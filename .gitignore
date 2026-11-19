@@ -1,0 +1,48 @@
+# Entornos virtuales y dependencias
+venv/
+venv_hayai/
+.venv/
+node_modules/
+
+# Secretos y configuracion local
+.env
+.env.*
+
+# Caché de Python y testing
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Modelos pesados y motores externos (>100 MB no permitidos en GitHub)
+models/
+motores_externos/
+
+# Archivos de trabajo por capitulo (RAWs, PSDs, diagnosticos, backups)
+01_RAW/
+02_TRABAJO_PSD/
+03_TRADUCCIONES/recortes_globos/
+03_TRADUCCIONES/pendiente_traduccion.json
+03_TRADUCCIONES/ocr_capitulo.json
+03_TRADUCCIONES/guion_typeo.json
+03_TRADUCCIONES/memoria_contexto.json
+04_DIAGNOSTICO/
+06_REPOSITORIO_GLOBOS/
+07_EXPERIMENTOS_TRADUCCION_TYPEO/
+08_RESULTADOS_TYPEO/
+09_PSD_FINAL/
+backups/
+config/limpieza_cache.json
+REPORTE_ERRORES.json
+
+# Archivos autogenerados y efímeros
+scripts/cola_limpieza_ps.jsx
+*.lock
+.typeo_photoshop.lock
+
+# Archivos del sistema y logs temporales
+*.log
+logs_limpieza.txt
+Thumbs.db
+Desktop.ini
+.DS_Store

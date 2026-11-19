@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "activo": true,
+  "modelo": "models/ocr/en_PP-OCRv5_rec_mobile.onnx",
+  "sha256": "c3461add59bb4323ecba96a492ab75e06dda42467c9e3d0c18db5d1d21924be8",
+  "origen": "https://github.com/RapidAI/RapidOCR/blob/main/python/rapidocr/default_models.yaml",
+  "confianza_minima": 0.82,
+  "confianza_nueva_zona": 0.9,
+  "lado_maximo": 1600,
+  "max_recortes": 4,
+  "limpieza_revisada": {
+    "7e3b476d8c2263d4951a4f9fc10a6264d6ed72b92d26a75cfd8b54870673ce7d": {
+      "archivo": "01.jpg",
+      "selecciones": [
+        {
+          "rectangulo": [536, 570, 1331, 624],
+          "umbral": 105,
+          "alto_minimo": 33,
+          "ancho_maximo": 49,
+          "area_minima": 150,
+          "margen_px": 5,
+          "margen_reemplazo_px": 13
+        }
+      ]
+    },
+    "ba9ea18ee68ba55fa94b0ca18f9eefcb8ac4b066fc0c25c0097efa119c35e4a7": {
+      "archivo": "24.jpg",
+      "arte_protegido": [
+        [[874, 1350], [882, 1345], [886, 1331], [891, 1330], [900, 1336], [916, 1319], [931, 1311], [939, 1339], [916, 1344], [907, 1353], [915, 1365], [899, 1367], [887, 1373], [884, 1361], [874, 1355]],
+        [[923, 1116], [926, 1100], [940, 1088], [949, 1088], [955, 1096], [952, 1106], [945, 1112], [957, 1115], [961, 1122], [958, 1128], [947, 1131], [928, 1129], [927, 1123]],
+        [[927, 1468], [931, 1463], [943, 1463], [944, 1458], [953, 1457], [960, 1463], [962, 1476], [957, 1487], [949, 1489], [934, 1485]],
+        [[950, 1434], [956, 1432], [961, 1435], [963, 1429], [969, 1427], [975, 1430], [978, 1437], [977, 1446], [971, 1453], [963, 1456], [955, 1452], [949, 1444]]
+      ]
+    },
+    "51438970d85d283f9f7a6c397b38752d0806ff8587fc9ca0f624321f71d31510": {
+      "archivo": "32.jpg",
+      "margen_glifos_por_bloque": {
+        "32_10": 7
+      }
+    }
+  },
+  "zonas_revisadas": {
+    "24.jpg": {
+      "raw_sha256": "ba9ea18ee68ba55fa94b0ca18f9eefcb8ac4b066fc0c25c0097efa119c35e4a7",
+      "bloques": {
+        "24_06": {
+          "tipo_texto": "pantalla",
+          "trazo_px": 0,
+          "repaso_fondo": {
+            "rgb": [
+              255,
+              255,
+              255
+            ],
+            "debajo_generativas": true
+          }
+        },
+        "24_07": {
+          "tipo_texto": "pantalla",
+          "trazo_px": 0,
+          "repaso_fondo": {
+            "rgb": [
+              255,
+              255,
+              255
+            ],
+            "debajo_generativas": true
+          }
+        },
+        "24_08": {
+          "tipo_texto": "pantalla",
+          "trazo_px": 0,
+          "repaso_fondo": {
+            "rgb": [
+              255,
+              255,
+              255
+            ],
+            "debajo_generativas": true
+          }
+        },
+        "24_10": {
+          "tipo_texto": "pantalla",
+          "trazo_px": 0
+        },
+        "24_11": {
+          "tipo_texto": "pantalla",
+          "trazo_px": 0
+        },
+        "24_15": {
+          "tipo_texto": "pantalla",
+          "trazo_px": 0,
+          "repaso_fondo": {
+            "rgb": [
+              203,
+              203,
+              203
+            ],
+            "debajo_generativas": false
+          }
+        },
+        "24_19": {
+          "tipo_texto": "pantalla",
+          "trazo_px": 0
+        },
+        "24_02": {
+          "fondo_blanco": true
+        }
+      }
+    }
+  },
+  "margen_limpieza_texto_px": 6,
+  "margen_limpieza_glifo_px": 5
+}

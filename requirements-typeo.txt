@@ -1,0 +1,4 @@
+Pillow>=10
+fonttools>=4
+# Opcional: pyphen para ampliar el vocabulario de cortes silabicos en espanol.
+# El flujo usa un vocabulario validado y no corta a ciegas si no esta instalado.

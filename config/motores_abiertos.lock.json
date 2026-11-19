@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "repositorios": {
+    "BallonsTranslator": {
+      "origen": "https://github.com/dmMaze/BallonsTranslator",
+      "commit": null,
+      "nota": "Copia preexistente sin metadatos Git"
+    },
+    "comic-translate": {
+      "origen": "https://github.com/ogkalu2/comic-translate.git",
+      "commit": "8977b91a4f7a40c3917c5a268e9e7d78e1d818da"
+    },
+    "manga-image-translator": {
+      "origen": "https://github.com/zyddnys/manga-image-translator.git",
+      "commit": "89d7a8ead7fc6f9b21236a6c51d3854ccfe0acbf"
+    },
+    "manga-ocr": {
+      "origen": "https://github.com/kha-white/manga-ocr.git",
+      "commit": "c333b5d36e88d539d6b040b4c4cf90ad5ecd4f69"
+    },
+    "koharu": {
+      "origen": "https://github.com/koharu-rs/koharu.git",
+      "commit": "34f141a38cdaf5353c821d2c8836938e7d21a596"
+    }
+  },
+  "koharu_version": "0.85.4",
+  "omitidos_por_usuario": [
+    "koharu"
+  ],
+  "componentes_integrados": {
+    "BallonsTranslator": "limpieza OpenCV",
+    "comic-translate": "limpieza LaMa ONNX",
+    "manga-image-translator": "limpieza LaMa Large",
+    "manga-ocr": "OCR japones por zonas"
+  }
+}

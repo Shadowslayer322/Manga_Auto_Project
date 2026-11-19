@@ -1,0 +1,2497 @@
+{
+  "version": 1,
+  "origen": "Geometria cotejada en RAW y validada en pruebas 01-09; anotaciones especificas del capitulo actual",
+  "paginas": [
+    {
+      "archivo": "001.jpg",
+      "raw_sha256": "a2bfe7a6c2751013da6feee3872bfb5e8cc11c69a4c728a65038890fa427cc18",
+      "width": 1284,
+      "height": 1826,
+      "zonas": [
+        {
+          "id": "001_01",
+          "texto_original": "はい…",
+          "box_contenedor": [
+            543,
+            507,
+            710,
+            783
+          ],
+          "poligono_globo": [
+            [
+              622,
+              509
+            ],
+            [
+              566,
+              550
+            ],
+            [
+              543,
+              664
+            ],
+            [
+              573,
+              751
+            ],
+            [
+              629,
+              782
+            ],
+            [
+              662,
+              769
+            ],
+            [
+              689,
+              736
+            ],
+            [
+              709,
+              623
+            ],
+            [
+              678,
+              538
+            ]
+          ],
+          "poligono_panel": [
+            [
+              455,
+              98
+            ],
+            [
+              1185,
+              98
+            ],
+            [
+              1185,
+              939
+            ],
+            [
+              506,
+              909
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "superior_derecho",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 28,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_02",
+          "texto_original": "妹さんが？",
+          "box_contenedor": [
+            842,
+            180,
+            995,
+            415
+          ],
+          "poligono_globo": [
+            [
+              994,
+              180
+            ],
+            [
+              902,
+              184
+            ],
+            [
+              856,
+              223
+            ],
+            [
+              842,
+              284
+            ],
+            [
+              847,
+              339
+            ],
+            [
+              897,
+              405
+            ],
+            [
+              966,
+              405
+            ],
+            [
+              991,
+              365
+            ]
+          ],
+          "poligono_panel": [
+            [
+              455,
+              98
+            ],
+            [
+              1185,
+              98
+            ],
+            [
+              1185,
+              939
+            ],
+            [
+              506,
+              909
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "superior_derecho",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 24,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_03",
+          "texto_original": "なんでしょうか うるさいですね",
+          "box_contenedor": [
+            29,
+            960,
+            265,
+            1379
+          ],
+          "poligono_globo": [
+            [
+              139,
+              962
+            ],
+            [
+              92,
+              985
+            ],
+            [
+              53,
+              1042
+            ],
+            [
+              30,
+              1202
+            ],
+            [
+              83,
+              1342
+            ],
+            [
+              178,
+              1378
+            ],
+            [
+              247,
+              1278
+            ],
+            [
+              263,
+              1128
+            ],
+            [
+              223,
+              1010
+            ],
+            [
+              184,
+              972
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              912
+            ],
+            [
+              1184,
+              964
+            ],
+            [
+              1184,
+              1630
+            ],
+            [
+              0,
+              1630
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 26,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_04",
+          "texto_original": "元々",
+          "box_contenedor": [
+            347,
+            498,
+            464,
+            716
+          ],
+          "poligono_globo": [
+            [
+              402,
+              500
+            ],
+            [
+              382,
+              509
+            ],
+            [
+              360,
+              541
+            ],
+            [
+              348,
+              616
+            ],
+            [
+              369,
+              695
+            ],
+            [
+              409,
+              713
+            ],
+            [
+              429,
+              704
+            ],
+            [
+              451,
+              672
+            ],
+            [
+              463,
+              597
+            ],
+            [
+              444,
+              527
+            ],
+            [
+              425,
+              506
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              491
+            ],
+            [
+              476,
+              491
+            ],
+            [
+              500,
+              907
+            ],
+            [
+              0,
+              875
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "medio_izquierdo",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 22,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_05",
+          "texto_original": "シャオ先生に…",
+          "box_contenedor": [
+            932,
+            19,
+            1151,
+            320
+          ],
+          "poligono_globo": [
+            [
+              1115,
+              37
+            ],
+            [
+              1006,
+              27
+            ],
+            [
+              935,
+              99
+            ],
+            [
+              932,
+              319
+            ],
+            [
+              992,
+              319
+            ],
+            [
+              996,
+              288
+            ],
+            [
+              1062,
+              319
+            ],
+            [
+              1125,
+              269
+            ],
+            [
+              1150,
+              225
+            ],
+            [
+              1145,
+              73
+            ]
+          ],
+          "poligono_panel": [
+            [
+              455,
+              98
+            ],
+            [
+              1185,
+              98
+            ],
+            [
+              1185,
+              939
+            ],
+            [
+              506,
+              909
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "superior_derecho",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 28,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_06",
+          "texto_original": "私の…",
+          "box_contenedor": [
+            46,
+            643,
+            163,
+            871
+          ],
+          "poligono_globo": [
+            [
+              98,
+              645
+            ],
+            [
+              61,
+              683
+            ],
+            [
+              47,
+              765
+            ],
+            [
+              69,
+              845
+            ],
+            [
+              88,
+              864
+            ],
+            [
+              110,
+              868
+            ],
+            [
+              137,
+              848
+            ],
+            [
+              162,
+              797
+            ],
+            [
+              161,
+              747
+            ],
+            [
+              141,
+              671
+            ],
+            [
+              120,
+              649
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              491
+            ],
+            [
+              476,
+              491
+            ],
+            [
+              500,
+              907
+            ],
+            [
+              0,
+              875
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "medio_izquierdo",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 28,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_07",
+          "texto_original": "……実は",
+          "box_contenedor": [
+            339,
+            132,
+            433,
+            364
+          ],
+          "poligono_globo": [
+            [
+              382,
+              135
+            ],
+            [
+              350,
+              180
+            ],
+            [
+              341,
+              260
+            ],
+            [
+              346,
+              321
+            ],
+            [
+              371,
+              356
+            ],
+            [
+              390,
+              362
+            ],
+            [
+              418,
+              328
+            ],
+            [
+              431,
+              246
+            ],
+            [
+              415,
+              162
+            ],
+            [
+              398,
+              139
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              100
+            ],
+            [
+              444,
+              100
+            ],
+            [
+              476,
+              486
+            ],
+            [
+              0,
+              486
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "superior_izquierdo",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 27,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_08",
+          "texto_original": "「精神移行実験」というのは…",
+          "box_contenedor": [
+            37,
+            120,
+            195,
+            457
+          ],
+          "poligono_globo": [
+            [
+              112,
+              122
+            ],
+            [
+              59,
+              175
+            ],
+            [
+              38,
+              291
+            ],
+            [
+              67,
+              418
+            ],
+            [
+              121,
+              455
+            ],
+            [
+              189,
+              392
+            ],
+            [
+              177,
+              389
+            ],
+            [
+              193,
+              267
+            ],
+            [
+              164,
+              158
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              100
+            ],
+            [
+              444,
+              100
+            ],
+            [
+              476,
+              486
+            ],
+            [
+              0,
+              486
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "superior_izquierdo",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 22,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_09",
+          "texto_original": "ぴいっ！",
+          "box_contenedor": [
+            287,
+            1124,
+            491,
+            1365
+          ],
+          "poligono_globo": [
+            [
+              490,
+              1126
+            ],
+            [
+              287,
+              1156
+            ],
+            [
+              296,
+              1276
+            ],
+            [
+              327,
+              1359
+            ],
+            [
+              451,
+              1361
+            ],
+            [
+              483,
+              1336
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              912
+            ],
+            [
+              1184,
+              964
+            ],
+            [
+              1184,
+              1630
+            ],
+            [
+              0,
+              1630
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 38,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "grito",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_10",
+          "texto_original": "原作:サク研 作画:渡部タカシ",
+          "box_contenedor": [
+            175,
+            5,
+            444,
+            102
+          ],
+          "poligono_globo": [
+            [
+              175,
+              5
+            ],
+            [
+              444,
+              5
+            ],
+            [
+              444,
+              102
+            ],
+            [
+              175,
+              102
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1284,
+              0
+            ],
+            [
+              1284,
+              1826
+            ],
+            [
+              0,
+              1826
+            ]
+          ],
+          "permite_fuera_panel_raw": true,
+          "panel_id": "margen_original_raw",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 24,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "rotulo",
+          "rol_revisado": "narrador",
+          "tipo_contenedor": "rotulo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_11",
+          "texto_original": "第16話:乱戦交錯(前編)",
+          "box_contenedor": [
+            466,
+            27,
+            928,
+            108
+          ],
+          "poligono_globo": [
+            [
+              466,
+              27
+            ],
+            [
+              928,
+              27
+            ],
+            [
+              928,
+              108
+            ],
+            [
+              466,
+              108
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1284,
+              0
+            ],
+            [
+              1284,
+              1826
+            ],
+            [
+              0,
+              1826
+            ]
+          ],
+          "permite_fuera_panel_raw": true,
+          "panel_id": "margen_original_raw",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 26,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "rotulo",
+          "rol_revisado": "titulo",
+          "tipo_contenedor": "rotulo",
+          "original_aliases": []
+        },
+        {
+          "id": "001_13",
+          "texto_original": "○今回の敵も、くせ者確定。",
+          "box_contenedor": [
+            100,
+            1634,
+            1150,
+            1658
+          ],
+          "poligono_globo": [
+            [
+              914.0,
+              1008.0
+            ],
+            [
+              1536.0,
+              1008.0
+            ],
+            [
+              1536.0,
+              1088.0
+            ],
+            [
+              914.0,
+              1088.0
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1284,
+              0
+            ],
+            [
+              1284,
+              1826
+            ],
+            [
+              0,
+              1826
+            ]
+          ],
+          "permite_fuera_panel_raw": true,
+          "panel_id": "margen_original_raw",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 14,
+          "minimo_px": 12,
+          "margen_revision_px": 1,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "rotulo",
+          "nota_reubicacion": "Nota editorial horizontal en separacion inferior; se elimina la rotacion del margen.",
+          "rol_revisado": "narrador",
+          "tipo_contenedor": "rotulo",
+          "original_aliases": []
+        }
+      ]
+    },
+    {
+      "archivo": "002.jpg",
+      "raw_sha256": "605b206fe9efbe1db96a129d43865c3f2269884f2bec808d1e3a045d6a35b0a1",
+      "width": 1284,
+      "height": 1826,
+      "zonas": [
+        {
+          "id": "002_01",
+          "texto_original": "何？ この人達",
+          "box_contenedor": [
+            1003,
+            1435,
+            1209,
+            1733
+          ],
+          "poligono_globo": [
+            [
+              1144,
+              1436
+            ],
+            [
+              1052,
+              1451
+            ],
+            [
+              1004,
+              1518
+            ],
+            [
+              1003,
+              1637
+            ],
+            [
+              1022,
+              1696
+            ],
+            [
+              1064,
+              1729
+            ],
+            [
+              1145,
+              1725
+            ],
+            [
+              1188,
+              1696
+            ],
+            [
+              1205,
+              1662
+            ],
+            [
+              1201,
+              1485
+            ]
+          ],
+          "poligono_panel": [
+            [
+              102,
+              1468
+            ],
+            [
+              1283,
+              1468
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              102,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 24,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "002_02",
+          "texto_original": "笑いながら近づいてくる…",
+          "box_contenedor": [
+            531,
+            1581,
+            746,
+            1824
+          ],
+          "poligono_globo": [
+            [
+              633,
+              1581
+            ],
+            [
+              550,
+              1625
+            ],
+            [
+              533,
+              1729
+            ],
+            [
+              562,
+              1797
+            ],
+            [
+              663,
+              1823
+            ],
+            [
+              712,
+              1797
+            ],
+            [
+              745,
+              1754
+            ],
+            [
+              744,
+              1707
+            ],
+            [
+              716,
+              1626
+            ],
+            [
+              682,
+              1592
+            ]
+          ],
+          "poligono_panel": [
+            [
+              102,
+              1468
+            ],
+            [
+              1283,
+              1468
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              102,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 27,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        }
+      ]
+    },
+    {
+      "archivo": "003.jpg",
+      "raw_sha256": "75a4095c4c2ea98e4be6033f0a76b9100a2dfce376110e985008793dc1fb9449",
+      "width": 1284,
+      "height": 1826,
+      "zonas": [
+        {
+          "id": "003_01",
+          "texto_original": "きゃあ！",
+          "box_contenedor": [
+            505,
+            610,
+            790,
+            885
+          ],
+          "poligono_globo": [
+            [
+              505,
+              722
+            ],
+            [
+              625,
+              610
+            ],
+            [
+              790,
+              610
+            ],
+            [
+              787,
+              773
+            ],
+            [
+              753,
+              820
+            ],
+            [
+              750,
+              883
+            ],
+            [
+              653,
+              885
+            ],
+            [
+              580,
+              874
+            ],
+            [
+              548,
+              810
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              475
+            ],
+            [
+              1183,
+              597
+            ],
+            [
+              1183,
+              1315
+            ],
+            [
+              0,
+              1372
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "medio",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 66,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "globo",
+          "criterio_tamano": "grito dentro de globo amplio confirmado en RAW: ancho objetivo 55% del contenedor; no aplicar limite fijo por ser una sola palabra",
+          "rol_revisado": "grito",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "003_02",
+          "texto_original": "この臭い…",
+          "box_contenedor": [
+            897,
+            1439,
+            1148,
+            1733
+          ],
+          "poligono_globo": [
+            [
+              1070,
+              1444
+            ],
+            [
+              978,
+              1451
+            ],
+            [
+              921,
+              1497
+            ],
+            [
+              900,
+              1634
+            ],
+            [
+              938,
+              1685
+            ],
+            [
+              926,
+              1702
+            ],
+            [
+              984,
+              1729
+            ],
+            [
+              1042,
+              1722
+            ],
+            [
+              1103,
+              1688
+            ],
+            [
+              1140,
+              1599
+            ],
+            [
+              1126,
+              1490
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              1410
+            ],
+            [
+              1184,
+              1364
+            ],
+            [
+              1184,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 34,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "003_03",
+          "texto_original": "オイル!?",
+          "box_contenedor": [
+            35,
+            1493,
+            244,
+            1814
+          ],
+          "poligono_globo": [
+            [
+              193,
+              1498
+            ],
+            [
+              118,
+              1496
+            ],
+            [
+              41,
+              1561
+            ],
+            [
+              51,
+              1763
+            ],
+            [
+              100,
+              1811
+            ],
+            [
+              162,
+              1800
+            ],
+            [
+              235,
+              1732
+            ],
+            [
+              243,
+              1592
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              1410
+            ],
+            [
+              1184,
+              1364
+            ],
+            [
+              1184,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 28,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        }
+      ]
+    },
+    {
+      "archivo": "004.jpg",
+      "raw_sha256": "c313d3365cec2a4b82fc404c63dd458af4be7f8f6734a79c1c4efa7950a1e989",
+      "width": 1284,
+      "height": 1826,
+      "zonas": [
+        {
+          "id": "004_01",
+          "texto_original": "リーチ様の御血をいただきますですぅぅ！",
+          "box_contenedor": [
+            129,
+            285,
+            380,
+            615
+          ],
+          "poligono_globo": [
+            [
+              53,
+              289
+            ],
+            [
+              233,
+              138
+            ],
+            [
+              386,
+              157
+            ],
+            [
+              393,
+              505
+            ],
+            [
+              455,
+              590
+            ],
+            [
+              409,
+              682
+            ],
+            [
+              154,
+              717
+            ],
+            [
+              109,
+              598
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1283,
+              0
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "composicion_de_pagina_unica",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 34,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "004_02",
+          "texto_original": "私が凶手 マイグレーターの貴様らを祓ってえぇ！",
+          "box_contenedor": [
+            927,
+            1100,
+            1144,
+            1430
+          ],
+          "poligono_globo": [
+            [
+              865,
+              1050
+            ],
+            [
+              967,
+              967
+            ],
+            [
+              1104,
+              954
+            ],
+            [
+              1170,
+              1032
+            ],
+            [
+              1160,
+              1290
+            ],
+            [
+              1210,
+              1391
+            ],
+            [
+              1155,
+              1495
+            ],
+            [
+              894,
+              1520
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1283,
+              0
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "composicion_de_pagina_unica",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 31,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "004_03",
+          "texto_original": "自称悪魔祓い 放火魔ヌー 懲役120年",
+          "box_contenedor": [
+            177,
+            1595,
+            588,
+            1760
+          ],
+          "poligono_globo": null,
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1283,
+              0
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "composicion_de_pagina_unica",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 30,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "rotulo",
+          "rol_revisado": "narrador",
+          "tipo_contenedor": "rotulo",
+          "original_aliases": []
+        },
+        {
+          "id": "004_04",
+          "texto_original": "浴びましたね 聖水を",
+          "box_contenedor": [
+            1058,
+            76,
+            1217,
+            272
+          ],
+          "poligono_globo": [
+            [
+              1024,
+              81
+            ],
+            [
+              1091,
+              22
+            ],
+            [
+              1189,
+              18
+            ],
+            [
+              1257,
+              62
+            ],
+            [
+              1241,
+              235
+            ],
+            [
+              1198,
+              313
+            ],
+            [
+              1080,
+              320
+            ],
+            [
+              1024,
+              249
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1283,
+              0
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "composicion_de_pagina_unica",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 23,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "004_05",
+          "texto_original": "もうおしまいですよ 悪魔憑き",
+          "box_contenedor": [
+            1040,
+            722,
+            1205,
+            893
+          ],
+          "poligono_globo": [
+            [
+              1005,
+              719
+            ],
+            [
+              1062,
+              652
+            ],
+            [
+              1163,
+              658
+            ],
+            [
+              1243,
+              719
+            ],
+            [
+              1222,
+              906
+            ],
+            [
+              1192,
+              977
+            ],
+            [
+              1057,
+              944
+            ],
+            [
+              1005,
+              870
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1283,
+              0
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "composicion_de_pagina_unica",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 29,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "004_06",
+          "texto_original": "ホホホ～～！",
+          "box_contenedor": [
+            154,
+            1103,
+            323,
+            1310
+          ],
+          "poligono_globo": [
+            [
+              103,
+              1050
+            ],
+            [
+              232,
+              1007
+            ],
+            [
+              360,
+              1080
+            ],
+            [
+              347,
+              1245
+            ],
+            [
+              316,
+              1382
+            ],
+            [
+              151,
+              1430
+            ],
+            [
+              111,
+              1314
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              0
+            ],
+            [
+              1283,
+              0
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "composicion_de_pagina_unica",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 43,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "globo",
+          "criterio_tamano": "texto corto apilado: mayor tamano que cabe en area reservada con margen y borde",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": [
+            "ホホホホ～！"
+          ]
+        }
+      ]
+    },
+    {
+      "archivo": "005.jpg",
+      "raw_sha256": "bec5085be23c10ef8b2e91552ccf6dcb520eaaa5fecfe77771dfc06d0a0d9cf0",
+      "width": 1284,
+      "height": 1826,
+      "zonas": [
+        {
+          "id": "005_01",
+          "texto_original": "まさかこの人達は…",
+          "box_contenedor": [
+            532,
+            97,
+            733,
+            382
+          ],
+          "poligono_globo": [
+            [
+              629,
+              99
+            ],
+            [
+              590,
+              113
+            ],
+            [
+              558,
+              148
+            ],
+            [
+              535,
+              256
+            ],
+            [
+              570,
+              346
+            ],
+            [
+              606,
+              373
+            ],
+            [
+              641,
+              378
+            ],
+            [
+              684,
+              359
+            ],
+            [
+              712,
+              324
+            ],
+            [
+              732,
+              218
+            ],
+            [
+              694,
+              128
+            ]
+          ],
+          "poligono_panel": [
+            [
+              120,
+              80
+            ],
+            [
+              1183,
+              80
+            ],
+            [
+              1183,
+              397
+            ],
+            [
+              120,
+              397
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "superior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 27,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "005_02",
+          "texto_original": "ファイヤスターターです",
+          "box_contenedor": [
+            997,
+            1516,
+            1224,
+            1825
+          ],
+          "poligono_globo": [
+            [
+              1067,
+              1522
+            ],
+            [
+              997,
+              1598
+            ],
+            [
+              997,
+              1824
+            ],
+            [
+              1202,
+              1824
+            ],
+            [
+              1221,
+              1694
+            ],
+            [
+              1198,
+              1599
+            ],
+            [
+              1138,
+              1527
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              1231
+            ],
+            [
+              1283,
+              1265
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 31,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "005_03",
+          "texto_original": "リーチ？",
+          "box_contenedor": [
+            1028,
+            97,
+            1160,
+            351
+          ],
+          "poligono_globo": [
+            [
+              1087,
+              99
+            ],
+            [
+              1042,
+              145
+            ],
+            [
+              1028,
+              238
+            ],
+            [
+              1050,
+              318
+            ],
+            [
+              1075,
+              344
+            ],
+            [
+              1100,
+              348
+            ],
+            [
+              1143,
+              304
+            ],
+            [
+              1158,
+              214
+            ],
+            [
+              1135,
+              128
+            ],
+            [
+              1112,
+              104
+            ]
+          ],
+          "poligono_panel": [
+            [
+              120,
+              80
+            ],
+            [
+              1183,
+              80
+            ],
+            [
+              1183,
+              397
+            ],
+            [
+              120,
+              397
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "superior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 26,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "005_04",
+          "texto_original": "えっ!?",
+          "box_contenedor": [
+            639,
+            1301,
+            803,
+            1470
+          ],
+          "poligono_globo": [
+            [
+              772,
+              1311
+            ],
+            [
+              752,
+              1302
+            ],
+            [
+              651,
+              1326
+            ],
+            [
+              657,
+              1354
+            ],
+            [
+              639,
+              1448
+            ],
+            [
+              760,
+              1469
+            ],
+            [
+              761,
+              1458
+            ],
+            [
+              789,
+              1445
+            ],
+            [
+              802,
+              1399
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              1231
+            ],
+            [
+              1283,
+              1265
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 38,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "grito",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "005_05",
+          "texto_original": "ミミさん 避けて",
+          "box_contenedor": [
+            826,
+            1570,
+            1027,
+            1826
+          ],
+          "poligono_globo": [
+            [
+              1026,
+              1570
+            ],
+            [
+              996,
+              1599
+            ],
+            [
+              957,
+              1575
+            ],
+            [
+              917,
+              1574
+            ],
+            [
+              864,
+              1611
+            ],
+            [
+              827,
+              1709
+            ],
+            [
+              843,
+              1825
+            ],
+            [
+              1026,
+              1825
+            ]
+          ],
+          "poligono_panel": [
+            [
+              0,
+              1231
+            ],
+            [
+              1283,
+              1265
+            ],
+            [
+              1283,
+              1825
+            ],
+            [
+              0,
+              1825
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "inferior",
+          "trazo_px": 0,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 34,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "dialogo_blanco",
+          "contenedor_revisado": "globo",
+          "rol_revisado": "normal",
+          "tipo_contenedor": "globo",
+          "original_aliases": []
+        },
+        {
+          "id": "005_06",
+          "texto_original": "『クロス・クリメイション』",
+          "box_contenedor": [
+            32,
+            610,
+            420,
+            800
+          ],
+          "poligono_globo": [
+            [
+              -205.0,
+              739.0
+            ],
+            [
+              424.0,
+              739.0
+            ],
+            [
+              424.0,
+              846.0
+            ],
+            [
+              -205.0,
+              846.0
+            ]
+          ],
+          "poligono_panel": [
+            [
+              2,
+              423
+            ],
+            [
+              1183,
+              423
+            ],
+            [
+              1183,
+              1217
+            ],
+            [
+              2,
+              1194
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "medio",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 44,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "rotulo",
+          "nota_reubicacion": "Tecnica horizontal en dos lineas sobre brazo, segun referencia del usuario. Sin comillas decorativas para evitar sustituciones tipograficas.",
+          "rol_revisado": "fuera_globo",
+          "tipo_contenedor": "rotulo",
+          "original_aliases": []
+        },
+        {
+          "id": "005_07",
+          "texto_original": "ディア・ウエポン",
+          "box_contenedor": [
+            905,
+            475,
+            1165,
+            690
+          ],
+          "poligono_globo": [
+            [
+              886.5,
+              627.5
+            ],
+            [
+              1353.5,
+              627.5
+            ],
+            [
+              1353.5,
+              721.5
+            ],
+            [
+              886.5,
+              721.5
+            ]
+          ],
+          "poligono_panel": [
+            [
+              2,
+              423
+            ],
+            [
+              1183,
+              423
+            ],
+            [
+              1183,
+              1217
+            ],
+            [
+              2,
+              1194
+            ]
+          ],
+          "permite_fuera_panel_raw": false,
+          "panel_id": "medio",
+          "trazo_px": 5,
+          "trazo_rgb": [
+            255,
+            255,
+            255
+          ],
+          "relleno_rgb": [
+            0,
+            0,
+            0
+          ],
+          "tamano_px": 44,
+          "margen_revision_px": 6,
+          "metodo_limpieza": "relleno_generativo",
+          "contenedor_revisado": "rotulo",
+          "nota_reubicacion": "Tecnica horizontal desplazada hacia dentro para respetar el borde derecho del panel en RAW.",
+          "rol_revisado": "fuera_globo",
+          "tipo_contenedor": "rotulo",
+          "original_aliases": []
+        }
+      ]
+    }
+  ]
+}

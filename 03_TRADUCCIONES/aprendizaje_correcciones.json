@@ -1,0 +1,43 @@
+{
+  "manga": "Migrator (マイグレーター)",
+  "paginas_aprendidas": {
+    "001.jpg": {
+      "archivo": "001.jpg",
+      "comparativa_optimizada": "C:\\Manga_Auto_Project\\04_DIAGNOSTICO\\APRENDIZAJE\\COMP_APRENDIZAJE_001.jpg",
+      "peso_kb": 299.9,
+      "estado": "analizada_y_aprendida"
+    },
+    "002.jpg": {
+      "archivo": "002.jpg",
+      "comparativa_optimizada": "C:\\Manga_Auto_Project\\04_DIAGNOSTICO\\APRENDIZAJE\\COMP_APRENDIZAJE_002.jpg",
+      "peso_kb": 351.2,
+      "estado": "analizada_y_aprendida"
+    },
+    "003.jpg": {
+      "archivo": "003.jpg",
+      "comparativa_optimizada": "C:\\Manga_Auto_Project\\04_DIAGNOSTICO\\APRENDIZAJE\\COMP_APRENDIZAJE_003.jpg",
+      "peso_kb": 334.0,
+      "estado": "analizada_y_aprendida"
+    },
+    "004.jpg": {
+      "archivo": "004.jpg",
+      "comparativa_optimizada": "C:\\Manga_Auto_Project\\04_DIAGNOSTICO\\APRENDIZAJE\\COMP_APRENDIZAJE_004.jpg",
+      "peso_kb": 370.2,
+      "estado": "analizada_y_aprendida"
+    },
+    "005.jpg": {
+      "archivo": "005.jpg",
+      "comparativa_optimizada": "C:\\Manga_Auto_Project\\04_DIAGNOSTICO\\APRENDIZAJE\\COMP_APRENDIZAJE_005.jpg",
+      "peso_kb": 331.8,
+      "estado": "analizada_y_aprendida"
+    }
+  },
+  "patrones_identificados": {
+    "estilo_dialogo_shao": "formal, minúsculas, calmada, fuente Laffayette Comic Pro o Neets Hand para susurros.",
+    "estilo_dialogo_mimi": "asustadiza, signos ¡! e ¡¿?!, fuente BB Toonacious o Komika Boo.",
+    "estilo_enemigos_nuu": "exclamativo, fanático, risas jocosas 'jojojo', técnicas entre comillas angulares «...».",
+    "limpieza_fondos": "GenFill en pares cercanos para evitar deformación de tramas complejas.",
+    "limpieza_globos": "blanco puro 100% sólido sin ningún hueco interior en trazos."
+  },
+  "historial_correcciones": []
+}

@@ -1,0 +1,11 @@
+{
+  "01.jpg": {
+    "raw_sha256": "7e3b476d8c2263d4951a4f9fc10a6264d6ed72b92d26a75cfd8b54870673ce7d",
+    "zonas": [
+      {
+        "rectangulo": [530, 566, 1341, 636],
+        "motivo": "Titulo superpuesto a la mano, la manga y su contorno"
+      }
+    ]
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "version": 1,
+  "idioma_origen": "EN",
+  "idioma_destino": "ES",
+  "capitulo": "Evershifting Girlfriends - Chapter 2",
+  "paginas": [
+    {
+      "archivo": "01.jpg",
+      "raw_sha256": "7e3b476d8c2263d4951a4f9fc10a6264d6ed72b92d26a75cfd8b54870673ce7d",
+      "bloques": [
+        {
+          "id": "01_01",
+          "texto_original": "...ENOUGH REJECTION, AND ENOUGH PAIN FOR A LIFETIME.",
+          "traduccion_es": "...suficiente rechazo y suficiente dolor para toda una vida.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "01_06",
+          "texto_original": "I'VE EXPERIENCED ENOUGH LOVE...",
+          "traduccion_es": "ya viví suficiente amor...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "01_07",
+          "texto_original": "Tokimasa's",
+          "traduccion_es": "el viaje de amor",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "01_08",
+          "texto_original": "journey of love...!!",
+          "traduccion_es": "de tokimasa...!!",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "01_09",
+          "texto_original": "EVERSHIFTIWG-GIRLFRIEWOS FRIEWD",
+          "traduccion_es": "evershifting girlfriends",
+          "rol_fuente": "impreso"
+        }
+      ]
+    },
+    {
+      "archivo": "02.jpg",
+      "raw_sha256": "102141c8deb4a6af4fc136608cc010a7633d45ae97bf85d5bf81aea75974809e",
+      "bloques": [
+        {
+          "id": "02_01",
+          "texto_original": "I WON'T\nFALL IN\nLOVE...",
+          "traduccion_es": "no me voy\na enamorar...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "02_02",
+          "texto_original": "SOI\nWON'T\nDO IT\nAGAIN.",
+          "traduccion_es": "así que\nno lo\nharé más.",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "02_03",
+          "texto_original": "YAY!",
+          "traduccion_es": "¡yey!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "02_04",
+          "texto_original": "THAT WAS\nMY FIRST\nKISS!",
+          "traduccion_es": "¡ese fue\nmi primer\nbeso!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "02_05",
+          "texto_original": "Localization by Lapin, Inc.\n(Translation: Jena Greco)",
+          "traduccion_es": "localización por lapin, inc.\n(traducción: jena greco)",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "02_06",
+          "texto_original": "Despite his feelings,\nthey kissed almost\nimmediately..!!",
+          "traduccion_es": "a pesar de sus sentimientos,\nse besaron casi\nde inmediato...!!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "02_09",
+          "texto_original": "EVERSHIFTING",
+          "traduccion_es": "evershifting",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "02_10",
+          "texto_original": "GIRLFRIEWDS",
+          "traduccion_es": "girlfriends",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "02_11",
+          "texto_original": "hapter 2: Airin's Determination",
+          "traduccion_es": "cap. 2: la determinación de airin",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "02_12",
+          "texto_original": "OMAMEDA",
+          "traduccion_es": "omameda",
+          "rol_fuente": "impreso"
+        }
+      ]
+    },
+    {
+      "archivo": "03.jpg",
+      "raw_sha256": "46c69b8b4262f267a053c59c9aabc89948558fbd9b9b54f5a8eb9b7aca96543a",
+      "bloques": [
+        {
+          "id": "03_01",
+          "texto_original": "HEY,\nC'MON.",
+          "traduccion_es": "oye,\nvamos.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "03_02",
+          "texto_original": "I LOVE\nyou,\nTOKIRIN!",
+          "traduccion_es": "¡te amo,\ntokirin!",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "03_03",
+          "texto_original": "SINCE WE\nEXCHANGED\nVOWS AND\nALL...",
+          "traduccion_es": "ya que\nintercambiamos\nvotos y todo...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "03_04",
+          "texto_original": "...HATE\nyou.",
+          "traduccion_es": "...te odio.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "03_05",
+          "texto_original": "I.",
+          "traduccion_es": "yo.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "03_06",
+          "texto_original": "..THAT\nMUST MAKE\nUS AN\nOFFICIAL\nCOUPLE\nNOW,\nRIGHT?",
+          "traduccion_es": "...eso nos\nvuelve pareja\noficial,\n¿no?",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "03_07",
+          "texto_original": "SAY\nYOU\nLOVE\nME!",
+          "traduccion_es": "¡di que\nme amas!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "03_08",
+          "texto_original": "SAY IT\nBACK!",
+          "traduccion_es": "¡dilo\ntambién!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "03_09",
+          "texto_original": "WAH!",
+          "traduccion_es": "¡ah!",
+          "rol_fuente": "normal"
+        }
+      ]
+    },
+    {
+      "archivo": "04.jpg",
+      "raw_sha256": "7761002beeefe443ee127f5977657934472b094b108d1de200600d4db8a3530e",
+      "bloques": [
+        {
+          "id": "04_01",
+          "texto_original": "...PEOPLE\nLIKE YOU.",
+          "traduccion_es": "...gente\ncomo tú.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "04_02",
+          "texto_original": "DON'T DON'T SHOW SHOW\nYOUR YOUR FACE FACE\nAROUND ME\nAGAIN.",
+          "traduccion_es": "no vuelvas\na mostrarte\nante mí.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "04_03",
+          "texto_original": "I CAN'T\nSTAND...",
+          "traduccion_es": "no soporto...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "04_04",
+          "texto_original": "...RED\nFLAG.",
+          "traduccion_es": "...alerta\nroja.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "04_05",
+          "texto_original": "THERE'S\n...THAN NOTHING\nPEOPLE WORSE",
+          "traduccion_es": "no hay nada\npeor que...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "04_06",
+          "texto_original": "IT'S A\nHUGE",
+          "traduccion_es": "es una\nenorme",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "04_07",
+          "texto_original": "...WHO\nKISS\nPEOPLE\nLIKE IT'S\nNOTHING.",
+          "traduccion_es": "...quien besa\na otros como\nsi nada.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "04_08",
+          "texto_original": "SPL",
+          "traduccion_es": "spl",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "04_09",
+          "texto_original": "SH",
+          "traduccion_es": "sh",
+          "rol_fuente": "impreso"
+        }
+      ]
+    },
+    {
+      "archivo": "05.jpg",
+      "raw_sha256": "c1548eadc4bffe1b52bda6d7bb9777891606b8ebef58ce980d82b60f00dc7b11",
+      "bloques": [
+        {
+          "id": "05_01",
+          "texto_original": "DOESN'T\nMATTER.",
+          "traduccion_es": "no\nimporta.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "05_02",
+          "texto_original": "SHE'S\nRIDICU-\nLOUS...",
+          "traduccion_es": "es\nridícu-\nla...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "05_03",
+          "texto_original": "THIS\nIS SO\nANNOY-\nING...",
+          "traduccion_es": "qué\nmolesto\nes esto...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "05_04",
+          "texto_original": "WHAT\nHAP-\nPENED\n?!",
+          "traduccion_es": "¿qué\npasó\n?!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "05_05",
+          "texto_original": "AH!!",
+          "traduccion_es": "¡¡ah!!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "05_06",
+          "texto_original": "WHAT'RE\nYOU ALL\nSOAKED\nFOR?!",
+          "traduccion_es": "¿¡por qué\nestán todos\nempapados?!",
+          "rol_fuente": "normal"
+        }
+      ]
+    },
+    {
+      "archivo": "06.jpg",
+      "raw_sha256": "4f6930053ca7054491a1409f5c9485c74e07e99ca8449d07cd51f5ddfdb12b5f",
+      "bloques": [
+        {
+          "id": "06_01",
+          "texto_original": "I THOUGHT\nI TOLD YOU\nNOT TO SHOW\nYOUR FACE\nAROUND ME.",
+          "traduccion_es": "creí haberte\ndicho que no\nte acercaras\na mí.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_02",
+          "texto_original": "ALL JUST\nIMPULSE.\nNO VALUE\nIN IT AT\nALL...",
+          "traduccion_es": "puro impulso.\nsin ningún\nvalor...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_03",
+          "texto_original": "GUESS\nOTHER\nTHINGS\nHAPPENED\nBEFORE WE\nREACHED\nTHAT POINT,\nBUT...",
+          "traduccion_es": "supongo que\npasaron otras\ncosas antes\nde llegar\na esto...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_04",
+          "texto_original": "AN AFFRONT\nTO SOMEONE\nLIKE ME,\nWHO'S GONE\nSO FAR AS\nCONFESSING\n365 TIMES.",
+          "traduccion_es": "un insulto\npara quien\nse declaró\n365 veces.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_05",
+          "texto_original": "HEY,\nKURUSU.\nSOMEONE\nWANTS TO\nSEE YOU.",
+          "traduccion_es": "oye, kurusu.\nalguien\nquiere verte.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_07",
+          "texto_original": "...WHATEVER.\nDOESN'T\nMATTER,",
+          "traduccion_es": "...da igual.\nno importa,",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_08",
+          "texto_original": "WHAT\nABOUT\nTHAT\nWAS\nVOW?",
+          "traduccion_es": "¿y qué hay\nde aquel\njuramento?",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_09",
+          "texto_original": "A",
+          "traduccion_es": "a",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_12",
+          "texto_original": "ARTIST: TOKIMASA",
+          "traduccion_es": "artista: tokimasa",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_13",
+          "texto_original": "THAT WAS EVEN A",
+          "traduccion_es": "ni siquiera fue un",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "06_14",
+          "texto_original": "BROoD",
+          "traduccion_es": "rumiar",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "06_15",
+          "texto_original": "BROOD",
+          "traduccion_es": "rumiar",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "06_06",
+          "texto_original": "hmm",
+          "traduccion_es": "hmm...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "06_10",
+          "texto_original": "PANT",
+          "traduccion_es": "jadeo",
+          "rol_fuente": "impreso"
+        }
+      ]
+    },
+    {
+      "archivo": "07.jpg",
+      "raw_sha256": "fe179dedbc87721d9d6e0105c4a1b36fe9102da53dc0b59fe9e018adb30cc96e",
+      "bloques": [
+        {
+          "id": "07_01",
+          "texto_original": "SHE'LL\nHAVE TO\nGIVE UP\nEVENTU-\nALLY...",
+          "traduccion_es": "tendrá que\nrendirse\nal final...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "07_02",
+          "texto_original": "C'MON,\nDARLING!\nOPEN UP!",
+          "traduccion_es": "¡vamos, amor!\n¡abre!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "07_03",
+          "texto_original": "YEP,\nBUT I\nLOVE\nyou...",
+          "traduccion_es": "sí, pero\nte amo...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "07_04",
+          "texto_original": "...SO\nTHAT\nDOESN'T\nMATTER.",
+          "traduccion_es": "...así que\nno importa.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "07_05",
+          "texto_original": "DON'T\nGIVE HER\nATTEN-\nTION...",
+          "traduccion_es": "no le\nhagas\ncaso...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "07_06",
+          "texto_original": "I'M...\n...NOT\nGIVING IN,\nNO MATTER\nWHAT YOU\nSAY.",
+          "traduccion_es": "no voy\na ceder,\ndigas lo\nque digas.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "07_08",
+          "texto_original": "PANT\n1\nWHEEZE",
+          "traduccion_es": "jadeo",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "07_10",
+          "texto_original": "PANT",
+          "traduccion_es": "jadeo",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "07_11",
+          "texto_original": "WHEEZE",
+          "traduccion_es": "jadeo",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "07_12",
+          "texto_original": "SLIDE",
+          "traduccion_es": "desliza",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "07_13",
+          "texto_original": "BAM",
+          "traduccion_es": "¡bam!",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "07_07",
+          "texto_original": "hmm",
+          "traduccion_es": "hmm...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "07_09",
+          "texto_original": "PANT",
+          "traduccion_es": "jadeo",
+          "rol_fuente": "impreso"
+        }
+      ]
+    },
+    {
+      "archivo": "08.jpg",
+      "raw_sha256": "2838b9033dbb628ae4edf99f47462c42242a6d65f4c9e3d194cb4331f7f3e0f3",
+      "bloques": [
+        {
+          "id": "08_01",
+          "texto_original": "NOTHING\nBEATS THE\nOUTSIDE AIR\nAFTER A\nWHOLE WEEK\nWITHOUT IT!",
+          "traduccion_es": "¡nada supera\nel aire fresco\ntras toda\nuna semana\nencerrado!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "08_03",
+          "texto_original": "EVEN\nTHE LIVING\nROOM'S\nBACK TO\nNORMAL.",
+          "traduccion_es": "hasta la sala\nvolvió a la\nnormalidad.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "08_02",
+          "texto_original": "MMMM...",
+          "traduccion_es": "mmmm...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "08_04",
+          "texto_original": "WOO",
+          "traduccion_es": "¡yuju!",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "08_05",
+          "texto_original": "HOO!",
+          "traduccion_es": "¡yuju!",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "08_06",
+          "texto_original": "sfx",
+          "traduccion_es": "eh...",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "08_07",
+          "texto_original": "sfx",
+          "traduccion_es": "eh...",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "08_08",
+          "texto_original": "sfx",
+          "traduccion_es": "eh...",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "08_09",
+          "texto_original": "sfx",
+          "traduccion_es": "eh...",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "08_10",
+          "texto_original": "sfx",
+          "traduccion_es": "eh...",
+          "rol_fuente": "impreso"
+        }
+      ]
+    },
+    {
+      "archivo": "09.jpg",
+      "raw_sha256": "e6e46d820df33807d0e641ef30ce69ff0e28220582a20e0e3d8eccac657b0b24",
+      "bloques": [
+        {
+          "id": "09_01",
+          "texto_original": "THIS IS HOW\nIT ALWAYS IS.\nIT'S EXHAUST-\nING GOING\nALONG WITH\nTHIS WHOLE\nCHARADE.",
+          "traduccion_es": "siempre es\nasí. agota\nseguirle el\njuego a\nesta farsa.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "09_02",
+          "texto_original": "...BUT I\nSUPPOSE\nTHINGS\nWORKED\nOUT.",
+          "traduccion_es": "...pero creo\nque todo\nsalió bien.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "09_03",
+          "texto_original": "I WASN'T\nSURE WHAT\nWOULD\nHAPPEN\nWHEN AIRIN\nWENT WILD\nLIKE\nTHAT...",
+          "traduccion_es": "no sabía qué\npasaría con\nairin tan\ndescontrolada...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "09_04",
+          "texto_original": "I'M\nTIRED...\nI'D\nRATHER\nSLEEP..",
+          "traduccion_es": "tengo sueño...\nprefiero\ndormir...",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "09_05",
+          "texto_original": "BUT\nI WANT\nTO EAT\nFIRST!",
+          "traduccion_es": "¡pero quiero\ncomer\nantes!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "09_06",
+          "texto_original": "LET'S\nCHECK\nTHINGS ON\nTHE TV.",
+          "traduccion_es": "veamos\nqué hay en\nla tele.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "09_07",
+          "texto_original": "SHUT IT,\nYOU\nTWO!!",
+          "traduccion_es": "¡¡cállense,\npar de dos!!",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "09_08",
+          "texto_original": "HUFF\n2",
+          "traduccion_es": "bufido",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "09_09",
+          "texto_original": "HUFF",
+          "traduccion_es": "bufido",
+          "rol_fuente": "normal"
+        }
+      ]
+    },
+    {
+      "archivo": "10.jpg",
+      "raw_sha256": "7115512d53223d4cef4134205230b7e44d2bfcba33d81c020c9fa3077e39c5b1",
+      "bloques": [
+        {
+          "id": "10_01",
+          "texto_original": "HEY,\nKURUSU.\nLET'S HANG\nOUT AFTER\nSCHOOL\nTODAY.",
+          "traduccion_es": "oye, kurusu.\nsalgamos\ndespués de\nclases hoy.",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "10_02",
+          "texto_original": "NAH...\nNOT IN\nTHE\nMOOD...",
+          "traduccion_es": "sin\nganas...",
+          "rol_fuente": "impreso"
+        },
+        {
+          "id": "10_04",
+          "texto_original": "WRITINGS:\"I LOVE YOU, DARLING!\"\n\"I WANNA BE TOGETHER FOREVER!\n\"I'M NEVER GIVING UP ON YOU!\"",
+          "traduccion_es": "notas: «¡te amo, amor!»\n«¡quiero estar contigo siempre!»\n«¡nunca me rendiré contigo!»",
+          "rol_fuente": "normal"
+        },
+        {
+          "id": "10_03",
+          "texto_original": "SKRIT SKRIT",
+          "traduccion_es": "raspa\nraspa",
+          "rol_fuente": "normal"
+        }
+      ]
+    }
+  ]
+}

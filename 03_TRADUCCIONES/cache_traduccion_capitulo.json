@@ -1,0 +1,3731 @@
+{
+  "24.jpg": {
+    "archivo": "24.jpg",
+    "raw_sha256": "ba9ea18ee68ba55fa94b0ca18f9eefcb8ac4b066fc0c25c0097efa119c35e4a7",
+    "bloques": [
+      {
+        "id": "24_01",
+        "texto_original": "HOLD ON,\nTOKIMASA!\nWHERE ARE\nYOU HEADING\nTHIS LATE?!",
+        "traduccion_es": "¡Espera, Tokimasa! ¿Adónde vas a estas horas?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "24_02",
+        "texto_original": "THE CONVE-\nNIENCE\nSTORE!!",
+        "traduccion_es": "¡A la tienda de conveniencia!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "24_03",
+        "texto_original": "WH-\nWHAT THE\nHELL...?!",
+        "traduccion_es": "¿Q-qué demonios...?!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "24_04",
+        "texto_original": "I HAVE\nA BAD\nFEELING\nABOUT\nTHIS...",
+        "traduccion_es": "Tengo un mal presentimiento...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "24_05",
+        "texto_original": "WHAT\nIS SHE\nTHINKING..\n...GOING\nOUT IN\nTHE MIDDLE\nOF THE\nNIGHT",
+        "traduccion_es": "¿Qué estará pensando...? ¡¿Salir a estas horas de la noche?!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "24_06",
+        "texto_original": "I'll just pass the time by\ncounting stars",
+        "traduccion_es": "Pasaré el rato contando estrellas.",
+        "rol_fuente": "pantalla"
+      },
+      {
+        "id": "24_07",
+        "texto_original": "I was so excited, I went to\nour meet-up spot early",
+        "traduccion_es": "Me emocioné tanto que llegué temprano al punto de encuentro.",
+        "rol_fuente": "pantalla"
+      },
+      {
+        "id": "24_08",
+        "texto_original": "Sweet dreams",
+        "traduccion_es": "Dulces sueños.",
+        "rol_fuente": "pantalla"
+      },
+      {
+        "id": "24_15",
+        "texto_original": "Airin",
+        "traduccion_es": "Airin",
+        "rol_fuente": "pantalla"
+      }
+    ],
+    "sfx": []
+  },
+  "32.jpg": {
+    "archivo": "32.jpg",
+    "raw_sha256": "51438970d85d283f9f7a6c397b38752d0806ff8587fc9ca0f624321f71d31510",
+    "bloques": [
+      {
+        "id": "32_01",
+        "texto_original": "ALL RIGHT,\nWITH LUNCH\nOUT OF THE\nWAY, WHAT\nSHOULD WE\nDO NEXT?",
+        "traduccion_es": "Bien, ya almorzamos. ¿Qué hacemos ahora?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "32_02",
+        "texto_original": "UGH, I'M\nLOST.",
+        "traduccion_es": "Uf, estoy perdido.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "32_03",
+        "texto_original": "SORRY,\nBUT THE\nROAD'S\nCLOSED\nAHEAD.",
+        "traduccion_es": "Lo siento, pero la calle está cerrada más adelante.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "32_04",
+        "texto_original": "WE APOLO-\nGIZE, BUT\nYOU'LL HAVE\nTO TAKE A\nDIFFERENT\nROUTE.",
+        "traduccion_es": "Disculpen, tendrán que tomar otra ruta.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "32_05",
+        "texto_original": "OH! THEN\nLET'S TAKE\nA DIFFERENT\nSTREET.",
+        "traduccion_es": "¡Ah! Entonces vayamos por otra calle.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "32_06",
+        "texto_original": "I'LL NEVER\nMAKE IT IN\nTIME FOR\nTHE EN-\nTRANCE\nCEREMONY.",
+        "traduccion_es": "¡No llegaré a tiempo a la ceremonia de ingreso!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "32_07",
+        "texto_original": "THE ROAD'S\nCLOSED?",
+        "traduccion_es": "¿La calle está cerrada?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "32_08",
+        "texto_original": "UH...",
+        "traduccion_es": "Eh...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "32_09",
+        "texto_original": "",
+        "traduccion_es": "Paso cerrado.",
+        "rol_fuente": "cartel"
+      },
+      {
+        "id": "32_10",
+        "texto_original": "SIGN:\nROAD CLOSURE",
+        "traduccion_es": "Cartel: calle cerrada",
+        "rol_fuente": "cartel"
+      }
+    ],
+    "sfx": []
+  },
+  "01.jpg": {
+    "archivo": "01.jpg",
+    "bloques": [
+      {
+        "id": "01_01",
+        "texto_original": "...ENOUGH REJECTION, AND ENOUGH PAIN FOR A LIFETIME.",
+        "traduccion_es": "...suficiente rechazo, y suficiente dolor para toda una vida.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "01_06",
+        "texto_original": "I'VE EXPERIENCED ENOUGH LOVE...",
+        "traduccion_es": "ya he experimentado suficiente amor...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "01_07",
+        "texto_original": "Tokimasa's",
+        "traduccion_es": "el viaje amoroso",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "01_08",
+        "texto_original": "journey of love...!!",
+        "traduccion_es": "de Tokimasa...!!",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "01_09",
+        "texto_original": "EVERSHIFTIWG-GIRLFRIEWOS FRIEWD",
+        "traduccion_es": "evershifting girlfriends",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "7e3b476d8c2263d4951a4f9fc10a6264d6ed72b92d26a75cfd8b54870673ce7d"
+  },
+  "02.jpg": {
+    "archivo": "02.jpg",
+    "bloques": [
+      {
+        "id": "02_01",
+        "texto_original": "I WON'T\nFALL IN\nLOVE...",
+        "traduccion_es": "no me voy\na enamorar...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "02_02",
+        "texto_original": "SOI\nWON'T\nDO IT\nAGAIN.",
+        "traduccion_es": "así que no\nlo haré\notra vez.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "02_03",
+        "texto_original": "YAY!",
+        "traduccion_es": "¡yey!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "02_04",
+        "texto_original": "THAT WAS\nMY FIRST\nKISS!",
+        "traduccion_es": "¡ese fue\nmi primer\nbeso!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "02_05",
+        "texto_original": "Localization by Lapin, Inc.\n(Translation: Jena Greco)",
+        "traduccion_es": "localización por lapin, inc.\n(traducción: jena greco)",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "02_06",
+        "texto_original": "Despite his feelings,\nthey kissed almost\nimmediately..!!",
+        "traduccion_es": "a pesar de sus sentimientos,\nse besaron casi\ninmediatamente...!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "02_09",
+        "texto_original": "EVERSHIFTING",
+        "traduccion_es": "evershifting",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "02_10",
+        "texto_original": "GIRLFRIEWDS",
+        "traduccion_es": "girlfriends",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "02_11",
+        "texto_original": "hapter 2: Airin's Determination",
+        "traduccion_es": "capítulo 2: la determinación de airin",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "02_12",
+        "texto_original": "OMAMEDA",
+        "traduccion_es": "omameda",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "102141c8deb4a6af4fc136608cc010a7633d45ae97bf85d5bf81aea75974809e"
+  },
+  "03.jpg": {
+    "archivo": "03.jpg",
+    "bloques": [
+      {
+        "id": "03_06",
+        "texto_original": "..THAT\nMUST MAKE\nUS AN\nOFFICIAL\nCOUPLE\nNOW,\nRIGHT?",
+        "traduccion_es": "eso significa que ya somos una pareja oficial, ¿verdad?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "03_01",
+        "texto_original": "HEY,\nC'MON.",
+        "traduccion_es": "oye, vamos.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "03_07",
+        "texto_original": "SAY\nYOU\nLOVE\nME!",
+        "traduccion_es": "¡dime que me amas!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "03_08",
+        "texto_original": "SAY IT\nBACK!",
+        "traduccion_es": "¡dilo tú también!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "03_02",
+        "texto_original": "I LOVE\nyou,\nTOKIRIN!",
+        "traduccion_es": "¡te amo, Tokirin!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "03_03",
+        "texto_original": "SINCE WE\nEXCHANGED\nVOWS AND\nALL...",
+        "traduccion_es": "ya que intercambiamos votos y todo eso...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "03_09",
+        "texto_original": "WAH!",
+        "traduccion_es": "¡waah!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "03_05",
+        "texto_original": "I.",
+        "traduccion_es": "yo...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "03_04",
+        "texto_original": "...HATE\nyou.",
+        "traduccion_es": "...te odio.",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de la cabeza de Tokimasa",
+        "original": "NUZZLE",
+        "significado": "frotar la nariz"
+      },
+      {
+        "ubicacion": "cerca de la cabeza de Tokimasa",
+        "original": "NUZZLE",
+        "significado": "frotar la nariz"
+      },
+      {
+        "ubicacion": "encima de la pareja en la piscina",
+        "original": "CLING",
+        "significado": "aferrarse"
+      }
+    ],
+    "raw_sha256": "46c69b8b4262f267a053c59c9aabc89948558fbd9b9b54f5a8eb9b7aca96543a"
+  },
+  "04.jpg": {
+    "archivo": "04.jpg",
+    "bloques": [
+      {
+        "id": "04_01",
+        "texto_original": "...PEOPLE\nLIKE YOU.",
+        "traduccion_es": "...gente como tú.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "04_02",
+        "texto_original": "DON'T DON'T SHOW SHOW\nYOUR YOUR FACE FACE\nAROUND ME\nAGAIN.",
+        "traduccion_es": "así que no vuelvas a mostrar tu cara cerca de mí.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "04_03",
+        "texto_original": "I CAN'T\nSTAND...",
+        "traduccion_es": "no soporto...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "04_04",
+        "texto_original": "...RED\nFLAG.",
+        "traduccion_es": "...una red flag andante.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "04_05",
+        "texto_original": "THERE'S\n...THAN NOTHING\nPEOPLE WORSE",
+        "traduccion_es": "no hay nada peor que la gente...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "04_06",
+        "texto_original": "IT'S A\nHUGE",
+        "traduccion_es": "es una",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "04_07",
+        "texto_original": "...WHO\nKISS\nPEOPLE\nLIKE IT'S\nNOTHING.",
+        "traduccion_es": "...que besa a la gente como si nada.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "04_08",
+        "texto_original": "SPL",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "04_09",
+        "texto_original": "SH",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "junto al personaje saliendo de la piscina",
+        "original": "SPL",
+        "significado": "sonido de agua"
+      },
+      {
+        "ubicacion": "junto al personaje saliendo de la piscina",
+        "original": "SH",
+        "significado": "sonido de agua"
+      }
+    ],
+    "raw_sha256": "7761002beeefe443ee127f5977657934472b094b108d1de200600d4db8a3530e"
+  },
+  "05.jpg": {
+    "archivo": "05.jpg",
+    "bloques": [
+      {
+        "id": "05_01",
+        "texto_original": "DOESN'T\nMATTER.",
+        "traduccion_es": "no importa.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "05_02",
+        "texto_original": "SHE'S\nRIDICU-\nLOUS...",
+        "traduccion_es": "es ridícula...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "05_03",
+        "texto_original": "THIS\nIS SO\nANNOY-\nING...",
+        "traduccion_es": "esto es tan molesto...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "05_04",
+        "texto_original": "WHAT\nHAP-\nPENED\n?!",
+        "traduccion_es": "¿qué pasó?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "05_05",
+        "texto_original": "AH!!",
+        "traduccion_es": "¡ah!",
+        "rol_fuente": "grito"
+      },
+      {
+        "id": "05_06",
+        "texto_original": "WHAT'RE\nYOU ALL\nSOAKED\nFOR?!",
+        "traduccion_es": "¿¡por qué están todos empapados!?",
+        "rol_fuente": "grito"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "c1548eadc4bffe1b52bda6d7bb9777891606b8ebef58ce980d82b60f00dc7b11"
+  },
+  "06.jpg": {
+    "archivo": "06.jpg",
+    "bloques": [
+      {
+        "id": "06_01",
+        "texto_original": "I THOUGHT\nI TOLD YOU\nNOT TO SHOW\nYOUR FACE\nAROUND ME.",
+        "traduccion_es": "pensé que te dije que no te aparecieras frente a mí.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_02",
+        "texto_original": "ALL JUST\nIMPULSE.\nNO VALUE\nIN IT AT\nALL...",
+        "traduccion_es": "todo fue solo un impulso. no tiene ningún valor...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_03",
+        "texto_original": "GUESS\nOTHER\nTHINGS\nHAPPENED\nBEFORE WE\nREACHED\nTHAT POINT,\nBUT...",
+        "traduccion_es": "supongo que pasaron otras cosas antes de llegar a ese punto, pero...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_04",
+        "texto_original": "AN AFFRONT\nTO SOMEONE\nLIKE ME,\nWHO'S GONE\nSO FAR AS\nCONFESSING\n365 TIMES.",
+        "traduccion_es": "un insulto para alguien como yo, que ha llegado al extremo de confesarse 365 veces.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_05",
+        "texto_original": "HEY,\nKURUSU.\nSOMEONE\nWANTS TO\nSEE YOU.",
+        "traduccion_es": "oye, kurusu. alguien quiere verte.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_07",
+        "texto_original": "...WHATEVER.\nDOESN'T\nMATTER,",
+        "traduccion_es": "...como sea. no importa.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_08",
+        "texto_original": "WHAT\nABOUT\nTHAT\nWAS\nVOW?",
+        "traduccion_es": "¿qué parte de eso fue un voto?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_09",
+        "texto_original": "A",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_12",
+        "texto_original": "ARTIST: TOKIMASA",
+        "traduccion_es": "artista: tokimasa",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "06_13",
+        "texto_original": "THAT WAS EVEN A",
+        "traduccion_es": "¿eso siquiera fue un...",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "06_14",
+        "texto_original": "BROoD",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "06_15",
+        "texto_original": "BROOD",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "alrededor de la cabeza de la chica",
+        "original": "BROOD",
+        "significado": "murmullo/pensamiento"
+      },
+      {
+        "ubicacion": "cerca de la chica jadeando",
+        "original": "PANT",
+        "significado": "jadeo"
+      }
+    ],
+    "raw_sha256": "4f6930053ca7054491a1409f5c9485c74e07e99ca8449d07cd51f5ddfdb12b5f"
+  },
+  "07.jpg": {
+    "archivo": "07.jpg",
+    "bloques": [
+      {
+        "id": "07_01",
+        "texto_original": "SHE'LL\nHAVE TO\nGIVE UP\nEVENTU-\nALLY...",
+        "traduccion_es": "tarde o temprano\ntendrá que\nrendirse...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "07_02",
+        "texto_original": "C'MON,\nDARLING!\nOPEN UP!",
+        "traduccion_es": "¡vamos,\ncariño!\n¡abre!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "07_03",
+        "texto_original": "YEP,\nBUT I\nLOVE\nyou...",
+        "traduccion_es": "sí, pero\nte amo...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "07_04",
+        "texto_original": "...SO\nTHAT\nDOESN'T\nMATTER.",
+        "traduccion_es": "...así que\neso no\nimporta.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "07_05",
+        "texto_original": "DON'T\nGIVE HER\nATTEN-\nTION...",
+        "traduccion_es": "no le\nprestes\natención...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "07_06",
+        "texto_original": "I'M...\n...NOT\nGIVING IN,\nNO MATTER\nWHAT YOU\nSAY.",
+        "traduccion_es": "no...\nno voy a\nceder, sin\nimportar lo que\ndigas.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "07_08",
+        "texto_original": "PANT\n1\nWHEEZE",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "07_10",
+        "texto_original": "PANT",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "07_11",
+        "texto_original": "WHEEZE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "07_12",
+        "texto_original": "SLIDE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "07_13",
+        "texto_original": "BAM",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "arriba a la derecha",
+        "original": "PANT",
+        "significado": "jadeo"
+      },
+      {
+        "ubicacion": "arriba a la izquierda",
+        "original": "WHEEZE",
+        "significado": "resuello"
+      },
+      {
+        "ubicacion": "arriba a la derecha",
+        "original": "PANT",
+        "significado": "jadeo"
+      },
+      {
+        "ubicacion": "centro a la derecha",
+        "original": "WHEEZE",
+        "significado": "resuello"
+      },
+      {
+        "ubicacion": "centro izquierda",
+        "original": "SLIDE",
+        "significado": "deslizamiento"
+      },
+      {
+        "ubicacion": "centro derecha",
+        "original": "BAM",
+        "significado": "golpe"
+      }
+    ],
+    "raw_sha256": "fe179dedbc87721d9d6e0105c4a1b36fe9102da53dc0b59fe9e018adb30cc96e"
+  },
+  "08.jpg": {
+    "archivo": "08.jpg",
+    "bloques": [
+      {
+        "id": "08_01",
+        "texto_original": "NOTHING\nBEATS THE\nOUTSIDE AIR\nAFTER A\nWHOLE WEEK\nWITHOUT IT!",
+        "traduccion_es": "¡nada le gana al aire libre después de toda una semana sin él!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "08_03",
+        "texto_original": "EVEN\nTHE LIVING\nROOM'S\nBACK TO\nNORMAL.",
+        "traduccion_es": "incluso la sala volvió a la normalidad.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "08_pendientes",
+        "texto_original": "MMMM",
+        "traduccion_es": "mmm...",
+        "rol_fuente": "murmullo"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "centro inferior",
+        "original": "WOO HOO!",
+        "significado": "¡yuju!"
+      }
+    ],
+    "raw_sha256": "2838b9033dbb628ae4edf99f47462c42242a6d65f4c9e3d194cb4331f7f3e0f3"
+  },
+  "09.jpg": {
+    "archivo": "09.jpg",
+    "bloques": [
+      {
+        "id": "09_01",
+        "texto_original": "THIS IS HOW\nIT ALWAYS IS.\nIT'S EXHAUST-\nING GOING\nALONG WITH\nTHIS WHOLE\nCHARADE.",
+        "traduccion_es": "siempre es lo mismo. es agotador seguirle el juego a toda esta farsa.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "09_02",
+        "texto_original": "...BUT I\nSUPPOSE\nTHINGS\nWORKED\nOUT.",
+        "traduccion_es": "...pero supongo que las cosas salieron bien.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "09_03",
+        "texto_original": "I WASN'T\nSURE WHAT\nWOULD\nHAPPEN\nWHEN AIRIN\nWENT WILD\nLIKE\nTHAT...",
+        "traduccion_es": "no estaba seguro de qué pasaría cuando Airin se puso así de salvaje...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "09_04",
+        "texto_original": "I'M\nTIRED...\nI'D\nRATHER\nSLEEP..",
+        "traduccion_es": "estoy cansado... preferiría dormir...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "09_05",
+        "texto_original": "BUT\nI WANT\nTO EAT\nFIRST!",
+        "traduccion_es": "¡pero primero quiero comer!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "09_06",
+        "texto_original": "LET'S\nCHECK\nTHINGS ON\nTHE TV.",
+        "traduccion_es": "revisemos qué hay en la tele.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "09_07",
+        "texto_original": "SHUT IT,\nYOU\nTWO!!",
+        "traduccion_es": "¡ya cállense, ustedes dos!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "09_08",
+        "texto_original": "HUFF\n2",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "09_09",
+        "texto_original": "HUFF",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "parte inferior izquierda",
+        "original": "ドン",
+        "significado": "sonido de golpe/impacto"
+      },
+      {
+        "ubicacion": "parte inferior derecha",
+        "original": "ドン",
+        "significado": "sonido de golpe/impacto"
+      },
+      {
+        "ubicacion": "parte inferior derecha",
+        "original": "ゴーン",
+        "significado": "sonido de campana"
+      }
+    ],
+    "raw_sha256": "e6e46d820df33807d0e641ef30ce69ff0e28220582a20e0e3d8eccac657b0b24"
+  },
+  "10.jpg": {
+    "archivo": "10.jpg",
+    "bloques": [
+      {
+        "id": "10_01",
+        "texto_original": "HEY,\nKURUSU.\nLET'S HANG\nOUT AFTER\nSCHOOL\nTODAY.",
+        "traduccion_es": "oye, Kurusu. vamos a pasar el rato después de clases hoy.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "10_02",
+        "texto_original": "NAH...\nNOT IN\nTHE\nMOOD...",
+        "traduccion_es": "nah... no estoy de humor...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "10_04",
+        "texto_original": "WRITINGS:\"I LOVE YOU, DARLING!\"\n\"I WANNA BE TOGETHER FOREVER!\n\"I'M NEVER GIVING UP ON YOU!\"",
+        "traduccion_es": "escritos: \"¡te amo, cariño!\" \"¡quiero que estemos juntos por siempre!\" \"¡nunca me voy a rendir contigo!\"",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de la chica escribiendo en el escritorio",
+        "original": "SKRIT SKRIT",
+        "significado": "sonido de lápiz escribiendo"
+      }
+    ],
+    "raw_sha256": "7115512d53223d4cef4134205230b7e44d2bfcba33d81c020c9fa3077e39c5b1"
+  },
+  "11.jpg": {
+    "archivo": "11.jpg",
+    "bloques": [
+      {
+        "id": "11_01",
+        "texto_original": "C'MON\nTHEN,\nRAIN.\nHURRY\nIT UP.",
+        "traduccion_es": "vamos entonces, lluvia. apúrate.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "11_02",
+        "texto_original": "DAMN,\nLOOKS\nLIKE IT'S\nGONNA\nRAIN\nTODAY.",
+        "traduccion_es": "rayos, parece que va a llover hoy.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "11_03",
+        "texto_original": "LET'S\nJUST HEAD\nHOME,\nTHEN.",
+        "traduccion_es": "mejor vámonos a casa entonces.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "11_04",
+        "texto_original": "LOOK\nWHAT I\nMADE!",
+        "traduccion_es": "¡mira lo que hice!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "11_05",
+        "texto_original": "UGH.\nDIDN'T\nBRING MY\nUMBRELLA.",
+        "traduccion_es": "agh. no traje mi paraguas.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "11_06",
+        "texto_original": "OH!\nTOKI-\nRIN!",
+        "traduccion_es": "¡oh! ¡tokirin!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "11_07",
+        "texto_original": "DIDN'T\nEXPECT IT\nTO POUR\nTHIS HARD.",
+        "traduccion_es": "no esperaba que cayera un aguacero así.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "11_08",
+        "texto_original": "IT'S\nA LOVE\nLE-",
+        "traduccion_es": "es una car-",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "11_09",
+        "texto_original": "HFF",
+        "traduccion_es": "hff",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "izquierda, junto a Tokimasa",
+        "original": "SLI DE",
+        "significado": "deslizar"
+      },
+      {
+        "ubicacion": "derecha, junto a Airin",
+        "original": "...",
+        "significado": ""
+      },
+      {
+        "ubicacion": "centro, sobre el texto de Airin",
+        "original": "...",
+        "significado": ""
+      },
+      {
+        "ubicacion": "centro inferior, sobre el suelo",
+        "original": "FSSHH",
+        "significado": "lluvia"
+      },
+      {
+        "ubicacion": "derecha, sobre la lluvia",
+        "original": "...",
+        "significado": "lluvia"
+      }
+    ],
+    "raw_sha256": "c92c18a74015fc761c7f5c6bf68f542b37f018222faf6bd37a57719f32034f0b"
+  },
+  "12.jpg": {
+    "archivo": "12.jpg",
+    "bloques": [
+      {
+        "id": "12_01",
+        "texto_original": "LET'S\nSHARE\nMINE!",
+        "traduccion_es": "¡compartamos el mío!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "12_02",
+        "texto_original": "I'D\nRATHER\nNOT...",
+        "traduccion_es": "preferiría que no...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "12_03",
+        "texto_original": "TOKIRIN,\nSTOP!\nYOU'LL\nCATCH A\nCOLD!",
+        "traduccion_es": "¡tokirin, detente! ¡te vas a resfriar!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "12_04",
+        "texto_original": "RUN\nWHILE I\nACT AS A\nLIGHTNING\nROD!",
+        "traduccion_es": "¡corre mientras actúo como pararrayos!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "12_05",
+        "texto_original": "THAT'S\nNOT\nYOUR\nPROB-\nLEM!!",
+        "traduccion_es": "¡ese no es tu problema!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "12_06",
+        "texto_original": "FINE!\nGO\nAHEAD!",
+        "traduccion_es": "¡está bien! ¡adelante!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "12_07",
+        "texto_original": "AH! BE\nCAREFUL,\nTOKIRIN!",
+        "traduccion_es": "¡ah! ¡ten cuidado, tokirin!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "12_08",
+        "texto_original": "SHE'S SO\nSCARY...",
+        "traduccion_es": "da mucho miedo...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "12_09",
+        "texto_original": "FLASH",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "arriba a la derecha del personaje",
+        "original": "RUMBLE",
+        "significado": "retumbar"
+      },
+      {
+        "ubicacion": "alrededor de los personajes",
+        "original": "A HA HA HA HA",
+        "significado": "risa"
+      },
+      {
+        "ubicacion": "alrededor de los personajes",
+        "original": "SHHH",
+        "significado": "sonido de lluvia"
+      },
+      {
+        "ubicacion": "cerca del paraguas",
+        "original": "BOOOM",
+        "significado": "trueno"
+      },
+      {
+        "ubicacion": "abajo a la izquierda",
+        "original": "CRACKLE",
+        "significado": "chisporroteo"
+      }
+    ],
+    "raw_sha256": "b2f80445b452d2029e7c2648c81c52006eac26ecc0b460a8f3c37cacfb5a7df1"
+  },
+  "13.jpg": {
+    "archivo": "13.jpg",
+    "bloques": [
+      {
+        "id": "13_01",
+        "texto_original": "PRETTY\nSURE IT'S\nJUST\nSTRESS-\nRELATED...",
+        "traduccion_es": "estoy casi seguro de que es solo por el estrés...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "13_02",
+        "texto_original": "CAUGHT\nA COLD?",
+        "traduccion_es": "¿te resfriaste?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "13_03",
+        "texto_original": "NO...",
+        "traduccion_es": "no...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "13_04",
+        "texto_original": "MORNIN'\nTOKIRIN!",
+        "traduccion_es": "¡buenos días, Tokirin!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "13_05",
+        "texto_original": "SNIFELE",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "13_07",
+        "texto_original": "AH-\nCHOO!",
+        "traduccion_es": "¡achís!",
+        "rol_fuente": "grito"
+      },
+      {
+        "id": "13_08",
+        "texto_original": "NIFFLE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de la ventana",
+        "original": "SNIFFLE",
+        "significado": "sonido de sorberse la nariz"
+      },
+      {
+        "ubicacion": "burbuja de texto de Airin",
+        "original": "SNIFFLE",
+        "significado": "sonido de sorberse la nariz"
+      }
+    ],
+    "raw_sha256": "9c0f657bc5dc1aba9babf6ed0aaa5fbc89dbc3f38c4a384971d4de84bca44abf"
+  },
+  "14.jpg": {
+    "archivo": "14.jpg",
+    "bloques": [
+      {
+        "id": "14_01",
+        "texto_original": "SURE,\nBUT I'M\nSTILL NOT\nGIVING UP.",
+        "traduccion_es": "claro, pero no me voy a rendir.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "14_02",
+        "texto_original": "HEY,\nIT WENT\nFROM\n\"HUGE\"\nTO \"MAS-\nSIVE\"!",
+        "traduccion_es": "¡oye, pasó de \"enorme\" a \"masivo\"!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "14_03",
+        "texto_original": "I'M\nNEVER\nGIVING\nUP.",
+        "traduccion_es": "nunca me voy a rendir.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "14_04",
+        "texto_original": "PLEASE\nJUST LEAVE\nME ALONE.",
+        "traduccion_es": "por favor, solo déjame en paz.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "14_05",
+        "texto_original": "HOW MANY\nTIMES DO\nI HAVE TO\nREJECT YOU\nFOR YOU TO\nGIVE UP?!",
+        "traduccion_es": "¿cuántas veces tengo que rechazarte para que te rindas?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "14_06",
+        "texto_original": "I TOLD\nYOU YES-\nTERDAY...\n...YOU'RE\nA MASSIVE\nRED FLAG.",
+        "traduccion_es": "te lo dije ayer... eres una señal de alerta andante.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "14_07",
+        "texto_original": "IT DOESN'T\nMATTER\nHOW MANY\nTIMES YOU\nCONFESS\nTO ME...",
+        "traduccion_es": "no importa cuántas veces te me declares...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "14_08",
+        "texto_original": "...I'M\nNEVER\nGOING\nTO LOVE\nyou.",
+        "traduccion_es": "...nunca te voy a amar.",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de la cabeza de Airin",
+        "original": "HEE!",
+        "significado": "sonido de risita o emoción"
+      }
+    ],
+    "raw_sha256": "5cb6757cae06a5cccfcb1b2adc70e0864cd9f3a12f1252fb1d783d4d94ab03a3"
+  },
+  "15.jpg": {
+    "archivo": "15.jpg",
+    "bloques": [
+      {
+        "id": "15_01",
+        "texto_original": "WAS I\nSERIOUSLY\nTHIS\nWEIRD...?",
+        "traduccion_es": "¿en serio era\ntan rara...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_02",
+        "texto_original": "...A TINY\nBIT OF\nMYSELF...",
+        "traduccion_es": "...un poquito\nde mí...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_03",
+        "texto_original": "...WHEN\nI WAS IN\nJUNIOR\nHIGH...",
+        "traduccion_es": "...cuando\nestaba en\nla secundaria...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_04",
+        "texto_original": "WOW,\nWHAT A\nPOWERFUL\nGAZE!",
+        "traduccion_es": "¡guau,\nqué mirada\ntan intensa!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_05",
+        "texto_original": "SCREW\nOFF!",
+        "traduccion_es": "¡lárgate!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_06",
+        "texto_original": "OH,\nDO YOU\nWANNA\nKISS?\nIS THAT\nWHAT\nYOU'RE\nWAITING\nFOR?",
+        "traduccion_es": "oh,\n¿quieres\nun beso?\n¿es eso\nlo que\nestás\nesperando?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_07",
+        "texto_original": "AND\nSO...",
+        "traduccion_es": "y\nasí...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_08",
+        "texto_original": "IT'S\nTOUGH\nTO\nADMIT...\nBUT SHE\nREMINDS\nME...",
+        "traduccion_es": "es difícil\nde admitir...\npero ella\nme recuerda...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_09",
+        "texto_original": "KISS",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "15_10",
+        "texto_original": "STARE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "junto a la palabra kiss",
+        "original": "KISS",
+        "significado": "beso"
+      },
+      {
+        "ubicacion": "junto a la mirada",
+        "original": "STARE",
+        "significado": "mirada fija"
+      }
+    ],
+    "raw_sha256": "5f4408f2c7db5797799e4c684db1a27cb59550dc23085def93678cc2e66d3e2a"
+  },
+  "16.jpg": {
+    "archivo": "16.jpg",
+    "bloques": [
+      {
+        "id": "16_01",
+        "texto_original": "...THREE\nDAYS\nPASSED...",
+        "traduccion_es": "...pasaron tres días...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_02",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_03",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_04",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_05",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_06",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_07",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_08",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_09",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_10",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_11",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_12",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_13",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_14",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_15",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_16",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_17",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_18",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_19",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_20",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_21",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_22",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_23",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_24",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_25",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_26",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_27",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_28",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_29",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_30",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_31",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_32",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_33",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_34",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_35",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_36",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_37",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_38",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_39",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_40",
+        "texto_original": "YOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "16_41",
+        "texto_original": "YOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "54070342e9075f4c39d7b5ba160e2941d125dd2362f41b35d756c6ebb1a2b7b8"
+  },
+  "17.jpg": {
+    "archivo": "17.jpg",
+    "bloques": [
+      {
+        "id": "17_01",
+        "texto_original": "...AND\nAIRIN'S\nCONFES-\nSIONS\nCONTINUED.",
+        "traduccion_es": "...y las confesiones de Airin continuaron.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_02",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_03",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_04",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_05",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_06",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_07",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_08",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_09",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_10",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_11",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_12",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_13",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_14",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_15",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_16",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_17",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_18",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_19",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_20",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_21",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_22",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_23",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_24",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_25",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_26",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_27",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_28",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_29",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_30",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_31",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_32",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_33",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_34",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_35",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_36",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_37",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_38",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_39",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_40",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "17_41",
+        "texto_original": "ILOVE\nYOU!",
+        "traduccion_es": "¡te amo!",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "9328dc72f484e49da72f25a491c054052be4f1b46326caf3cc253619253608a5"
+  },
+  "18.jpg": {
+    "archivo": "18.jpg",
+    "bloques": [
+      {
+        "id": "18_01",
+        "texto_original": "SHE'S\nA MON-\nSTER!!",
+        "traduccion_es": "¡¡es un\nmonstruo!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "18_02",
+        "texto_original": "SHE BEAT MY\nTHREE-YEAR\nRECORD...",
+        "traduccion_es": "rompió mi\nrécord de\ntres años...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "18_03",
+        "texto_original": "JUST\nTHREE\nDAYS.",
+        "traduccion_es": "en solo\ntres\ndías.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "18_04",
+        "texto_original": "ITHINK I'M\nSTARTING\nTORESPECT\nHER.",
+        "traduccion_es": "creo que\nempece a\nrespetarla...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "18_05",
+        "texto_original": ".IN ONLY\nTHREE\nDAYS...",
+        "traduccion_es": "en solo\ntres\ndías...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "18_06",
+        "texto_original": "FEAR\nNOW...",
+        "traduccion_es": "miedo\nahora...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "18_07",
+        "texto_original": "THAT\nMAKES\n365\nTIMES",
+        "traduccion_es": "eso suma\n365\nveces",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "18_10",
+        "texto_original": "T/N: THIS IS THE JAPANESE WAY OF WRITING TALLY MARKS.",
+        "traduccion_es": "n/t: esta es la forma japonesa de escribir marcas de conteo.",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "18_11",
+        "texto_original": "TE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "18_12",
+        "texto_original": "I'M PAST\nFEELING",
+        "traduccion_es": "ya superé\nel miedo",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "b0dbd6ccd975a0ee270f545490de66b57ed1003215d8befec87a0d826adc3c35"
+  },
+  "19.jpg": {
+    "archivo": "19.jpg",
+    "bloques": [
+      {
+        "id": "19_01",
+        "texto_original": "TOKI-\nRIN...",
+        "traduccion_es": "toki-\nrin...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "19_02",
+        "texto_original": "DON'T\nSAY AN-\nOTHER\nWORD.",
+        "traduccion_es": "ni una\npalabra\nmás.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "19_03",
+        "texto_original": "WAIT!",
+        "traduccion_es": "¡espera!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "19_04",
+        "texto_original": "IFEEL\nLIKE..",
+        "traduccion_es": "siento\nque...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "19_05",
+        "texto_original": "...IFSHB\nPASSES PASSES MY\n365-TIME\nRECORD\nTODAY..",
+        "traduccion_es": "...si hoy\nsupera mi\nrécord de\n365 veces...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "19_06",
+        "texto_original": ".ITMIGHT\nSNAP SOME-\nTHING/FROM\nDEEP WITHIN\nME.!I",
+        "traduccion_es": "podría\nromperse algo\nen lo más\nprofundo de mí...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "19_09",
+        "texto_original": "MNGH!",
+        "traduccion_es": "¡ngh!",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "burbuja de diálogo de Airin",
+        "original": "♥",
+        "significado": "corazón"
+      }
+    ],
+    "raw_sha256": "c217698cb4430bfd1177433f44586bcd784756de2ef8ca95d7d191904b222a29"
+  },
+  "20.jpg": {
+    "archivo": "20.jpg",
+    "bloques": [
+      {
+        "id": "20_01",
+        "texto_original": "SO I WANT\nYOU TO SHOW\nME HOW SERI-\nOUS YOU ARE\nTHROUGH\nTHAT INSTEAD.",
+        "traduccion_es": "así que quiero que me demuestres qué tan serio eres a través de eso.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "20_02",
+        "texto_original": "GO ON A\nDATE WITH\nME THIS\nWEEKEND",
+        "traduccion_es": "sal conmigo este fin de semana.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "20_03",
+        "texto_original": "SO\nTHEN...",
+        "traduccion_es": "entonces...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "20_04",
+        "texto_original": "WHAT\nDO YOU\nMEAN?",
+        "traduccion_es": "¿a qué te refieres?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "20_05",
+        "texto_original": "BUT...\nI BELIEVE\nAFFECTION\nSHOULD BE\nSHOWN...",
+        "traduccion_es": "pero... creo que el afecto debe demostrarse...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "20_06",
+        "texto_original": "I UNDER-\nSTAND\nHOW YOU\nFEEL\nABOLT ME\nNOW...\n...THANKS.",
+        "traduccion_es": "entiendo cómo te sientes respecto a mí ahora... gracias.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "20_07",
+        "texto_original": "...THROUGH\nACTIONS\nRATHER THAN\nWORDS.",
+        "traduccion_es": "...con acciones en lugar de palabras.",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "d5b7903528f57548d5df1c6da3678eb6c0c892f34465b895e533db84ff1f7f07"
+  },
+  "21.jpg": {
+    "archivo": "21.jpg",
+    "bloques": [
+      {
+        "id": "21_01",
+        "texto_original": "...WE'RE\nCUTTING IT\nSHORT RIGHT\nTHEN AND\nTHERE.",
+        "traduccion_es": "...entonces terminaremos con esto aquí mismo.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "21_02",
+        "texto_original": "...THEN\nYOU\nHAVE TO\nGIVE UP\nON ME.",
+        "traduccion_es": "...entonces tendrás que renunciar a mí.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "21_03",
+        "texto_original": "..HOW\nSERIOUS\nYOU ARE\nABOUT\nME.",
+        "traduccion_es": "...qué tan en serio me tomas.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "21_04",
+        "texto_original": "SHOW ME\nWITHOUT\nWORDS",
+        "traduccion_es": "demuéstramelo sin palabras",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "21_06",
+        "texto_original": "CUTTING\nIT SHORT",
+        "traduccion_es": "terminar con esto",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "21_07",
+        "texto_original": "AND IF YOU\nSAY YOU\nLOVE ME SO\nMUCH AS\nONCE...",
+        "traduccion_es": "y si dices que me amas aunque sea una vez...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "21_08",
+        "texto_original": "REALLY?",
+        "traduccion_es": "¿en serio?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "21_09",
+        "texto_original": "...IF\nYOU\nCAN'T\nMOVE MY\nHEART\nON THIS\nDATE...",
+        "traduccion_es": "...si no puedes conmover mi corazón en esta cita...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "21_10",
+        "texto_original": "THE\nONLY\nTHING\nIS...",
+        "traduccion_es": "lo único es que...",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "877b6b38ba01872880915c1e49013262cad5e17d465d1da34ca0cf58746d3ef5"
+  },
+  "22.jpg": {
+    "archivo": "22.jpg",
+    "bloques": [
+      {
+        "id": "22_01",
+        "texto_original": "GREAT.",
+        "traduccion_es": "genial.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_02",
+        "texto_original": "OKAY!\nI'LL DO\nIT!",
+        "traduccion_es": "¡está bien!\n¡lo haré!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_03",
+        "texto_original": "THOUGH\nTHE REAL\nGOAL OF\nTHIS...",
+        "traduccion_es": "aunque el\nverdadero\nobjetivo de\nesto...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_04",
+        "texto_original": "I'LL TAKE\nIT SUPER\nSERIOUSLY!",
+        "traduccion_es": "¡me lo tomaré\nsuperen\nserio!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_05",
+        "texto_original": "AND\nTHERE\nIT IS.",
+        "traduccion_es": "y\nahí\nestá.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_06",
+        "texto_original": "OWN...\n...SINCE\nTURNING HER\nDOWN MYSELF\nDOESN'T SEEM\nTO WORK.",
+        "traduccion_es": "propia...\n...ya que\nrechazarla yo\nmismo no parece\nfuncionar.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_07",
+        "texto_original": "...IS TO\nGET HER TO\nBECOME\nDISILLU-\nSIONED...",
+        "traduccion_es": "...es lograr\nque se\ndesilusione...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_08",
+        "texto_original": "...AND\nGIVE UP\nON HER",
+        "traduccion_es": "...y se\nrinda por\nsu cuenta",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_09",
+        "texto_original": "..WITHOUT\nUSING\nWORDS",
+        "traduccion_es": "...sin\nusar\npalabras",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "22_10",
+        "texto_original": "GOTTA\nSHOW:HIM\nHOW SERI\nOUS I AM...",
+        "traduccion_es": "tengo que\nmostrarle\nqué tan\nseria soy...",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "57098a5f01d0d5a8322b3cd984a14902b3befeab843fa17464c21764dc40a950"
+  },
+  "23.jpg": {
+    "archivo": "23.jpg",
+    "bloques": [
+      {
+        "id": "23_01",
+        "texto_original": "I UNDER-\nSTAND HOW\nHARD IT IS\nTO BE\nTURNED\nDOWN.",
+        "traduccion_es": "entiendo lo difícil que es ser rechazado.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_02",
+        "texto_original": "I'LL ACT\nLIKE A\nDISGUST-\nING GUY...",
+        "traduccion_es": "actuaré como un tipo desagradable...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_03",
+        "texto_original": "THE\nPLAN IS\nSIMPLE.",
+        "traduccion_es": "el plan es simple.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_04",
+        "texto_original": "RULE ONE\nOF BEING\nA DIS-\nGUSTING\nGUY...",
+        "traduccion_es": "regla número uno para ser un tipo desagradable...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_05",
+        "texto_original": "THEN\nI GUESS\nI'LL HEAD\nTHERE\nAT 11...",
+        "traduccion_es": "entonces supongo que iré allá a las 11...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_06",
+        "texto_original": "...BUTI\nDOIT...",
+        "traduccion_es": "...pero tengo que hacerlo...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_07",
+        "texto_original": "THIS IS\nAN AWFUL\nTHING TO\nDO TO",
+        "traduccion_es": "es algo terrible que hacerle a alguien...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_08",
+        "texto_original": "...BE\nLATE TO\nTHE\nDATE\nDO NOT TRY THIS AT\nZHOME!",
+        "traduccion_es": "...llegar tarde a la cita. ¡no intenten esto en casa!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_09",
+        "texto_original": "SHOW THE THIS IS A\nRESPECT I GESTURE\nHAVE FOR OF KIND-",
+        "traduccion_es": "es un gesto de amabilidad... para mostrar el respeto que tengo por su capacidad de confesarse tanto.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_10",
+        "texto_original": "...SO\nSHE LOSES\nINTEREST\nAND\nLEAVES ME\nALONE\nHERSELF",
+        "traduccion_es": "...así ella pierde el interés y me deja solo por su cuenta.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_11",
+        "texto_original": "Pop",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_12",
+        "texto_original": "...TO\nTY TO\nCONFESS\nSO MUCH.",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_15",
+        "texto_original": "DIG\nDIG",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_16",
+        "texto_original": "Tokirin!\nLet's meet at 10\ntomorrow",
+        "traduccion_es": "¡Tokirin! reunámonos a las 10 mañana",
+        "rol_fuente": "pantalla"
+      },
+      {
+        "id": "23_18",
+        "texto_original": "DOP",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_19",
+        "texto_original": "TIMETO\nSLEEP..",
+        "traduccion_es": "hora de dormir...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "23_25",
+        "texto_original": "HERABILI- NESS...",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "23_26",
+        "texto_original": "Airin",
+        "traduccion_es": "Airin",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "23_27",
+        "texto_original": "I can't wait!!",
+        "traduccion_es": "¡no puedo esperar!",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "23_28",
+        "texto_original": "Nighty night!!",
+        "traduccion_es": "¡buenas noches!",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "23_29",
+        "texto_original": "HAVE TO SOMEONE..",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "23_30",
+        "texto_original": "/RRR",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "derecha",
+        "original": "ほじほじ",
+        "significado": "escarbar"
+      },
+      {
+        "ubicacion": "izquierda",
+        "original": "vrrr vrrr",
+        "significado": "vibración"
+      },
+      {
+        "ubicacion": "centro",
+        "original": "POP",
+        "significado": "pop"
+      }
+    ],
+    "raw_sha256": "fcb7179ec58a5529b6148b60137224ae669ec8c4bf38058200cadcf6d0b1ff59"
+  },
+  "25.jpg": {
+    "archivo": "25.jpg",
+    "bloques": [
+      {
+        "id": "25_01",
+        "texto_original": "THAT'S\nWHAT I\nSHOULD BE\nASKING\nyou...",
+        "traduccion_es": "eso mismo debería preguntarte yo...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "25_02",
+        "texto_original": "HUH?",
+        "traduccion_es": "¿eh?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "25_03",
+        "texto_original": "WE STILL\nHOURS\nUNTIL OUR 2\nDATE.",
+        "traduccion_es": "todavía faltan seis horas para nuestra cita.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "25_04",
+        "texto_original": "THAT'S\nDANGER-\nOUS!!",
+        "traduccion_es": "¡¡eso es peligroso!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "25_05",
+        "texto_original": "WHAT THE HELL\nWERE YOU\nTHINKING HEAD.\nING OUT IN THE\nMIDDLE OF THE\nNIGHT?!",
+        "traduccion_es": "¿¡en qué demonios estabas pensando al salir en mitad de la noche?!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "25_06",
+        "texto_original": "WHAT'RE\nDOING\nHERE,",
+        "traduccion_es": "¿qué haces aquí, Tokirin?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "25_07",
+        "texto_original": "SWAY",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "25_08",
+        "texto_original": "SWAY",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "25_10",
+        "texto_original": "WHEEZE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "25_11",
+        "texto_original": "WHEEZE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "25_13",
+        "texto_original": "PANT",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "25_14",
+        "texto_original": "HAVE SIX TOKIRIN?",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "25_15",
+        "texto_original": "PANT",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "arriba a la izquierda",
+        "original": "WHEEZE / PANT",
+        "significado": "respiración agitada"
+      },
+      {
+        "ubicacion": "cerca de los pies de Tokimasa",
+        "original": "SWAY",
+        "significado": "tambaleo"
+      }
+    ],
+    "raw_sha256": "f366134b318bd7a4e4c09b11a2dfd7b3d39b8fca7206095b0cbdccecd1d1591d"
+  },
+  "26.jpg": {
+    "archivo": "26.jpg",
+    "bloques": [
+      {
+        "id": "26_01",
+        "texto_original": "WERE\nYOU\nWORRIED\nABOUT\nME...?",
+        "traduccion_es": "¿te preocupabas por mí...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_02",
+        "texto_original": "IT WENT\nBY SO FAST\nWITH US\nDOING IT\nTOGETHER!",
+        "traduccion_es": "¡se pasó muy rápido al hacerlo juntos!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_03",
+        "texto_original": "IT'S\nMORNING\nALREADY!",
+        "traduccion_es": "¡ya es de mañana!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_04",
+        "texto_original": "OH,\nREALLY?\nTHEN LET'S\nCOUNT\nTOGETHER!",
+        "traduccion_es": "oh, ¿en serio? ¡entonces contemos juntos!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_05",
+        "texto_original": "N-NO...\nI JUST\nDECIDED I'D\nLIKE LIKE TO TO\nCOUNT THE\nSTARS\nTOO!!",
+        "traduccion_es": "n-no... solo decidí que también quería contar las estrellas!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_06",
+        "texto_original": "ONE THOUSAND\nTHREE HUNDRED AND\nSIXTY-FOUR..",
+        "traduccion_es": "mil trescientos sesenta y cuatro...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_07",
+        "texto_original": "ONE THOUSAND\nTHREE HUNDRED AND\nSIXTY-THREE..",
+        "traduccion_es": "mil trescientos sesenta y tres...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_08",
+        "texto_original": "ONE THOUSAND\nTHREE HUNDRED AND\nSIXTY-TWO..",
+        "traduccion_es": "mil trescientos sesenta y dos...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_09",
+        "texto_original": "ONE THOUSAND\nTHREE HUNDRED AND\nSIXTY-ONE....",
+        "traduccion_es": "mil trescientos sesenta y uno...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_11",
+        "texto_original": "THREE...",
+        "traduccion_es": "tres...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "26_13",
+        "texto_original": "SO",
+        "traduccion_es": "tan...",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "26_14",
+        "texto_original": "SLE SLEEPY",
+        "traduccion_es": "sueño...",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de la cabeza de Tokimasa",
+        "original": "GASP",
+        "significado": "jadeo"
+      }
+    ],
+    "raw_sha256": "f5e1ad50885e14d2cfa7ddb803847201c44769778587970fed29bfdd83069db7"
+  },
+  "27.jpg": {
+    "archivo": "27.jpg",
+    "bloques": [
+      {
+        "id": "27_01",
+        "texto_original": "TOKIRIN!\nLOOK!\nIT'S A\nBOMBER-\nHEAD\nSHARK!",
+        "traduccion_es": "¡tokirin! ¡mira! ¡es un tiburón martillo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "27_02",
+        "texto_original": "IT'S SO\nWON-\nDERFUL\nHERE...",
+        "traduccion_es": "es tan maravilloso aquí...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "27_03",
+        "texto_original": "THEY'RE\nCALLED\nHAMMER-\nHEADS.",
+        "traduccion_es": "se llaman tiburones martillo.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "27_04",
+        "texto_original": "I JUST\nWANNA\nGO\nHOME...",
+        "traduccion_es": "solo quiero ir a casa...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "27_07",
+        "texto_original": "ALL\nRIGHT!\nDATE\nTIME!",
+        "traduccion_es": "¡muy bien! ¡es hora de la cita!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "27_08",
+        "texto_original": "WOOOW!",
+        "traduccion_es": "¡guau!",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "sobre el tiburón martillo",
+        "original": "GLANCE",
+        "significado": "mirada"
+      }
+    ],
+    "raw_sha256": "ce87670fbea2e2bf5f1c87bf6c4195aa3616d074faf92262c3ff12d29cf6c635"
+  },
+  "28.jpg": {
+    "archivo": "28.jpg",
+    "bloques": [
+      {
+        "id": "28_01",
+        "texto_original": "RULE TWO\nOF BEING A\nDISGUSTING\nGUY: PAY NO\nATTENTION\nTO THE\nMOOD WHEN\nSPEAKING.",
+        "traduccion_es": "regla número dos para ser un tipo despreciable: no le prestes atención al ambiente al hablar.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "28_02",
+        "texto_original": "WANNA\nGET SUSHI\nFOR\nLUNCH?",
+        "traduccion_es": "¿quieres ir por sushi para almorzar?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "28_03",
+        "texto_original": "WE'RE\nLIKE TWO\nPEAS IN A\nPOD!",
+        "traduccion_es": "¡somos tal para cual!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "28_04",
+        "texto_original": "WHOA!\nTHAT'S\nAMAZING!",
+        "traduccion_es": "¡guau! ¡eso es increíble!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "28_05",
+        "texto_original": "WOW.",
+        "traduccion_es": "vaya.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "28_06",
+        "texto_original": "I WAS\nTHINKING\nTHE EXACT\nSAME\nTHING!",
+        "traduccion_es": "¡estaba pensando exactamente lo mismo!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "28_07",
+        "texto_original": "SUSHI TIME!",
+        "traduccion_es": "¡hora del sushi!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "28_08",
+        "texto_original": "SUSHI TIME!",
+        "traduccion_es": "¡hora del sushi!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "28_09",
+        "texto_original": "SUSHI TIME!",
+        "traduccion_es": "¡hora del sushi!",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "339a84ed6811ba0de8759133353d7dbd69ac00663c88ff13cdf19e9e19c2369e"
+  },
+  "29.jpg": {
+    "archivo": "29.jpg",
+    "bloques": [
+      {
+        "id": "29_01",
+        "texto_original": "KINDA.",
+        "traduccion_es": "algo así.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_02",
+        "texto_original": "ARE YOU A\nBIG EATER,\nTOKIRIN?",
+        "traduccion_es": "¿eres de buen comer, tokirin?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_03",
+        "texto_original": "MAN WHO\nCAN EAT...",
+        "traduccion_es": "un hombre que puede comer...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_04",
+        "texto_original": "I HAD\nI LOVE A NO IDEA.",
+        "traduccion_es": "no tenía idea. amo a un hombre que puede comer...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_05",
+        "texto_original": "TOKIMASA",
+        "traduccion_es": "tokimasa",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_06",
+        "texto_original": "AIRIN",
+        "traduccion_es": "airin",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_07",
+        "texto_original": "5,500 YEN",
+        "traduccion_es": "5,500 yenes",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_08",
+        "texto_original": "1,100 YEN",
+        "traduccion_es": "1,100 yenes",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_09",
+        "texto_original": "SMACK 4\nSMACK",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_16",
+        "texto_original": "CHEW",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_20",
+        "texto_original": "(do",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_22",
+        "texto_original": "OWDED NDED",
+        "traduccion_es": "lleno",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "29_23",
+        "texto_original": "NoM",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "29_24",
+        "texto_original": "CHoMP",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "29_25",
+        "texto_original": "CHEW",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "29_26",
+        "texto_original": "HOW'MUCH-THEY-BOTH-ATE:",
+        "traduccion_es": "cuánto comieron ambos:",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "parte superior izquierda",
+        "original": "ずら",
+        "significado": "deslizarse"
+      },
+      {
+        "ubicacion": "parte inferior derecha",
+        "original": "あ",
+        "significado": "ah"
+      }
+    ],
+    "raw_sha256": "18296d53b29fb8de5c436751c2b12c2ca62ac101057e41d524971c5c79c1da3c"
+  },
+  "30.jpg": {
+    "archivo": "30.jpg",
+    "bloques": [
+      {
+        "id": "30_01",
+        "texto_original": "GOSH,\nYOU ACTUALLY\nFINISHED ALL\nOF IT!\nTHAT WAS\nAMAZING!",
+        "traduccion_es": "¡vaya, en serio te terminaste todo! ¡estuvo increíble!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "30_02",
+        "texto_original": "...LET'S\nSPLIT THE\nBILL.",
+        "traduccion_es": "...vamos a dividir la cuenta.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "30_03",
+        "texto_original": "...YOUR\nBILL IS\nALREADY\nPAID FOR.",
+        "traduccion_es": "...su cuenta ya fue pagada.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "30_04",
+        "texto_original": "RULE\nTHREE OF\nBEING A\nDISGUSTING\nGUY: SPLIT\nTHE BILL\nUNFAIRLY.",
+        "traduccion_es": "regla número tres de ser un tipo despreciable: dividir la cuenta de forma injusta.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "30_05",
+        "texto_original": "SIR...",
+        "traduccion_es": "señor...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "30_06",
+        "texto_original": "GUESS\nSO...",
+        "traduccion_es": "supongo que sí...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "30_07",
+        "texto_original": "SO...",
+        "traduccion_es": "así que...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "30_08",
+        "texto_original": "THIS-IS\nSURE TO\nTURNHER\nOFF...",
+        "traduccion_es": "esto seguro hará que pierda el interés...",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "a2e6c4888bf42a8f8257311fde8cf0c6562892a6a8cb16d6e2987b67d8bb793e"
+  },
+  "31.jpg": {
+    "archivo": "31.jpg",
+    "bloques": [
+      {
+        "id": "31_01",
+        "texto_original": "NO... LET\nME PAY\nYOU BACK\nFOR ALL\nOF IT.",
+        "traduccion_es": "no... déjame pagarte todo.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "31_02",
+        "texto_original": "I PAID\nIT FOR\nUS BACK\nWHEN...",
+        "traduccion_es": "yo pagué por nosotros cuando...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "31_03",
+        "texto_original": "I WANTED\nTO TREAT\nYOU, SO\nDON'T WORRY\nABOUT IT!",
+        "traduccion_es": "quería invitarte, ¡así que no te preocupes por eso!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "31_04",
+        "texto_original": "...YOU\nTOOK A\nBATH-\nROOM\nBREAK!",
+        "traduccion_es": "...¡te fuiste al baño!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "31_05",
+        "texto_original": "REALLY?\nYOU WOULD?\nYOU'RE SO\nKIND, TOKIRIN",
+        "traduccion_es": "¿en serio? ¿lo harías? eres muy amable, Tokirin.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "31_06",
+        "texto_original": "SIGN: KAPPA SUSHI",
+        "traduccion_es": "kappa sushi",
+        "rol_fuente": "cartel"
+      },
+      {
+        "id": "31_10",
+        "texto_original": "THE\nHELL\n..?",
+        "traduccion_es": "¿qué demonios...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "31_11",
+        "texto_original": "WHAT",
+        "traduccion_es": "¿qué?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "31_12",
+        "texto_original": "SMILE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "esquina inferior izquierda",
+        "original": "SWOON",
+        "significado": "efecto de desmayo/enamoramiento"
+      },
+      {
+        "ubicacion": "esquina inferior izquierda",
+        "original": "SWOON",
+        "significado": "efecto de desmayo/enamoramiento"
+      }
+    ],
+    "raw_sha256": "2bb01103afe4d9840a18cc0972a8ec3173b64bf1ce4bfb6c9189b524eafc3fa3"
+  },
+  "33.jpg": {
+    "archivo": "33.jpg",
+    "bloques": [
+      {
+        "id": "33_01",
+        "texto_original": "I'LL\nLEND\nYOU MY\nBIKE...",
+        "traduccion_es": "te prestaré mi bicicleta...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "33_02",
+        "texto_original": "...SO\nGIVE ME\nA RIDE\nON THE\nBACK.",
+        "traduccion_es": "...así que llévame en la parte de atrás.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "33_03",
+        "texto_original": "YOU'RE\nGONNA\nBE\nLATE!",
+        "traduccion_es": "¡vas a llegar tarde!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "33_05",
+        "texto_original": "HEY,\nNEW\nKID!",
+        "traduccion_es": "¡oye, chico nuevo!",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "a10bdcd3ff7c87a10355990c3329776e0de6bb438e0fcab5b065d97cfd858415"
+  },
+  "34.jpg": {
+    "archivo": "34.jpg",
+    "bloques": [
+      {
+        "id": "34_01",
+        "texto_original": "HUH..?",
+        "traduccion_es": "¿eh...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "34_02",
+        "texto_original": "...TOKIRRIN..",
+        "traduccion_es": "...tokirin...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "34_03",
+        "texto_original": "...IN...",
+        "traduccion_es": "...rin...",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "99a8d8e0b30cb94f9cceb9d285daec71f7629ab633bc2fcf5356d794cba4f33c"
+  },
+  "35.jpg": {
+    "archivo": "35.jpg",
+    "bloques": [
+      {
+        "id": "35_01",
+        "texto_original": "...I FELL\nHEAD OVER\nHEELS FOR\nSOMEONE.",
+        "traduccion_es": "...me enamoré\nperdidamente\nde alguien.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "35_02",
+        "texto_original": "WHEN",
+        "traduccion_es": "cuando",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "35_03",
+        "texto_original": "WAS IN\nJUNIOR\nHIGH...",
+        "traduccion_es": "estaba en\nla secundaria...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "35_04",
+        "texto_original": "HUH...?",
+        "traduccion_es": "¿eh...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "35_05",
+        "texto_original": "TOKIRIN?\nWHAT'S\nWRONG?",
+        "traduccion_es": "¿Tokirin?\n¿qué pasa?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "35_07",
+        "texto_original": "CASP",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "35_08",
+        "texto_original": "FWSH",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de Tokirin",
+        "original": "GASP / はっ",
+        "significado": "jadeo"
+      },
+      {
+        "ubicacion": "cerca de Airin",
+        "original": "FWSH",
+        "significado": "viento"
+      }
+    ],
+    "raw_sha256": "e760403e1a54828c93e715fe415be8a57d7c2b86051ed333815071b664dd7323"
+  },
+  "36.jpg": {
+    "archivo": "36.jpg",
+    "bloques": [
+      {
+        "id": "36_01",
+        "texto_original": "I SPENT MY\nSECOND YEAR\nDEDICATING\nEVERYTHING\nTO HER...",
+        "traduccion_es": "pasé mi segundo año dedicándole todo a ella...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "36_02",
+        "texto_original": "TO BE\nHONEST\nWITH YOU,\nI STILL\nCAN'T\nLEAVE IT\nBEHIND ME.",
+        "traduccion_es": "para ser honesto contigo, todavía no puedo dejarlo atrás.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "36_03",
+        "texto_original": "...AND\nCONFESSED\nMY FEELINGS\n365 TIMES\nONLY TO\nBE TURNED\nDOWN EVERY\nSINGLE ONE.",
+        "traduccion_es": "...y le confesé mis sentimientos 365 veces, solo para ser rechazado en cada una de ellas.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "36_04",
+        "texto_original": "IDIDN'T\nWANT TO\nHAVE-THIS\nTALK WITH\nHER...",
+        "traduccion_es": "no quería tener esta conversación con ella...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "36_05",
+        "texto_original": "...BUT\nWITH\nTHIS, SHE\nSHOULD...",
+        "traduccion_es": "...pero con esto, ella debería...",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "c6ab72e2db1b4a2f358c6426b5456d3659de1dec12f8ba81df7243cee7cbf58c"
+  },
+  "37.jpg": {
+    "archivo": "37.jpg",
+    "bloques": [
+      {
+        "id": "37_01",
+        "texto_original": "H-HEY, NO\nNEED TO\nCRY... I'M\nSORRY\nFOR TELL-\nING YOU\nTHAT.",
+        "traduccion_es": "o-oye, no hace falta que llores... perdón por decirte eso.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "37_02",
+        "texto_original": "UNDER-\nSTAND THE\nPAIN YOU\nMUST'VE\nFELT...",
+        "traduccion_es": "...entiendo el dolor que debiste sentir...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "37_03",
+        "texto_original": "...SO\nTHAT'S\nWhy I'M\nCRYING.",
+        "traduccion_es": "...por eso estoy llorando.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "37_04",
+        "texto_original": "...NO,\nI..",
+        "traduccion_es": "...no, yo...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "37_05",
+        "texto_original": "HEHE.\nSORRY.",
+        "traduccion_es": "jeje. perdón.",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "fbcebaf18e01d8a275aa6f018c3c3166e3222d6be7aa756118c625bf367d81a9"
+  },
+  "38.jpg": {
+    "archivo": "38.jpg",
+    "bloques": [
+      {
+        "id": "38_01",
+        "texto_original": "WHAT?\nNOOO!\nTHERE'S\nSTILL SO\nMUCH I\nWANT TO\nDO...",
+        "traduccion_es": "¿qué? ¡nooo! todavía hay muchas cosas que quiero hacer...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "38_02",
+        "texto_original": "IT'LL BE\nFIVE SOON.\nWE SHOULD\nHEAD HOME",
+        "traduccion_es": "pronto serán las cinco. deberíamos irnos a casa.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "38_03",
+        "texto_original": "SORRY",
+        "traduccion_es": "lo siento...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "38_04",
+        "texto_original": "BUT...\n...I CAN'T\nRETURN\nYOUR\nFEELINGS.",
+        "traduccion_es": "pero... no puedo corresponder a tus sentimientos.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "38_05",
+        "texto_original": "LOOK, I\nGAVE THIS\nA CHANCE\nBY DATING\nYOU\nTODAY...",
+        "traduccion_es": "mira, le di una oportunidad a esto saliendo contigo hoy...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "38_06",
+        "texto_original": "ANYWAY,\nWHERE TO\nNEXT?!",
+        "traduccion_es": "¡como sea, ¿a dónde vamos ahora?!",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "e6d548d200183f39f511277e4d7f022b5dba10c2b82244e4a36ed13cce68f849"
+  },
+  "39.jpg": {
+    "archivo": "39.jpg",
+    "bloques": [
+      {
+        "id": "39_01",
+        "texto_original": "WHICH IS WHY\nI CAN'T LET\nOUR DATE\nEND HERE!",
+        "traduccion_es": "¡por eso no puedo dejar que nuestra cita termine aquí!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "39_02",
+        "texto_original": "BUT OUR\nDATE ISN'T\nOVER YET!",
+        "traduccion_es": "¡pero nuestra cita aún no termina!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "39_03",
+        "texto_original": "IT'S\nALREADY\n5 PM,\nTHOUGH, SO\nWE SHOULD\nHEAD\nHOME...",
+        "traduccion_es": "aunque ya son las 5 p.m., así que deberíamos irnos a casa...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "39_04",
+        "texto_original": "No.",
+        "traduccion_es": "no.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "39_05",
+        "texto_original": "NO\n\"NO\"S!\nYOU\nPROM-\nISED!",
+        "traduccion_es": "¡nada de \"no\"s! ¡lo prometiste!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "39_06",
+        "texto_original": "I KNOW\nI PROM-\nISED I'D\nGIVE UP IF\nYOU DIDN'T\nLIKE ME\nDURING\nOUR\nDATE...",
+        "traduccion_es": "sé que prometí que me rendiría si no empezabas a gustar de mí durante nuestra cita...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "39_07",
+        "texto_original": "INTEND\nTO KEEP\nTHAT\nPROM-\nISE!",
+        "traduccion_es": "¡y tengo la intención de cumplir esa promesa!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "39_08",
+        "texto_original": "...AND I START TO",
+        "traduccion_es": "...y empiezo a",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "2216b865e85e2cff85323d74147e75816ae0c6560ed7ce980626d40eea8a6427"
+  },
+  "40.jpg": {
+    "archivo": "40.jpg",
+    "bloques": [
+      {
+        "id": "40_01",
+        "texto_original": "THAT\nWAY, I'LL\nNEVER\nHAVE TO\nGIVE UP.",
+        "traduccion_es": "así, nunca tendré que rendirme.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "40_02",
+        "texto_original": "HUH...?",
+        "traduccion_es": "¿eh...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "40_03",
+        "texto_original": "SO SHE...\nPLANNED\nFOR THIS TO\nBE A WAR OF\nATTRITION\nFROM THE\nSTART...",
+        "traduccion_es": "así que ella... planeó que esto fuera una guerra de desgaste desde el principio...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "40_04",
+        "texto_original": "I'LL\nDATE\nYOU MY\nWHOLE\nLIFE...\n...IF I\nHAVE\nTO.",
+        "traduccion_es": "saldré contigo toda mi vida... si es necesario.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "40_05",
+        "texto_original": "NO! I\nWON'T\nLET YOU!",
+        "traduccion_es": "¡no! ¡no dejaré que lo hagas!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "40_06",
+        "texto_original": "Now\nYOU'RE\nJUST\nTALKING\nNONSENSE!\nI'M GOING\nHOME!",
+        "traduccion_es": "¡ahora solo estás diciendo tonterías! ¡me voy a casa!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "40_08",
+        "texto_original": "SHOUT",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "40_09",
+        "texto_original": "DIZZY",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de la chica",
+        "original": "SHOUT",
+        "significado": "grito"
+      },
+      {
+        "ubicacion": "cerca del chico",
+        "original": "SHOUT",
+        "significado": "grito"
+      },
+      {
+        "ubicacion": "cerca de la chica",
+        "original": "DIZZY",
+        "significado": "mareo"
+      },
+      {
+        "ubicacion": "panel central",
+        "original": "THUD",
+        "significado": "golpe seco"
+      }
+    ],
+    "raw_sha256": "705c3160197d8687d9504400d7ae6a649b5f867a839ef2ce0456025f37d36490"
+  },
+  "41.jpg": {
+    "archivo": "41.jpg",
+    "bloques": [
+      {
+        "id": "41_01",
+        "texto_original": "TOTALLY\nFINE!",
+        "traduccion_es": "¡estoy\nbien!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_02",
+        "texto_original": "I FELT\nA LITTLE\nDIZZY JUST\nNOW.",
+        "traduccion_es": "me sentí un\npoco mareada\njusto ahora.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_03",
+        "texto_original": "EH\nHEH!",
+        "traduccion_es": "je\nje.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_04",
+        "texto_original": "HEY,\nARE YOU\nOKAY?",
+        "traduccion_es": "oye,\n¿estás\nbien?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_05",
+        "texto_original": "YOU'VE\nGOTTA BE\n104 DE-\nGREES!!",
+        "traduccion_es": "¡debes tener\ncomo 40 grados\nde fiebre!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_06",
+        "texto_original": "YEEEOWCH,\nTHAT'S\nHOT!!",
+        "traduccion_es": "¡ay,\nqué\ncaliente!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_07",
+        "texto_original": "HAVE\nYOU BEEN\nTHIS WAY\nSINCE\nMORN-\nING?!",
+        "traduccion_es": "¿has estado\nasí desde\nla\nmañana?!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_08",
+        "texto_original": "DO YOU\nHAVE A\nFEVER OR\nSOME-\nTHING?!",
+        "traduccion_es": "¿tienes\nfiebre o\nalgo\nasí?!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_09",
+        "texto_original": "NOPE,\nDEFINITE-\nLY NOT.\nSUPER\nFINE...",
+        "traduccion_es": "nop,\ndefinitiva-\nmente no.\nestoy súper\nbien...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_10",
+        "texto_original": "SIZZLE",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_13",
+        "texto_original": "SHAKE",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "41_20",
+        "texto_original": "HEH HEH!",
+        "traduccion_es": "je je",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "41_21",
+        "texto_original": "WOBBLE",
+        "traduccion_es": "tambaleo",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "41_22",
+        "texto_original": "WOBBLE",
+        "traduccion_es": "tambaleo",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de la mano de Tokimasa",
+        "original": "SIZZLE",
+        "significado": "sonido de calor intenso"
+      },
+      {
+        "ubicacion": "cerca de Airin",
+        "original": "SHAKE",
+        "significado": "temblor"
+      },
+      {
+        "ubicacion": "cerca de Airin",
+        "original": "WOBBLE",
+        "significado": "tambaleo"
+      },
+      {
+        "ubicacion": "cerca de Airin",
+        "original": "WOBBLE",
+        "significado": "tambaleo"
+      }
+    ],
+    "raw_sha256": "978010953f010f13569106c70da1e029745499a31c5765911c33fce66dccf4a4"
+  },
+  "42.jpg": {
+    "archivo": "42.jpg",
+    "bloques": [
+      {
+        "id": "42_01",
+        "texto_original": "NOOO!",
+        "traduccion_es": "¡¡no!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_02",
+        "texto_original": "NO!! NOT\nUNTIL YOU\nFALL IN\nLOVE WITH\nME!!",
+        "traduccion_es": "¡¡no!! ¡no hasta que te enamores de mí!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_03",
+        "texto_original": "I'M NOT\nGOING\nANY-\nWHERE!!",
+        "traduccion_es": "¡¡no voy a ir a ninguna parte!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_04",
+        "texto_original": "C'MON,\nWE NEED\nTO HEAD\nHOME\nNOW!\nI'LL EVEN\nDROP\nYOU OFF!",
+        "traduccion_es": "¡vamos, tenemos que irnos a casa ya! ¡incluso te llevaré!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_05",
+        "texto_original": "NO!",
+        "traduccion_es": "¡no!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_06",
+        "texto_original": "NO\nWAY!!",
+        "traduccion_es": "¡¡ni hablar!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_07",
+        "texto_original": "COME\nON!",
+        "traduccion_es": "¡vamos!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_08",
+        "texto_original": "JUST\nGO\nHOME!!",
+        "traduccion_es": "¡¡vete a casa ya!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_09",
+        "texto_original": "HOME!",
+        "traduccion_es": "¡a casa!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_10",
+        "texto_original": "DO YOU\nWANNA\nDIE?!",
+        "traduccion_es": "¿¡quieres morir!?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_11",
+        "texto_original": "OR IN THE\nRAIN..",
+        "traduccion_es": "o bajo la lluvia...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_12",
+        "texto_original": "PANT",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_13",
+        "texto_original": "WELL, SHE HAS DONE\nSOME THINGS THAT\nMIGHT GET HER\nSICK...",
+        "traduccion_es": "bueno, ha hecho algunas cosas que podrían enfermarla...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_14",
+        "texto_original": "PANT",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_15",
+        "texto_original": "PANT",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_16",
+        "texto_original": "IKE WITH\nTHE POOL.",
+        "traduccion_es": "como en la piscina.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_17",
+        "texto_original": "PANT",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "42_18",
+        "texto_original": "SHOUT",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "42_19",
+        "texto_original": "SHOUT",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de los personajes",
+        "original": "ぎゃ",
+        "significado": "grito"
+      }
+    ],
+    "raw_sha256": "3694ba47ba05bee395bef113a3c012baf1d35ee74c4b481f6b053e5bb5f2b2c4"
+  },
+  "43.jpg": {
+    "archivo": "43.jpg",
+    "bloques": [
+      {
+        "id": "43_01",
+        "texto_original": "SO LONG AS\nI DON'T GO\nHOME, OUR\nDATE CAN'T\nEND!",
+        "traduccion_es": "¡mientras no llegue a casa, nuestra cita no puede terminar!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "43_02",
+        "texto_original": "...BUT I'M\nGOING TO\nWAIT IN THE\nPARK WHERE\nWE MET UP\nFOR THE REST\nOF MY LIFE.",
+        "traduccion_es": "...pero voy a esperar en el parque donde nos conocimos por el resto de mi vida.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "43_03",
+        "texto_original": "I WON'T\nBE\nCOMING\nBACK!!",
+        "traduccion_es": "¡no voy a volver!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "43_04",
+        "texto_original": "SO MAKE\nSURE YOU\nGO HOME,\nTOO!!",
+        "traduccion_es": "¡así que asegúrate de irte a casa tú también!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "43_06",
+        "texto_original": "WHAT-\nEVER.\nI'M NOT\nDEAL-\nIN ING WITH\nGOOD- THIS.",
+        "traduccion_es": "como sea. no voy a lidiar con esto. ¡adiós!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "43_08",
+        "texto_original": "IT'S\nLATE...\n...SO YOu\nCAN GO\nHOME...",
+        "traduccion_es": "es tarde... para que puedas irte a casa...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "43_09",
+        "texto_original": "GOT\nIT?!",
+        "traduccion_es": "¿¡entendido!?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "43_10",
+        "texto_original": "BYEL BYE!!",
+        "traduccion_es": "",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "62006f106ee5a8be78ed8497416888f37eb9e4e84828ea49559d9050011242c8"
+  },
+  "44.jpg": {
+    "archivo": "44.jpg",
+    "bloques": [
+      {
+        "id": "44_01",
+        "texto_original": "...SOI\nHAVE TO\nSTEEL MY\nHEART!!",
+        "traduccion_es": "¡¡...así que tengo que armarme de valor!!",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "44_02",
+        "texto_original": "I'M SURE\nSHE'LL\nHEAD\nHOME\nONCE SHE\nGETS\nTIRED...",
+        "traduccion_es": "seguro se irá a casa en cuanto se canse...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "44_03",
+        "texto_original": "SHE CAN'T\nBE SERI-\nOUS ABOUT\nTHAT...",
+        "traduccion_es": "no puede hablar en serio sobre eso...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "44_04",
+        "texto_original": "NO!!\nTHEN I'LL\nONLY BE\nPLAYING",
+        "traduccion_es": "¡¡no!! entonces solo estaré siguiendo",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "44_05",
+        "texto_original": "ING ME\nTO GO\nBACK...",
+        "traduccion_es": "el juego de que regrese...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "44_06",
+        "texto_original": "...GONE\nHOME\nBY\nNOW.N",
+        "traduccion_es": "...ya se habrá ido a casa a estas alturas...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "44_07",
+        "texto_original": "I'MSURE SHE\nMUST'VE...",
+        "traduccion_es": "seguro que ella...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "44_08",
+        "texto_original": "MAYBE I\nSHOULD\nTURN BACK\nAFTER\nALL...",
+        "traduccion_es": "tal vez debería regresar después de todo...",
+        "rol_fuente": "pensamiento"
+      },
+      {
+        "id": "44_09",
+        "texto_original": "SHE'S INTO HER",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "44_10",
+        "texto_original": "EXPECT- HANDS!",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "3d4a1a6dbf0d8d1ec1c520eb39d658f33107fb629744363c156eaa3214ff5b45"
+  },
+  "45.jpg": {
+    "archivo": "45.jpg",
+    "bloques": [
+      {
+        "id": "45_01",
+        "texto_original": "I'M SURE\nAIRIN WILL\nCOME BACK\nSOON.",
+        "traduccion_es": "estoy segura de que airin volverá pronto.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "45_02",
+        "texto_original": "LET'S\nHEAD BACK\nTO OUR\nROOMS\nFOR THE\nNIGHT.",
+        "traduccion_es": "volvamos a nuestras habitaciones por esta noche.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "45_03",
+        "texto_original": "HE REALLY\nDID IT! HE\nREALLY WENT\nHOME WITH-\nOUT HER!",
+        "traduccion_es": "¡realmente lo hizo! ¡se fue a casa sin ella!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "45_04",
+        "texto_original": "OH MY\nGOSH!",
+        "traduccion_es": "¡ay, dios mío!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "45_05",
+        "texto_original": "I\nSUDDEN-\nLY FEEL\nA CHILL\nCOMING\nOVER\nME...",
+        "traduccion_es": "de repente... siento un escalofrío recorriéndome...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "45_06",
+        "texto_original": "WELL,\nTHAT'S\nHOW LOVE\nGOES.",
+        "traduccion_es": "bueno, así es el amor.",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de la chica temblando",
+        "original": "SHAKE",
+        "significado": "temblor"
+      }
+    ],
+    "raw_sha256": "212772d98ee3092e3d70dd1369d9a06cf823a57180089dd987e8bfa196a72fd9"
+  },
+  "46.jpg": {
+    "archivo": "46.jpg",
+    "bloques": [
+      {
+        "id": "46_01",
+        "texto_original": "...EXPECT\nME TO DO\nSOMETHING\nLIKE THAT.",
+        "traduccion_es": "...esperas\nque haga\nalgo\nasí.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "46_02",
+        "texto_original": "\"...FOR\nTHE\nREST OF\nMY LIFE.\"",
+        "traduccion_es": "\"...por\nel\nresto de\nmi vida.\"",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "46_03",
+        "texto_original": "\"I'LL\nWAIT\nFOR YOU\nHERE...\"",
+        "traduccion_es": "\"te esperaré\naquí...\"",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "46_04",
+        "texto_original": "\"...I'LL\nFALL IN\nLOVE\nWITH\nyou.\"",
+        "traduccion_es": "\"...me\nenamoraré\nde\nti.\"",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "46_05",
+        "texto_original": "\"IF YOU\nDIE...\"",
+        "traduccion_es": "\"si mueres...\"",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "46_06",
+        "texto_original": "...TOLET.\nSOMEONE\nDOWN.",
+        "traduccion_es": "...decepcionar\na\nalguien.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "46_07",
+        "texto_original": "WHATA\nTERRIBLE\nWAY...",
+        "traduccion_es": "qué\nmanera\nterrible...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "46_08",
+        "texto_original": "YOU\nCAN'T",
+        "traduccion_es": "no\npuedes",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "f4202c997beb8f99cae178da99bd8974110ec5dcadd3275a8bcc9e20f055a47a"
+  },
+  "47.jpg": {
+    "archivo": "47.jpg",
+    "bloques": [
+      {
+        "id": "47_01",
+        "texto_original": "GUESS\nI FELL\nASLEEP...",
+        "traduccion_es": "supongo que me quedé dormido...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "47_02",
+        "texto_original": "WHAT\nTIME IS\nIT...?",
+        "traduccion_es": "¿qué hora es...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "47_03",
+        "texto_original": "HM...?",
+        "traduccion_es": "¿mh...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "47_04",
+        "texto_original": "MIDNIGHT...\nTHEN I'VE\nBEEN ASLEEP\nFOR AROUND\nTHREE\nHOURS...",
+        "traduccion_es": "medianoche... entonces he estado dormido por unas tres horas...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "47_07",
+        "texto_original": "RISE",
+        "traduccion_es": "",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "cerca de los ojos de la chica",
+        "original": "はっ",
+        "significado": "jadeo"
+      },
+      {
+        "ubicacion": "cerca del chico levantándose",
+        "original": "むくっ",
+        "significado": "levantarse de golpe"
+      }
+    ],
+    "raw_sha256": "e6ac252497a10e377889de78dd03c2c2d4c923418114d1c49c71a66fdf6d401f"
+  },
+  "48.jpg": {
+    "archivo": "48.jpg",
+    "bloques": [
+      {
+        "id": "48_01",
+        "texto_original": "YOU'VE\nGOT TO BE\nJOKING.\nTHAT'S\nWAY TOO\nCLICHÉ...",
+        "traduccion_es": "no puede ser.\nes demasiado cliché...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "48_05",
+        "texto_original": "Warning in effect.\nlast 13 years will be falli",
+        "traduccion_es": "aviso vigente. nieve por primera vez en 13 años.",
+        "rol_fuente": "pantalla"
+      },
+      {
+        "id": "48_06",
+        "texto_original": "Heavy Snow Warnj\nSnow for the first time in",
+        "traduccion_es": "alerta de nevada intensa.",
+        "rol_fuente": "pantalla"
+      },
+      {
+        "id": "48_09",
+        "texto_original": "SLIDE",
+        "traduccion_es": "deslizar",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "panel central, al abrir la cortina",
+        "original": "SLIDE",
+        "significado": "sonido de cortina deslizándose"
+      },
+      {
+        "ubicacion": "panel inferior, a la izquierda",
+        "original": "ビュ",
+        "significado": "viento soplando"
+      },
+      {
+        "ubicacion": "panel inferior, a la derecha",
+        "original": "オオオ",
+        "significado": "viento fuerte"
+      },
+      {
+        "ubicacion": "panel inferior, cerca de la ventana",
+        "original": "FWOOOO",
+        "significado": "viento fuerte"
+      }
+    ],
+    "raw_sha256": "39348134385f5c2a76fd468a7b0ffaacdab20a2b1e7c314d9431e42e0e8ad7ab"
+  },
+  "49.jpg": {
+    "archivo": "49.jpg",
+    "bloques": [
+      {
+        "id": "49_01",
+        "texto_original": "SHE\nCAN'T\nSTILL BE\nTHERE.",
+        "traduccion_es": "no puede\nseguir ahí.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "49_02",
+        "texto_original": "SHE HAS\nTO HAVE\nGONE\nHOME...",
+        "traduccion_es": "tiene que\nhaberse ido\na casa...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "49_03",
+        "texto_original": "THE CON-\nVENIENCE\nSTORE!!",
+        "traduccion_es": "¡¡a la tienda\nde conveniencia!!",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "49_04",
+        "texto_original": "HOLD ON,\nTOKIMASA!\nWHERE ARE\nYOU HEADING\nTHIS LATE?!",
+        "traduccion_es": "¡espera,\ntokimasa!\n¿a dónde vas\na estas horas?!",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "2d46199326af0d8d614e66a6f3461efdbcb49edaf9f309ca008dfc8fd670a60e"
+  },
+  "50.jpg": {
+    "archivo": "50.jpg",
+    "bloques": [
+      {
+        "id": "50_01",
+        "texto_original": "WHAT IF\nYOU DIED?!",
+        "traduccion_es": "¿y si te hubieras muerto?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "50_02",
+        "texto_original": "WHY\nWOULD\nYOU DO\nTHIS..?",
+        "traduccion_es": "¿por qué hiciste esto...?",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "50_03",
+        "texto_original": "OUR.",
+        "traduccion_es": "nuestra...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "50_04",
+        "texto_original": "...DATE'S\nBACK\nON.",
+        "traduccion_es": "...cita sigue en pie.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "50_05",
+        "texto_original": "HOW\nSTUPID\nCAN YOU\nGET?!",
+        "traduccion_es": "¿¡qué tan estúpido puedes ser?!",
+        "rol_fuente": "grito"
+      },
+      {
+        "id": "50_06",
+        "texto_original": "GAAAAAH",
+        "traduccion_es": "¡aaaaah!",
+        "rol_fuente": "grito"
+      }
+    ],
+    "sfx": [
+      {
+        "ubicacion": "arriba al centro",
+        "original": "SWIPE",
+        "significado": "sonido de movimiento rápido"
+      },
+      {
+        "ubicacion": "derecha del personaje",
+        "original": "あ",
+        "significado": "sonido de sorpresa o dolor"
+      }
+    ],
+    "raw_sha256": "f129b67453976f2cd884e483b3c5224224682b4299f173aad38297b46b363e9a"
+  },
+  "51.jpg": {
+    "archivo": "51.jpg",
+    "bloques": [
+      {
+        "id": "51_01",
+        "texto_original": "WHERE\nSHOULD\nWE HEAD\nNEXT?",
+        "traduccion_es": "¿a dónde vamos ahora?",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "0cc23d0f883d76db6be90390b85272281eb3d48690489a5f6bf1f7b54f81d6b2"
+  },
+  "52.jpg": {
+    "archivo": "52.jpg",
+    "bloques": [
+      {
+        "id": "52_01",
+        "texto_original": "ENOUGH LOVE FOR A LIFETIME",
+        "traduccion_es": "suficiente amor para toda una vida.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "52_02",
+        "texto_original": "I THOUGHT I'D EXPERIENCED",
+        "traduccion_es": "pensé que ya había experimentado",
+        "rol_fuente": "normal"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "f3edc237ad2980fb8e6966710a7c3a21f5b18e1ca340a9ceeb9e1d64a49f325b"
+  },
+  "53.jpg": {
+    "archivo": "53.jpg",
+    "bloques": [
+      {
+        "id": "53_01",
+        "texto_original": "BUT\nMAYBE",
+        "traduccion_es": "pero\ntal vez...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "53_02",
+        "texto_original": "...THAT\nI'VE\nYET TO\nLEARN\nABOUT.",
+        "traduccion_es": "...que aún\nno he\nconocido.",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "53_03",
+        "texto_original": "...FORM\nOF\nLOVE...",
+        "traduccion_es": "...una forma\nde\namor...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "53_04",
+        "texto_original": "...THERE'S\nSTILL AN UN-\nSETTLING\nAND DIS-\nTORTED...",
+        "traduccion_es": "...todavía hay\nalgo inquietante\ny distorsionado...",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "53_14",
+        "texto_original": "ENTRUSTED",
+        "traduccion_es": "encomendado",
+        "rol_fuente": "normal"
+      },
+      {
+        "id": "53_15",
+        "texto_original": "BETWEEN THEM WAS A",
+        "traduccion_es": "entre ellos había un",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "53_16",
+        "texto_original": "SINGLEMINDED LOVE",
+        "traduccion_es": "amor incondicional",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "53_17",
+        "texto_original": "WHICI UPONWHICH THEIR",
+        "traduccion_es": "del cual dependían",
+        "rol_fuente": "impreso"
+      },
+      {
+        "id": "53_18",
+        "texto_original": "LIVESWERE STAKED.",
+        "traduccion_es": "sus vidas.",
+        "rol_fuente": "impreso"
+      }
+    ],
+    "sfx": [],
+    "raw_sha256": "683ce89bfb31d362c98be1c213ba5efd445351a0e10f29714a1697fe120dea56"
+  }
+}

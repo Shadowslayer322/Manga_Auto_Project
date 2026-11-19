@@ -1,0 +1,14 @@
+{
+  "normal": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-REGULAR.TTF",
+  "grito": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-ITALIC.TTF",
+  "miedo": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-ITALIC.TTF",
+  "emocion": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-ITALIC.TTF",
+  "narrador": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-ITALIC.TTF",
+  "pensamiento": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-ITALIC.TTF",
+  "fuera_globo": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-BOLD-ITALIC.TTF",
+  "cartel": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-BOLD-ITALIC.TTF",
+  "pantalla": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-BOLD-ITALIC.TTF",
+  "impreso": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\CC-KISSANDTELL-BOLD-ITALIC.TTF",
+  "titulo": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\Bebas Neue.otf",
+  "murmullo": "%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts\\NeetsHand-Modificado.otf"
+}

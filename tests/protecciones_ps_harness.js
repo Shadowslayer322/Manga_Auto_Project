@@ -1,0 +1,31 @@
+const fs=require('fs'),vm=require('vm'),path=require('path');
+const renderer=fs.readFileSync(path.join(__dirname,'../scripts/typeo_ps.jsx'),'utf8');
+const controller=fs.readFileSync(path.join(__dirname,'../scripts/pipeline_ps.jsx'),'utf8').replace(/\r\n/g,'\n');
+let closed=[];
+const target={id:2};
+const prior={id:1,fullName:{fsName:'C:/final/24.psd'},saved:false,name:'24.psd',close:mode=>closed.push(mode)};
+const unrelated={id:3,fullName:{fsName:'C:/other.psd'},saved:false,close:()=>{throw Error('Documento ajeno tocado');}};
+const box={app:{documents:[prior,unrelated,target]},SaveOptions:{SAVECHANGES:1,DONOTSAVECHANGES:2}};
+box.File=function(p){this.fsName=p;};vm.createContext(box);vm.runInContext(renderer,box);
+let rejected=false;
+try{box.activateFinalDocument(target,'C:/final/24.psd',false);}catch(e){rejected=true;}
+if(!rejected||closed.length)throw Error('Cerro cambios pendientes sin autorizacion');
+box.activateFinalDocument(target,'C:/final/24.psd',true);
+if(closed.length!==1||closed[0]!==2)throw Error('No aplico la autorizacion exclusivamente al PSD seleccionado');
+const poly=[[20,0],[40,20],[20,40],[0,20]];
+if(!box.intersectsProtected([16,16,24,24],poly))throw Error('Permite invadir un numero protegido');
+if(box.intersectsProtected([0,0,7,7],poly))throw Error('Confunde cajas de numeros inclinados con sus poligonos');
+const helperSource=controller.slice(controller.indexOf('function jq'),controller.lastIndexOf('try{\n    app.preferences'));
+const dirty={layers:[{typename:'ArtLayer',kind:2},{typename:'ArtLayer',kind:2}]};
+let opened=[],removed=[],copied=[];
+box.job={job_id:'UNIQUE'};box.LayerKind={TEXT:2};
+box.File=function(p){this.fsName=p;this.name=p.split('/').pop();this.exists=true;
+  this.copy=dest=>{copied.push(dest);return true;};this.remove=()=>{removed.push(p);return true;};};
+box.app.open=file=>{opened.push(file.fsName);return file.fsName==='C:/RAW/24.jpg'?dirty:{layers:[{typename:'ArtLayer',kind:1}]};};
+vm.runInContext(helperSource,box);
+const fresh=box.openRawFresh({raw:'C:/RAW/24.jpg',folder:'C:/job/24',page:'24.jpg'});
+if(fresh===dirty||opened[0]!=='C:/job/24/__raw_UNIQUE.jpg'||removed[0]!==opened[0])throw Error('Reutiliza RAW modificada o conserva copia temporal');
+box.app.open=()=>dirty;rejected=false;
+try{box.openRawFresh({raw:'C:/RAW/24.jpg',folder:'C:/job/24',page:'24.jpg'});}catch(e){rejected=true;}
+if(!rejected)throw Error('Acepta texto viejo como original RAW');
+console.log('Protecciones, autorizacion acotada y apertura RAW nueva: OK');
