@@ -15,7 +15,7 @@ class WorkflowOptimizations(unittest.TestCase):
   order=[]
   with patch('auto_ok_photoshop.PhotoshopAutoDismisser') as cls,patch('pipeline_completo.threading.Thread'),patch('pipeline_completo.subprocess.Popen') as launch,patch('pipeline_completo.finish_run',return_value={'ok':True}):
    cls.return_value.start.side_effect=lambda:order.append('monitor')
-   launch.side_effect=lambda *args:order.append('launch')
+   launch.side_effect=lambda *args,**_kw:order.append('launch')
    self.assertEqual(pipeline.run(self.job,base=self.base),{'ok':True})
    cls.return_value.stop.assert_called_once()
   self.assertEqual(order,['monitor','launch'])

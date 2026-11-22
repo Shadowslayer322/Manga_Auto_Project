@@ -285,12 +285,34 @@ def masks_worker(job, stop, events, recalculate=False, base=BASE, local_session=
             local_session.close()
 
 
-def translation_worker(job, stop, events, *, guion=None, motor='nativo', base=BASE):
+def _wait_guion_page(guion, page_name, stop):
+    announced=False
+    while not stop.is_set():
+        if Path(guion).is_file():
+            try:
+                data=load_translation(guion)
+                translated={p['archivo']:p for p in data['paginas']}
+                if len(translated)!=len(data['paginas']):raise TypeoError('Pagina duplicada en el guion')
+                if page_name in translated:
+                    return translated[page_name]
+            except (OSError,ValueError,TypeoError):
+                pass
+        if not announced:
+            print(f'[TRADUCCION] En pausa esperando traduccion de {page_name} en {guion}...', flush=True)
+            announced=True
+        if stop.wait(0.5):
+            return None
+    return None
+
+
+def translation_worker(job, stop, events, *, guion=None, motor='nativo', base=BASE, esperar_guion=False):
     if not wait_opened(job,stop):return
     base=Path(base)
-    if guion:
+    if guion and not esperar_guion:
         data=load_translation(guion);translated={p['archivo']:p for p in data['paginas']}
         if len(translated)!=len(data['paginas']):raise TypeoError('Pagina duplicada en el guion')
+    elif guion and esperar_guion:
+        translated={}
     elif motor=='nativo':
         import traducir_nativo_antigravity as native
         memory=native.inicializar_memoria()
@@ -309,8 +331,15 @@ def translation_worker(job, stop, events, *, guion=None, motor='nativo', base=BA
         if job.get('auto_geometry') and not page['geometry']['zonas']:
             data={'version':1,'paginas':[{'archivo':page['page'],'bloques':[]}]}
         elif guion:
-            if page['page'] not in translated:raise TypeoError('Falta pagina en el guion: '+page['page'])
-            data={'version':1,'paginas':[translated[page['page']]]}
+            if esperar_guion:
+                pg_data=_wait_guion_page(guion,page['page'],stop)
+                if pg_data is None:return
+                data={'version':1,'paginas':[pg_data]}
+            elif page['page'] not in translated:
+                print(f'[TYPEO][AVISO] Falta pagina en el guion (omitida): {page["page"]}', flush=True)
+                data={'version':1,'paginas':[{'archivo':page['page'],'bloques':[]}]}
+            else:
+                data={'version':1,'paginas':[translated[page['page']]]}
         elif motor=='nativo':
             data=parse_markdown(native.generar_tablas_markdown([page['page']],memory))
         else:
@@ -458,7 +487,7 @@ def _should_prewarm_local_session(job, recalculate, base):
     return False
 
 
-def run(job, *, guion=None, motor='nativo', recalculate=False, timeout=1800, base=BASE):
+def run(job, *, guion=None, motor='nativo', recalculate=False, timeout=1800, base=BASE, esperar_guion=False):
     base=Path(base);folder=Path(job['folder']);events=Events(folder/'eventos_python.jsonl')
     lock=base/'02_TRABAJO_PSD/.typeo_photoshop.lock'
     try:handle=lock.open('x',encoding='utf-8')
@@ -480,7 +509,7 @@ def run(job, *, guion=None, motor='nativo', recalculate=False, timeout=1800, bas
         queue=base/'scripts/cola_limpieza_ps.jsx'
         queue.write_text('#target photoshop\n'+renderer+'\n'+controller.replace('__PIPELINE__',json.dumps(job,ensure_ascii=True)),encoding='utf-8')
         workers=[(masks_worker,{'recalculate':recalculate,'base':base,'local_session':local_session,'local_folder':local_folder})]
-        if not job.get('clean_only'):workers.append((translation_worker,{'guion':guion,'motor':motor,'base':base}))
+        if not job.get('clean_only'):workers.append((translation_worker,{'guion':guion,'motor':motor,'base':base,'esperar_guion':esperar_guion}))
         for fn,kwargs in workers:
             t=threading.Thread(target=guarded_worker,args=(fn,job,stop,events),kwargs=kwargs,daemon=True);t.start();threads.append(t)
         job['status']='running';write_json(folder/'trabajo.json',job)
@@ -488,9 +517,21 @@ def run(job, *, guion=None, motor='nativo', recalculate=False, timeout=1800, bas
         dialog_monitor=PhotoshopAutoDismisser()
         dialog_monitor.start()
         events.record('photoshop_dispatch')
-        subprocess.Popen([resolve_photoshop_exe(),'-r',str(queue)])
+        popen_kwargs={}
+        if sys.platform=='win32':
+            si=subprocess.STARTUPINFO();si.lpDesktop='WinSta0\\Default';popen_kwargs['startupinfo']=si
+        subprocess.Popen([resolve_photoshop_exe(),'-r',str(queue)],**popen_kwargs)
         release=False  # No liberar mientras Photoshop pueda seguir ejecutando una accion.
         start=time.monotonic();reported=set()
+        session_file=base/'04_DIAGNOSTICO/pipeline/sesion_actual.json'
+        session_done=set()
+        if session_file.exists():
+            try:
+                prev_session=read_json(session_file)
+                if prev_session.get('output')==str(Path(job['output']).resolve()):
+                    session_done=set(prev_session.get('completadas',[]))
+            except (OSError,ValueError):
+                pass
         while time.monotonic()-start<timeout:
             if Path(job['native_status']).exists():
                 try:state=read_json(job['native_status'])
@@ -501,6 +542,7 @@ def run(job, *, guion=None, motor='nativo', recalculate=False, timeout=1800, bas
                     release=True
                     for t in threads:t.join(timeout=5)
                     summary=finish_run(job)
+                    session_file.unlink(missing_ok=True)
                     print('[COMPLETO] '+str(Path(job['output'])/'RESULTADOS.md'),flush=True)
                     return summary
             for p in job['pages']:
@@ -512,7 +554,10 @@ def run(job, *, guion=None, motor='nativo', recalculate=False, timeout=1800, bas
                         try:clean=read_json(p['clean_report'])
                         except (ValueError,OSError):continue
                         if clean.get('final_verified'):
-                            reported.add(p['page']);print('[FINAL] '+('Limpieza: ' if job.get('clean_only') else 'Limpieza + typeo + revision: ')+p['page'],flush=True)
+                            reported.add(p['page'])
+                            session_done.add(p['page'])
+                            write_json(session_file,{'output':str(Path(job['output']).resolve()),'completadas':sorted(session_done)})
+                            print('[FINAL] '+('Limpieza: ' if job.get('clean_only') else 'Limpieza + typeo + revision: ')+p['page'],flush=True)
             time.sleep(.05)
         Path(job['cancel']).write_text('Tiempo agotado; detener al terminar la operacion actual',encoding='utf-8')
         raise TypeoError('Tiempo agotado; Photoshop puede seguir terminando una accion. Revisar antes de liberar el bloqueo.')
@@ -530,6 +575,7 @@ def main(argv=None):
     parser.add_argument('--geometria',type=Path,default=BASE/'config/typeo_geometria.json')
     parser.add_argument('--salida',type=Path,default=BASE/'09_PSD_FINAL')
     parser.add_argument('--guion',type=Path)
+    parser.add_argument('--esperar-guion',action='store_true',help='Esperar traduccion pagina por pagina en guion_typeo.json mientras avanza el typeo')
     parser.add_argument('--motor',choices=['nativo','gemini'],default='nativo')
     parser.add_argument('--paginas')
     parser.add_argument('--reemplazar',action='store_true')
@@ -537,13 +583,14 @@ def main(argv=None):
     cleaning=parser.add_mutually_exclusive_group()
     cleaning.add_argument('--limpieza-externa',type=Path,help='capas.json de motores_abiertos.py; valida RAW, mascaras y transparencia')
     cleaning.add_argument('--motor-limpieza',choices=['hibrido','genfill','comic'],
-                          help='Hibrido por defecto. GenFill para zonas de personaje revisadas y LaMa para las demas')
+                          help='GenFill por defecto (solo relleno generativo de Photoshop).')
     parser.add_argument('--preparar',action='store_true',help='Solo validar el plan; no abrir Photoshop')
     parser.add_argument('--solo-limpieza',action='store_true',help='Abrir y limpiar las RAW actuales sin traduccion ni geometria de typeo')
     parser.add_argument('--geometria-ocr',action='store_true',help='Usar coordenadas OCR actuales para globos, carteles y pantallas')
     parser.add_argument('--solo-revision-typeo',action='store_true',help='Actualizar el typeo del PSD final verificado, conservando su limpieza')
     parser.add_argument('--documento-preparado',type=Path,help='Retomar un documento preparado cuyo guardado se detuvo por cambios abiertos')
     parser.add_argument('--reemplazar-version-abierta',action='store_true',help='Autorizar expresamente sustituir la version abierta sin guardar del PSD seleccionado')
+    parser.add_argument('--desde-cero',action='store_true',help='Reiniciar desde la primera pagina ignorando una sesion interrumpida')
     parser.add_argument('--tiempo-maximo',type=int,default=1800)
     args=parser.parse_args(argv)
     if args.tiempo_maximo<=0:parser.error('El plazo debe ser positivo')
@@ -562,13 +609,37 @@ def main(argv=None):
     guion_path=args.guion
     if auto and not args.solo_limpieza and args.motor=='nativo' and not guion_path:
         candidate_guion=BASE/'03_TRADUCCIONES/guion_typeo.json'
-        if candidate_guion.exists():guion_path=candidate_guion
+        if candidate_guion.exists() or args.esperar_guion:guion_path=candidate_guion
         else:raise TypeoError('Capitulo nuevo: usar --guion con traduccion real, generar 03_TRADUCCIONES/guion_typeo.json con el skill traducir, o --motor gemini')
-    job=prepare_run(args.geometria,args.salida,selected=args.paginas.split(',') if args.paginas else None,replace=args.reemplazar or args.solo_revision_typeo,
+    session_file=BASE/'04_DIAGNOSTICO/pipeline/sesion_actual.json'
+    if args.desde_cero and session_file.exists():
+        session_file.unlink(missing_ok=True)
+    selected_pages=args.paginas.split(',') if args.paginas else None
+    if selected_pages is None and not args.preparar and session_file.exists():
+        try:
+            prev=read_json(session_file)
+            done_pages=set(prev.get('completadas',[]))
+            if prev.get('output')==str(args.salida.resolve()) and done_pages:
+                if pre_geometry is not None:
+                    all_pages=[p['archivo'] for p in pre_geometry['paginas']]
+                else:
+                    all_pages=[raw.name for raw in sorted((BASE/'01_RAW').iterdir()) if raw.suffix.lower() in {'.png','.jpg','.jpeg','.webp'}]
+                remaining=[Path(name).stem for name in all_pages if not (name in done_pages and (args.salida/(Path(name).stem+'.psd')).exists())]
+                skipped=len(all_pages)-len(remaining)
+                if skipped>0:
+                    if not remaining:
+                        session_file.unlink(missing_ok=True)
+                        print('[SESION] Todas las paginas de la sesion anterior ya estaban completadas.',flush=True)
+                        return
+                    selected_pages=remaining
+                    print(f'[SESION] Reanudando sesion anterior: omitiendo {skipped} paginas completadas; continuando desde {remaining[0]}',flush=True)
+        except (OSError,ValueError):
+            pass
+    job=prepare_run(args.geometria,args.salida,selected=selected_pages,replace=args.reemplazar or args.solo_revision_typeo,
                     clean_only=args.solo_limpieza,auto_geometry=auto,reuse_final=args.solo_revision_typeo,pre_geometry=pre_geometry)
     job['allow_open_replacement']=args.reemplazar_version_abierta
     if not (args.limpieza_externa or args.solo_revision_typeo or args.documento_preparado):
-        job['cleaning_engine']=args.motor_limpieza or 'hibrido'
+        job['cleaning_engine']=args.motor_limpieza or 'genfill'
     if args.limpieza_externa:
         from motores_abiertos import validate_local_page
         # Comprobar todo antes de abrir Photoshop, no descubrir una RAW incorrecta dentro del trabajador.
@@ -598,7 +669,7 @@ def main(argv=None):
     write_json(Path(job['folder'])/'trabajo.json',job)
     print('[COMPLETO] Preparado un unico PSD final por pagina: '+job['output'],flush=True)
     if not args.preparar:
-        return run(job,guion=guion_path,motor=args.motor,recalculate=args.recalcular_mascaras,timeout=args.tiempo_maximo)
+        return run(job,guion=guion_path,motor=args.motor,recalculate=args.recalcular_mascaras,timeout=args.tiempo_maximo,esperar_guion=args.esperar_guion)
     return job
 
 

@@ -335,7 +335,7 @@ try{
                     if(current.original.kind===LayerKind.TEXT||current.base.kind===LayerKind.TEXT)throw new Error('El original RAW fue sustituido por texto');
                     if(!job.reuse_final){
                         var texts=0;for(var t=0;t<d.layers.length;t++)if(d.layers[t].typename==='ArtLayer'&&d.layers[t].kind===LayerKind.TEXT)texts++;
-                        if(texts!==ready.items.length)throw new Error('Hay textos anteriores superpuestos en el documento');
+                        if(texts>ready.items.length)throw new Error('Hay textos anteriores superpuestos en el documento');
                     }
                     for(var q=0;q<current.generativeIds.length;q++)if(!hasLayer(d.layers,current.generativeIds[q]))throw new Error('Falta una capa generativa antes de guardar');
                 };

@@ -39,9 +39,14 @@ def valid_english(text,score,minimum):
     if score<minimum or not text.strip() or '\ufffd' in text:return False
     chars=[c for c in text if c.isalpha()]
     latin=[c for c in chars if 'LATIN' in unicodedata.name(c,'')]
+    alpha_up=''.join(c.upper() for c in latin)
+    if len(chars)==2 and len(latin)==2 and not any(c in 'AEIOUY' for c in alpha_up) and alpha_up not in {'HM','MM','SH','DR','MR','MS','VS','TV','PC','OK'}:
+        return False
     if len(chars)>=2:return len(latin)/len(chars)>.95
+    if len(chars)==1 and len(text.strip())>=2 and any(c in text for c in '.-…?!'):
+        return len(latin)==1 and score>=minimum
     # Los mensajes pueden ser "I", "A", horas o numeros; evitar ruido aislado.
-    if re.sub(r'[^A-Za-z]','',text).upper() in {'I','A'}:return score>=.96
+    if alpha_up in {'I','A'}:return score>=.96
     return not chars and len(re.sub(r'\D','',text))>=2 and score>=.96
 
 
@@ -268,6 +273,188 @@ def text_area_mask(image,poly,padding_px=6):
     return area
 
 
+def _is_english_page(lines,zones):
+    if not zones or any(z.get('origen')=='ocr_ingles' for z in zones):
+        return True
+    alpha_lines=[l for l in lines if len(re.findall(r'[A-Za-z]{2,}',l.get('texto','')))>=1 and l.get('confianza',0)>=0.80]
+    spaced=sum(1 for l in alpha_lines if ' ' in l.get('texto','').strip())
+    strong=sum(1 for l in alpha_lines if len(re.findall(r'[A-Za-z]{3,}',l.get('texto','')))>=1 and l.get('confianza',0)>=0.88)
+    return spaced>=2 or len(alpha_lines)>=5 or strong>=2
+
+
+def _flat_zone_ink_mask(gray,zone,line_polys,base_mask,text_margin=6):
+    """Extraer tinta y puntuacion adyacente dentro de un contenedor blanco sin tocar sus bordes."""
+    h,w=gray.shape[:2]
+    bx_orig=list(map(int,zone['box_contenedor']))
+    x1,y1,x2,y2=bx_orig
+    for r in zone.get('rectangulos_texto',[]):
+        x1=min(x1,int(r[0]));y1=min(y1,int(r[1]));x2=max(x2,int(r[2]));y2=max(y2,int(r[3]))
+    for poly in line_polys:
+        bx1,by1,bx2,by2=map(int,box_of(poly))
+        x1=min(x1,bx1);y1=min(y1,by1);x2=max(x2,bx2);y2=max(y2,by2)
+    pad=28
+    wx1,wy1=max(0,x1-pad),max(0,y1-pad)
+    wx2,wy2=min(w,x2+pad),min(h,y2+pad)
+    if wx2<=wx1 or wy2<=wy1:
+        return 0,0,0,0,np.zeros((0,0),dtype=np.uint8)
+    sub=gray[wy1:wy2,wx1:wx2]
+    sh,sw=sub.shape
+    seed=np.zeros((sh,sw),dtype=np.uint8)
+    lines_hull=np.zeros((sh,sw),dtype=np.uint8)
+    poly_inner=np.zeros((sh,sw),dtype=np.uint8)
+    has_dark=bool(np.any(sub<225))
+    for poly in line_polys:
+        local_poly=np.asarray(poly,dtype=np.float32)-[wx1,wy1]
+        ry1,ry2,rx1,rx2,broi=_text_area_roi(sub.shape,local_poly,3)
+        if broi.size:lines_hull[ry1:ry2,rx1:rx2]|=broi
+        p_int=np.rint(local_poly).astype(np.int32)
+        p_mask=np.zeros((sh,sw),dtype=np.uint8)
+        cv2.fillPoly(p_mask,[p_int],255)
+        poly_inner|=cv2.erode(p_mask,np.ones((3,1),dtype=np.uint8))
+        if has_dark:
+            gy1,gy2,gx1,gx2,groi=_glyph_crop(sub,local_poly,3)
+            if groi is not None and groi.any():
+                # Strip any light-gray sparkle component (min gray >= 155) inside groi
+                g_sub=sub[gy1:gy2,gx1:gx2]
+                n_g,g_lbl,_,_=cv2.connectedComponentsWithStats((groi>0).astype(np.uint8))
+                for gid in range(1,n_g):
+                    g_comp=(g_lbl==gid)
+                    if int(g_sub[g_comp].min())<155:
+                        seed[gy1:gy2,gx1:gx2][g_comp]=255
+                if zone.get('origen')=='ocr_ingles':
+                    raw_ink=((sub<165)&(poly_inner>0)).astype(np.uint8)*255
+                    if raw_ink.any():seed|=expand_mask(raw_ink,2)
+                continue
+        ry1,ry2,rx1,rx2,broi=_text_area_roi(sub.shape,local_poly,min(3,text_margin) if has_dark else text_margin)
+        if broi.size:
+            if has_dark:
+                ink_b=((sub[ry1:ry2,rx1:rx2]<205)&(broi>0)).astype(np.uint8)*255
+                if ink_b.any():
+                    seed[ry1:ry2,rx1:rx2]|=expand_mask(ink_b,2)
+                    continue
+            seed[ry1:ry2,rx1:rx2]|=broi
+    if zone.get('origen')=='globo_solido_yolo' and has_dark:
+        b_sub=base_mask[wy1:wy2,wx1:wx2]
+        if np.any(b_sub):
+            near_hull=expand_mask(lines_hull,22)>0 if np.any(lines_hull) else np.ones((sh,sw),dtype=bool)
+            n_b,b_lbl,b_stats,_=cv2.connectedComponentsWithStats((b_sub>0).astype(np.uint8))
+            for bid in range(1,n_b):
+                b_comp=(b_lbl==bid)
+                if np.any(b_comp&near_hull) and int(sub[b_comp].min())<175:
+                    seed[b_comp]=255
+    if not has_dark or not seed.any():
+        return wy1,wy2,wx1,wx2,seed
+    seed_core=cv2.erode(seed,np.ones((3,3),np.uint8)) if np.any(seed) else seed
+    dark=cv2.morphologyEx(((sub<222)&(seed_core==0)).astype(np.uint8),cv2.MORPH_CLOSE,np.ones((3,3),np.uint8))
+    n_cc,lbl,stats,_=cv2.connectedComponentsWithStats(dark)
+    border_ids=set()
+    border_ids.update(np.unique(lbl[0,:]));border_ids.update(np.unique(lbl[-1,:]))
+    border_ids.update(np.unique(lbl[:,0]));border_ids.update(np.unique(lbl[:,-1]))
+    pcont_eroded=None
+    if zone.get('poligono_contenedor') and zone.get('origen')=='globo_solido_yolo':
+        pcont=np.zeros((sh,sw),dtype=np.uint8)
+        cv2.fillPoly(pcont,[np.asarray(zone['poligono_contenedor'],dtype=np.int32)-[wx1,wy1]],255)
+        pcont_eroded=cv2.erode(pcont,np.ones((3,3),np.uint8))
+        border_ids.update(np.unique(lbl[pcont_eroded==0]))
+    hull_outer=expand_mask(lines_hull,10)==0 if np.any(lines_hull) else np.zeros((sh,sw),dtype=bool)
+    outer_ids=set(np.unique(lbl[hull_outer]))
+    zw,zh=max(1,x2-x1),max(1,y2-y1)
+    wall_keep=np.zeros(n_cc,dtype=bool)
+    for cid in range(1,n_cc):
+        cw_c=int(stats[cid,cv2.CC_STAT_WIDTH])
+        ch_c=int(stats[cid,cv2.CC_STAT_HEIGHT])
+        c_area=int(stats[cid,cv2.CC_STAT_AREA])
+        c_mask=(lbl==cid)
+        seed_ov=int(np.count_nonzero(c_mask&(seed_core>0)))
+        in_hull=int(np.count_nonzero(c_mask&(lines_hull>0)))
+        if cid in border_ids and seed_ov<0.35*c_area:
+            wall_keep[cid]=True
+        elif cid in outer_ids and in_hull<0.55*c_area and c_area>=90:
+            wall_keep[cid]=True
+        elif cw_c>=0.70*zw and ch_c>=0.70*zh and seed_ov<0.25*c_area:
+            wall_keep[cid]=True
+        elif max(cw_c,ch_c)>=0.88*max(zw,zh) and c_area>=360 and seed_ov<0.15*c_area:
+            wall_keep[cid]=True
+    wall=wall_keep[lbl].astype(np.uint8)*255
+    # Strip wall pixels (excluding interior of OCR lines for room labels like Bathroom/Washroom)
+    wall_clip=cv2.dilate(wall,np.ones((5,5),np.uint8))
+    if zone.get('origen')=='ocr_ingles':
+        wall_clip=cv2.dilate(wall&cv2.bitwise_not(poly_inner),np.ones((3,3),np.uint8))
+    seed&=cv2.bitwise_not(wall_clip)
+    glyph_seed=seed.copy()
+    wall_buf=cv2.dilate(wall,np.ones((5,5),np.uint8))
+    free=(wall_buf==0).astype(np.uint8)
+    if pcont_eroded is not None:
+        free&=(pcont_eroded>0).astype(np.uint8)
+    n_f,flbl,_,_=cv2.connectedComponentsWithStats(free)
+    seed_fids=np.unique(flbl[(seed>0)&(free>0)])
+    seed_fids=seed_fids[seed_fids>0]
+    if len(seed_fids):
+        interior=np.isin(flbl,seed_fids)
+        cand_ink=(sub<205)&interior&(~wall_keep[lbl])
+        if np.any(cand_ink):
+            n_ik,ik_lbl,ik_stats,_=cv2.connectedComponentsWithStats(cand_ink.astype(np.uint8))
+            reach_inline=cv2.dilate(seed,cv2.getStructuringElement(cv2.MORPH_RECT,(35,13)))>0
+            reach_near=expand_mask(seed,24)>0
+            reach_vert=cv2.dilate(seed,cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(35,115)))>0
+            sy,sx=np.where(seed>0)
+            s_xmin,s_xmax=int(sx.min()),int(sx.max())
+            text_priors=np.zeros((sh,sw),dtype=bool)
+            for r in zone.get('rectangulos_texto',[]):
+                rx1,ry1=max(0,int(r[0])-wx1-18),max(0,int(r[1])-wy1-18)
+                rx2,ry2=min(sw,int(r[2])-wx1+18),min(sh,int(r[3])-wy1+18)
+                text_priors[ry1:ry2,rx1:rx2]=True
+            for poly in line_polys:
+                pb=box_of(poly)
+                rx1,ry1=max(0,int(pb[0])-wx1-26),max(0,int(pb[1])-wy1-26)
+                rx2,ry2=min(sw,int(pb[2])-wx1+26),min(sh,int(pb[3])-wy1+26)
+                text_priors[ry1:ry2,rx1:rx2]=True
+            dot_cands=[]
+            for iid in range(1,n_ik):
+                ix,iy,iw,ih,ia=[int(v) for v in ik_stats[iid]]
+                if 3<=ia<=185 and iw<=26 and ih<=26 and (ix>=s_xmin-16) and (ix+iw<=s_xmax+18):
+                    if np.any(reach_vert&(ik_lbl==iid)):
+                        dot_cands.append((iid,ix,iy,iw,ih))
+            collinear_dots=set()
+            for idx_a,(iid_a,xa,ya,wa,ha) in enumerate(dot_cands):
+                for iid_b,xb,yb,wb,hb in dot_cands[idx_a+1:]:
+                    gap=max(xa-(xb+wb),xb-(xa+wa))
+                    if abs((ya+ha/2)-(yb+hb/2))<=6 and -2<=gap<=28:
+                        collinear_dots.add(iid_a);collinear_dots.add(iid_b)
+            ik_keep=np.zeros(n_ik,dtype=bool)
+            for iid in range(1,n_ik):
+                ix,iy,iw,ih,ia=[int(v) for v in ik_stats[iid]]
+                imask=(ik_lbl==iid)
+                if iid in collinear_dots:
+                    ik_keep[iid]=True
+                elif 3<=ia<=200 and iw<=28 and ih<=28 and np.any(reach_inline&imask):
+                    ik_keep[iid]=True
+                elif pcont_eroded is not None and 200<ia<=6500 and ih<=190 and iw<=220:
+                    if np.any(reach_near&imask) and np.any(text_priors&imask):
+                        ik_keep[iid]=True
+            if np.any(ik_keep):
+                rec=expand_mask(ik_keep[ik_lbl].astype(np.uint8)*255,2)
+                reach2=cv2.dilate(seed|rec,cv2.getStructuringElement(cv2.MORPH_RECT,(31,11)))>0
+                for iid in range(1,n_ik):
+                    if not ik_keep[iid]:
+                        ix,iy,iw,ih,ia=[int(v) for v in ik_stats[iid]]
+                        imask=(ik_lbl==iid)
+                        if 3<=ia<=200 and iw<=28 and ih<=28 and np.any(reach2&imask):
+                            ik_keep[iid]=True
+                        elif pcont_eroded is not None and 200<ia<=6500 and np.any(expand_mask(seed|rec,18)>0&imask) and np.any(text_priors&imask):
+                            ik_keep[iid]=True
+                rec=expand_mask(ik_keep[ik_lbl].astype(np.uint8)*255,2)&(interior.astype(np.uint8)*255)
+                seed=(glyph_seed&cv2.bitwise_not(wall_clip))|rec
+            else:
+                seed=glyph_seed&cv2.bitwise_not(wall_clip)
+        else:
+            seed=glyph_seed&cv2.bitwise_not(wall_clip)
+    from prueba_segmentacion_pixel import parchar_huecos_mascara
+    seed=parchar_huecos_mascara(seed,max_hole_area=2500)
+    seed&=cv2.bitwise_not(wall_clip)
+    return wy1,wy2,wx1,wx2,seed
+
+
 def enrich_zones(raw,zones,mask,ocr,config,*,img=None,gray=None):
     """Enlazar por posicion, anadir ingles omitido y preservar IDs de la limpieza."""
     from limpieza_rapida import white_container
@@ -282,11 +469,31 @@ def enrich_zones(raw,zones,mask,ocr,config,*,img=None,gray=None):
         for key in ('alias_ocr','texto_original','ocr_id','rol_propuesto','no_procesar',
                     'fondo_limpieza_blanco','selecciones_fondo_complejo'):zone.pop(key,None)
     grouped={z['id']:[] for z in result};next_id=max(grouped,default=0)+1
-    overrides=config.get('zonas_revisadas',{}).get(Path(raw).name,{})
+    reviewed=config.get('zonas_revisadas',{})
+    overrides=reviewed.get(ocr.get('raw_sha256')) or reviewed.get(Path(raw).name,{})
     if overrides and overrides.get('raw_sha256')!=ocr['raw_sha256']:raise TypeoError('Revision OCR de otra RAW')
     cleaning_review=config.get('limpieza_revisada',{}).get(ocr.get('raw_sha256'),{})
     active=[];protected=[]
     candidates=ocr['lineas']+ocr.get('protegidos',[])
+    english_page=_is_english_page(candidates,result)
+    if english_page and ocr.get('pendientes'):
+        kept_pending=[]
+        backed_zones=[z for z in result if any(coverage(l['box'],z['box_contenedor'])>=0.55 for l in ocr['lineas'])]
+        for pline in ocr['pendientes']:
+            ptxt=pline.get('texto','').strip()
+            pconf=pline.get('confianza',0)
+            preason=protected_reason(ptxt)
+            alpha_only=re.sub(r'[^A-Za-z]','',ptxt)
+            is_clean_word=bool(re.fullmatch(r"[A-Za-z'.…?!]+",ptxt) and valid_english(ptxt,pconf,0.72) and (len(alpha_only)>=2 or alpha_only.upper()=='I'))
+            is_punct=bool(re.fullmatch(r'[.…?!]+',ptxt))
+            in_backed_bubble=any(coverage(pline['box'],z['box_contenedor'])>=0.65 and (
+                z.get('origen')=='globo_solido_yolo' or float(np.mean(gray[z['box_contenedor'][1]:z['box_contenedor'][3],z['box_contenedor'][0]:z['box_contenedor'][2]]>=245))>=0.70
+            ) for z in backed_zones)
+            if pconf>=0.72 and in_backed_bubble and (is_clean_word or is_punct) and (not preason or preason=='signo_aislado'):
+                candidates.append(pline)
+            else:
+                kept_pending.append(pline)
+        ocr['pendientes']=kept_pending
     ordinary=[l for l in candidates if not protected_reason(l['texto'])]
     for line in candidates:
         reason=protected_reason(line['texto'])
@@ -295,26 +502,35 @@ def enrich_zones(raw,zones,mask,ocr,config,*,img=None,gray=None):
         attached=False
         if reason in {'numero_aislado','signo_aislado'}:
             for zone in result:
-                if coverage(line['box'],zone['box_contenedor'])<.6:continue
-                attached=any(coverage(other['box'],zone['box_contenedor'])>.6 and
-                    max(0,max(line['box'][1],other['box'][1])-min(line['box'][3],other['box'][3]))<max(12,2*(other['box'][3]-other['box'][1])) for other in ordinary)
+                if coverage(line['box'],zone['box_contenedor'])<.5:continue
+                if reason=='signo_aislado':
+                    attached=any(coverage(other['box'],zone['box_contenedor'])>=.5 for other in ordinary)
+                else:
+                    attached=any(coverage(other['box'],zone['box_contenedor'])>.6 and
+                        max(0,max(line['box'][1],other['box'][1])-min(line['box'][3],other['box'][3]))<max(12,2*(other['box'][3]-other['box'][1])) for other in ordinary)
                 if attached:break
         if reason and not attached:protected.append({**line,'motivo':reason})
         else:active.append(line)
     ocr['lineas']=active;ocr['protegidos']=protected
     for line in active:
-        candidates=[(coverage(line['box'],z['box_contenedor']),z) for z in result]
-        score,zone=max(candidates,key=lambda x:x[0]) if candidates else (0,None)
+        if not english_page and not overrides:break
+        candidates=[(coverage(line['box'],z['box_contenedor']),z.get('origen')=='globo_solido_yolo',-max(1,(z['box_contenedor'][2]-z['box_contenedor'][0])*(z['box_contenedor'][3]-z['box_contenedor'][1])),z) for z in result]
+        score,_,_,zone=max(candidates,key=lambda x:(round(x[0],2),x[1],x[2])) if candidates else (0,False,0,None)
         if score<.65:
+            if not english_page:continue
             if line['confianza']<config['confianza_nueva_zona']:
                 ocr['pendientes'].append({**line,'motivo':'zona nueva con confianza insuficiente'});continue
             x1,y1,x2,y2=map(int,line['box']);pad=6
             box=[max(0,x1-pad),max(0,y1-pad),min(w,x2+pad),min(h,y2+pad)]
+            crop=gray[box[1]:box[3],box[0]:box[2]]
+            lh=float(np.linalg.norm(np.asarray(line['poligono'])[3]-np.asarray(line['poligono'])[0]))
+            is_white_crop=bool(crop.size and ((np.mean(crop>=245)>=0.65 and np.percentile(crop,25)>=240) or (np.mean(crop>=245)>=0.42 and np.mean((crop>=60)&(crop<=235))<0.09)))
+            if len(text_key(line['texto']))<2 or (lh>85 and not is_white_crop):
+                ocr['pendientes'].append({**line,'motivo':'zona nueva descartada por tamano o fragmento'});continue
             zone={'id':next_id,'origen':'ocr_ingles','tipo':'relleno_generativo','box_contenedor':box,
                   'rectangulos_texto':[[x1,y1,x2,y2]],'orientacion':'horizontal','poligonos_ocr':[]}
-            crop=gray[box[1]:box[3],box[0]:box[2]]
             # No llamar globo a un cartel: blanco uniforme es un metodo de limpieza.
-            if np.mean(crop>225)>.65 and np.median(crop)>235:
+            if (np.mean(crop>225)>.65 and np.median(crop)>235) or is_white_crop:
                 zone['fondo_plano_ocr']=True
                 zone['poligono_contenedor']=[[box[0],box[1]],[box[2],box[1]],[box[2],box[3]],[box[0],box[3]]]
             result.append(zone);grouped[next_id]=[];next_id+=1
@@ -327,16 +543,20 @@ def enrich_zones(raw,zones,mask,ocr,config,*,img=None,gray=None):
     for zone in result:
         if grouped[zone['id']]:continue
         hits=[l for l in protected if coverage(l['box'],zone['box_contenedor'])>.35 or coverage(zone['box_contenedor'],l['box'])>.35]
-        if hits:
+        if hits and english_page:
             zone['no_procesar']=hits[0]['motivo'];zone['texto_original']=paragraph_text(hits)
             zone['ocr_id']=Path(raw).stem+f'_{zone["id"]:02d}'
             continue
         area=(zone['box_contenedor'][2]-zone['box_contenedor'][0])*(zone['box_contenedor'][3]-zone['box_contenedor'][1])
         for other in result:
-            if other is zone:continue
+            if other is zone or not grouped[other['id']]:continue
             found=next((l for l in grouped[other['id']] if coverage(zone['box_contenedor'],l['box'])>.65 and
                 area<(l['box'][2]-l['box'][0])*(l['box'][3]-l['box'][1])*.95),None)
-            if found:zone['alias_ocr']=Path(raw).stem+f'_{other["id"]:02d}';break
+            if found or coverage(zone['box_contenedor'],other['box_contenedor'])>=0.60:
+                zone['alias_ocr']=Path(raw).stem+f'_{other["id"]:02d}';break
+        if english_page and not zone.get('no_procesar') and not zone.get('alias_ocr'):
+            zone['no_procesar']='arte_sin_ocr'
+            zone['ocr_id']=Path(raw).stem+f'_{zone["id"]:02d}'
     screen_anchors=[l for l in ocr['lineas'] if proposed_context(l['texto'])=='pantalla']
     for zone in result:
         lines=grouped[zone['id']]
@@ -347,7 +567,7 @@ def enrich_zones(raw,zones,mask,ocr,config,*,img=None,gray=None):
         if override.get('texto_original'):original=override['texto_original']
         kind=proposed_context(original,zone if zone['origen']!='ocr_ingles' else None,override.get('tipo_texto'))
         reason=protected_reason(original,kind)
-        if reason:
+        if reason and (english_page or reason not in {'numero_aislado','signo_aislado'}):
             zone.update({'no_procesar':reason,'texto_original':original,'ocr_id':uid})
             protected.extend({**line,'motivo':reason} for line in lines)
             continue
@@ -385,35 +605,53 @@ def enrich_zones(raw,zones,mask,ocr,config,*,img=None,gray=None):
     protected_keys={(l['texto'],tuple(np.asarray(l['poligono']).flatten())) for l in protected}
     # Sustituir el area heredada de cada renglon leido. Las zonas que solo
     # encontro el detector conservan su seleccion original.
-    recognized=np.zeros_like(mask);letters=np.zeros_like(mask)
-    text_margin=config.get('margen_limpieza_texto_px',6)
-    default_glyph_margin=config.get('margen_limpieza_glifo_px',5)
-    for zone in result:
-        if zone.get('no_procesar') or zone.get('alias_ocr'):continue
-        lines=grouped[zone['id']]
-        if not lines:continue
-        x1,y1,x2,y2=map(int,zone['box_contenedor']);recognized[y1:y2,x1:x2]=255
-        flat=white_container(gray,zone)
-        zone['fondo_limpieza_blanco']=flat
-        zone['selecciones_fondo_complejo']=[]
-        glyph_margin=cleaning_review.get('margen_glifos_por_bloque',{}).get(
-            zone['ocr_id'],default_glyph_margin)
-        for line in lines:
-            polygon=line['poligono']
-            if (line['texto'],tuple(np.asarray(polygon).flatten())) in protected_keys:continue
-            ry1,ry2,rx1,rx2,band_roi=_text_area_roi(gray.shape,polygon,text_margin)
-            if band_roi.size:recognized[ry1:ry2,rx1:rx2]|=band_roi
-            if flat:
-                if band_roi.size:letters[ry1:ry2,rx1:rx2]|=band_roi
+    if english_page:
+        recognized=np.zeros_like(mask);letters=np.zeros_like(mask)
+        text_margin=config.get('margen_limpieza_texto_px',6)
+        default_glyph_margin=config.get('margen_limpieza_glifo_px',5)
+        for zone in result:
+            if zone.get('no_procesar')=='arte_sin_ocr':
+                x1,y1,x2,y2=map(int,zone['box_contenedor']);recognized[y1:y2,x1:x2]=255
                 continue
-            zone['selecciones_fondo_complejo'].append(polygon)
-            gy1,gy2,gx1,gx2,glyph_roi=_glyph_crop(gray,polygon,glyph_margin)
-            if glyph_roi is not None and glyph_roi.any():
-                letters[gy1:gy2,gx1:gx2]|=glyph_roi
-            elif band_roi.size:
-                letters[ry1:ry2,rx1:rx2]|=band_roi
-    mask=(mask&cv2.bitwise_not(recognized))|letters
-    if all(grouped[z['id']] or z.get('no_procesar') or z.get('alias_ocr') for z in result):mask=letters
+            if zone.get('no_procesar') or zone.get('alias_ocr'):continue
+            lines=grouped[zone['id']]
+            if not lines:continue
+            x1,y1,x2,y2=map(int,zone['box_contenedor']);recognized[y1:y2,x1:x2]=255
+            if zone.get('origen')!='globo_solido_yolo' and not zone.get('fondo_plano_ocr'):
+                crop=gray[y1:y2,x1:x2]
+                if crop.size and float(np.mean(crop>=245))>=0.70 and float(np.percentile(crop,30))>=245:
+                    zone['fondo_plano_ocr']=True
+                    if not zone.get('poligono_contenedor'):
+                        zone['poligono_contenedor']=[[x1,y1],[x2,y1],[x2,y2],[x1,y2]]
+            flat=white_container(gray,zone)
+            zone['fondo_limpieza_blanco']=flat
+            zone['selecciones_fondo_complejo']=[]
+            glyph_margin=cleaning_review.get('margen_glifos_por_bloque',{}).get(
+                zone['ocr_id'],default_glyph_margin)
+            if not flat and zone.get('origen')=='texto_fuera_comic_detector' and len(lines)==1:
+                letters[y1:y2,x1:x2]|=mask[y1:y2,x1:x2]
+            active_polys=[]
+            for line in lines:
+                polygon=line['poligono']
+                if (line['texto'],tuple(np.asarray(polygon).flatten())) in protected_keys:continue
+                ry1,ry2,rx1,rx2,band_roi=_text_area_roi(gray.shape,polygon,text_margin)
+                if band_roi.size:recognized[ry1:ry2,rx1:rx2]|=band_roi
+                if flat:
+                    active_polys.append(polygon)
+                    continue
+                zone['selecciones_fondo_complejo'].append(polygon)
+                gy1,gy2,gx1,gx2,glyph_roi=_glyph_crop(gray,polygon,glyph_margin)
+                if glyph_roi is not None and glyph_roi.any():
+                    letters[gy1:gy2,gx1:gx2]|=glyph_roi
+                elif band_roi.size:
+                    letters[ry1:ry2,rx1:rx2]|=band_roi
+            if flat and active_polys:
+                fy1,fy2,fx1,fx2,fmask=_flat_zone_ink_mask(gray,zone,active_polys,mask,text_margin)
+                if fmask.size:
+                    recognized[fy1:fy2,fx1:fx2]=255
+                    letters[fy1:fy2,fx1:fx2]|=fmask
+        mask=(mask&cv2.bitwise_not(recognized))|letters
+        if all(grouped[z['id']] or z.get('no_procesar') or z.get('alias_ocr') for z in result):mask=letters
     for selection in cleaning_review.get('selecciones',[]):
         x1,y1,x2,y2=selection['rectangulo']
         polygon=[[x1,y1],[x2,y1],[x2,y2],[x1,y2]]
@@ -425,12 +663,13 @@ def enrich_zones(raw,zones,mask,ocr,config,*,img=None,gray=None):
                 zone['fondo_limpieza_blanco']=False
                 zone.setdefault('selecciones_fondo_complejo',[]).append(polygon)
     protection=np.zeros_like(mask)
-    for line in protected:cv2.fillPoly(protection,[np.asarray(line['poligono'],dtype=np.int32)],255)
+    if english_page:
+        for line in protected:cv2.fillPoly(protection,[np.asarray(line['poligono'],dtype=np.int32)],255)
     ocr['arte_protegido']=cleaning_review.get('arte_protegido',[])
     for polygon in ocr['arte_protegido']:
         cv2.fillPoly(protection,[np.asarray(polygon,dtype=np.int32)],255)
     for zone in result:
-        if zone.get('no_procesar'):
+        if zone.get('no_procesar') and zone.get('no_procesar')!='arte_sin_ocr':
             x1,y1,x2,y2=map(int,zone['box_contenedor']);protection[y1:y2,x1:x2]=255
     # Margen que tambien protege frente al expandir/feather de Photoshop.
     if protection.any():
@@ -539,7 +778,14 @@ def geometry_from_record(raw,record,*,gray=None,raw_hash=None):
             pts_f=[(float(x),float(y)) for x,y in pts]
             pminx,pminy=float(pts[:,0].min()),float(pts[:,1].min())
             pmaxx,pmaxy=float(pts[:,0].max()),float(pts[:,1].max())
-            candidates=[entry for entry in white_containers if _pts_inside_entry(entry,pts_f,pminx,pminy,pmaxx,pmaxy)]
+            zw,zh=max(1,b[2]-b[0]),max(1,b[3]-b[1])
+            candidates=[]
+            for entry in white_containers:
+                bx1,by1,bx2,by2=entry[3]
+                if (bx2-bx1)>zw*3 or (by2-by1)>zh*3:continue
+                if (bx1<=2)+(by1<=2)+(bx2>=w-2)+(by2>=h-2)>=2:continue
+                if _pts_inside_entry(entry,pts_f,pminx,pminy,pmaxx,pmaxy):
+                    candidates.append(entry)
             if candidates:
                 polygon=min(candidates,key=lambda entry:entry[2])[0]
                 pb=box_of(polygon)

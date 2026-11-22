@@ -180,6 +180,13 @@ class PhotoshopAutoDismisser:
                       if btext.replace('&','').strip().casefold() in ('ok','aceptar')),None)
         if ok_hwnd is None:
             return
+        for chwnd, ctext, _cid in checkboxes:
+            norm_cb = ''.join(c for c in unicodedata.normalize('NFKD', ctext.replace('&', '').casefold()) if not unicodedata.combining(c))
+            if any(k in norm_cb for k in ('no mostrar', 'no volver a mostrar', 'dont show', 'do not show')):
+                try:
+                    win32gui.SendMessage(chwnd, BM_SETCHECK, BST_CHECKED, 0)
+                except Exception:
+                    pass
         try:
             win32gui.SendMessage(ok_hwnd,BM_CLICK,0,0)
         except Exception:

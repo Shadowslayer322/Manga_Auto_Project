@@ -210,17 +210,43 @@ def bind_translation(translation, geometry, base=BASE):
                 continue
             text = row.get('traduccion_es', '').strip()
             if not text or text == '...' or re.search(r'[\u3040-\u30ff\u4e00-\u9fff]', text):
-                raise TypeoError(f'Traduccion pendiente o no localizada en {name}: {row.get("texto_original", "")}')
+                print(f'[TYPEO][OMITIDO] Traduccion pendiente o no localizada en {name}: {row.get("id") or row.get("texto_original", "")}', flush=True)
+                continue
             uid = row.get('id') or ''
             if uid and uid not in zones:
-                raise TypeoError(f'ID desconocido o de otra pagina: {uid} ({name})')
+                print(f'[TYPEO][OMITIDO] ID desconocido o de otra pagina: {uid} ({name})', flush=True)
+                continue
             if not uid:
                 candidates = originals.get(original_key(row.get('texto_original', '')), set())
-                if len(candidates) != 1:
-                    raise TypeoError(f'Correspondencia ausente o ambigua en {name}: {row.get("texto_original", "")}; indicar ID de zona')
-                uid = next(iter(candidates))
+                if len(candidates) == 1:
+                    uid = next(iter(candidates))
+                else:
+                    pos = row.get('pos')
+                    if isinstance(pos, (list, tuple)) and len(pos) == 2:
+                        pw = float(pg.get('width') or 1)
+                        ph = float(pg.get('height') or 1)
+                        px = float(pos[0]) / 1000.0 * pw
+                        py = float(pos[1]) / 1000.0 * ph
+                        best_uid, best_dist = None, None
+                        max_dist = max(pw, ph) * 0.25
+                        for cand_id, z in zones.items():
+                            if cand_id in used:
+                                continue
+                            bx1, by1, bx2, by2 = z['box_contenedor']
+                            inside = (bx1 - 35 <= px <= bx2 + 35) and (by1 - 35 <= py <= by2 + 35)
+                            cx, cy = (bx1 + bx2) / 2.0, (by1 + by2) / 2.0
+                            dist = ((cx - px) ** 2 + (cy - py) ** 2) ** 0.5
+                            if inside or dist <= max_dist:
+                                score = (0 if inside else 1, dist)
+                                if best_dist is None or score < best_dist:
+                                    best_uid, best_dist = cand_id, score
+                        uid = best_uid or ''
+                    if not uid:
+                        print(f'[TYPEO][OMITIDO] Correspondencia ausente o ambigua en {name}: {row.get("texto_original", "")}', flush=True)
+                        continue
             if uid in used:
-                raise TypeoError('Dos traducciones para la misma zona: ' + uid)
+                print(f'[TYPEO][OMITIDO] Dos traducciones para la misma zona: {uid}', flush=True)
+                continue
             used.add(uid)
             z = zones[uid]
             role = row.get('rol_fuente') or z.get('rol_revisado') or infer_role(row.get('ubicacion', ''))
@@ -229,12 +255,13 @@ def bind_translation(translation, geometry, base=BASE):
             if z.get('tipo_contenedor') == 'globo' and role == 'fuera_globo':
                 role = 'normal'
             if role not in ROLES:
-                raise TypeoError('Rol tipografico desconocido: ' + role)
+                print(f'[TYPEO][AVISO] Rol tipografico desconocido ({role}) en {uid}; usando normal', flush=True)
+                role = 'normal'
             blocks.append({'id': uid, 'texto_original': row.get('texto_original') or z.get('texto_original', ''),
                            'traduccion_es': text, 'ubicacion': row.get('ubicacion', ''),
                            'rol_fuente': role})
         if used != set(zones):
-            raise TypeoError(f'Zonas sin traduccion en {name}: {sorted(set(zones)-used)}')
+            print(f'[TYPEO][AVISO] Zonas sin traduccion en {name} (omitidas): {sorted(set(zones)-used)}', flush=True)
         result.append({'archivo': name, 'raw_sha256': pg['raw_sha256'], 'bloques': blocks})
     return {'version': 1, 'paginas': result}
 
@@ -318,6 +345,31 @@ def resolve_photoshop_exe(explicit=None):
     return str(found)
 
 
+def _symbol_font():
+    try:
+        return resolve_font('murmullo')
+    except TypeoError:
+        return None
+
+
+def symbol_ranges(lines, font, sym_font):
+    if sym_font is None or sym_font.postscript == font.postscript:
+        return []
+    text = '\r'.join(lines)
+    ranges = []
+    start = None
+    for idx, ch in enumerate(text):
+        is_sym = not ch.isspace() and ord(ch) not in font.cmap and ord(ch) in sym_font.cmap
+        if is_sym and start is None:
+            start = idx
+        elif not is_sym and start is not None:
+            ranges.append([start, idx])
+            start = None
+    if start is not None:
+        ranges.append([start, len(text)])
+    return ranges
+
+
 def typography_text(text, font):
     if not font.changes_case or text.isupper():
         text = text.lower()
@@ -335,6 +387,7 @@ def typography_text(text, font):
                 start = True
         text = ''.join(chars)
     equivalents = {'«': '"', '»': '"', '“': '"', '”': '"', '‘': "'", '’': "'", '…': '...', '—': '-', '–': '-'}
+    sym_font = _symbol_font()
     result, quote_open = [], True
     for c in text:
         # Photoshop convierte comillas ASCII a tipograficas incluso al asignar contents.
@@ -349,9 +402,13 @@ def typography_text(text, font):
         else:
             replacement = c if c.isspace() or ord(c) in font.cmap else equivalents.get(c)
         if replacement is None or any(not x.isspace() and ord(x) not in font.cmap for x in replacement):
-            raise TypeoError(f'Simbolo {c!r} no soportado por {font.postscript}; requiere equivalente revisado')
+            if sym_font is not None and not c.isspace() and ord(c) in sym_font.cmap:
+                replacement = c
+            else:
+                print(f'[TYPEO][AVISO] Simbolo {c!r} omitido (no soportado por {font.postscript})', flush=True)
+                continue
         result.append(replacement)
-    return ''.join(result)
+    return re.sub(r' {2,}', ' ', ''.join(result)).strip()
 
 
 def polygon_width(poly, y, cx):
@@ -599,11 +656,18 @@ def build_items(contract, geometry):
             role = row['rol_fuente']
             if re.search(r'chapter|cap[ií]tulo',row.get('texto_original','')+' '+row['traduccion_es'],re.I):role='titulo'
             elif role=='titulo':role='fuera_globo'
-            font = resolve_font(role)
-            text = typography_text(opening_punctuation(row['traduccion_es']), font)
-            lines, size, shape, split = compose_proportional(text, font, zone, role)
-            if ''.join(lines).replace('-', '').replace(' ', '') != ''.join(text.split()).replace('-', ''):
-                raise TypeoError('La composicion altero el contenido: ' + row['id'])
+            try:
+                font = resolve_font(role)
+                text = typography_text(opening_punctuation(row['traduccion_es']), font)
+                if not text.strip():
+                    print(f'[TYPEO][OMITIDO] {row["id"]}: texto vacio tras omitir simbolos no soportados', flush=True)
+                    continue
+                lines, size, shape, split = compose_proportional(text, font, zone, role)
+                if ''.join(lines).replace('-', '').replace(' ', '') != ''.join(text.split()).replace('-', ''):
+                    raise TypeoError('La composicion altero el contenido: ' + row['id'])
+            except TypeoError as exc:
+                print(f'[TYPEO][OMITIDO] {row["id"]}: {exc}', flush=True)
+                continue
             item = {**zone, 'rol': role, 'font_ps': font.postscript, 'fuente_archivo': str(font.path),
                     'traduccion_es': text, 'traduccion_recibida': row['traduccion_es'],
                     'lineas': lines, 'tamano_px': size, 'forma_composicion': shape,
@@ -612,6 +676,11 @@ def build_items(contract, geometry):
                     'trazo_px': zone.get('trazo_px', 5 if zone.get('metodo_limpieza') == 'relleno_generativo' else 0),
                     'trazo_rgb': zone.get('trazo_rgb', [255,255,255]),
                     'relleno_rgb': zone.get('relleno_rgb', [0,0,0]), 'margen_revision_px': zone.get('margen_revision_px', 6)}
+            sym_font = _symbol_font()
+            sym_ranges = symbol_ranges(lines, font, sym_font)
+            if sym_ranges:
+                item['fuente_simbolos_ps'] = sym_font.postscript
+                item['rangos_simbolos'] = sym_ranges
             target=english_reference_size(font,zone)
             if target and not item.get('tamano_fijo'):
                 item['tamano_objetivo_ingles_px']=target

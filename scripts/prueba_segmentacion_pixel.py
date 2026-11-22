@@ -48,7 +48,7 @@ def diagnosticar_sistema():
 # ==========================================================
 # FASE 2 Y 3: SEGMENTACIÓN REAL Y REFINAMIENTO OPENCV
 # ==========================================================
-def segmentar_caracteres_region(sub_img, sub_seg, origen, margin_px=DEFAULT_MARGIN_PX):
+def segmentar_caracteres_region(sub_img, sub_seg, origen, margin_px=DEFAULT_MARGIN_PX, estilo=None):
     """
     Analiza una región de búsqueda local y reconstruye la máscara a nivel de píxel
     de cada carácter, considerando:
@@ -62,6 +62,7 @@ def segmentar_caracteres_region(sub_img, sub_seg, origen, margin_px=DEFAULT_MARG
         return np.zeros((sh, sw), dtype=np.uint8)
         
     gray = cv2.cvtColor(sub_img, cv2.COLOR_BGR2GRAY) if len(sub_img.shape) == 3 else sub_img
+    es_tinta_color = False
     
     if origen == "globo_solido_yolo":
         # 1. Globos de diálogo sólidos blancos:
@@ -75,35 +76,107 @@ def segmentar_caracteres_region(sub_img, sub_seg, origen, margin_px=DEFAULT_MARG
         
     else:
         # 2. Textos fuera de globos (técnicas, textos en tramas, bordes complejos, furigana):
-        # A) Detectar núcleo blanco brillante (relleno interior de técnicas y caracteres huecos)
-        white_core = ((gray > 175) & (sub_seg > 0.05)) | ((gray > 215) & (sub_seg > 0.02))
-        
-        # B) Detectar contorno negro que bordea el relleno blanco
+        k_5x5 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
+        k_7x7 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
+        has_real_seg = float(sub_seg.min()) < 0.5
+
+        # A) Trazos con alta probabilidad U-Net y tinta a color (portadas)
+        strong_seg = (sub_seg > 0.25) if has_real_seg else np.zeros_like(gray, dtype=bool)
+        if len(sub_img.shape) == 3:
+            sub_chroma = sub_img.max(axis=2).astype(np.int16) - sub_img.min(axis=2).astype(np.int16)
+            color_ink = np.zeros_like(gray, dtype=bool)
+            chroma_bin = (sub_chroma > 14).astype(np.uint8)
+            if np.any(chroma_bin):
+                n_col, col_lbl, col_stats, _ = cv2.connectedComponentsWithStats(chroma_bin)
+                keep_col = np.zeros(n_col, dtype=bool)
+                if estilo == "color_portada":
+                    seed_seg = sub_seg > 0.02
+                    seed_hi = sub_chroma > 22
+                    for ci in range(1, n_col):
+                        cx, cy, cw_c, ch_c, area_ci = [int(v) for v in col_stats[ci]]
+                        roi_lbl = col_lbl[cy:cy+ch_c, cx:cx+cw_c] == ci
+                        if np.any(seed_seg[cy:cy+ch_c, cx:cx+cw_c] & roi_lbl) or (
+                            area_ci >= 40 and np.any(seed_hi[cy:cy+ch_c, cx:cx+cw_c] & roi_lbl)
+                        ):
+                            keep_col[ci] = True
+                else:
+                    seed_std = (sub_chroma > 16) & (sub_seg > 0.04)
+                    for ci in range(1, n_col):
+                        cx, cy, cw_c, ch_c, _ = [int(v) for v in col_stats[ci]]
+                        roi_lbl = col_lbl[cy:cy+ch_c, cx:cx+cw_c] == ci
+                        if np.any(seed_std[cy:cy+ch_c, cx:cx+cw_c] & roi_lbl):
+                            keep_col[ci] = True
+                color_ink = keep_col[col_lbl]
+            if np.any(color_ink):
+                color_ink = color_ink | ((cv2.dilate(color_ink.astype(np.uint8), k_5x5) > 0) & (sub_chroma > 10))
+        else:
+            color_ink = np.zeros_like(gray, dtype=bool)
+
+        # B) Letras oscuras estandar y furigana sobre tramas grises
+        _, otsu_inv = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+        dark_text = (otsu_inv > 0) & (sub_seg > 0.10) & (gray < 155)
+        if has_real_seg and estilo is None and np.any(dark_text):
+            n_dt, dt_lbl, dt_stats, _ = cv2.connectedComponentsWithStats(dark_text.astype(np.uint8))
+            keep_dt = np.ones(n_dt, dtype=bool)
+            keep_dt[0] = False
+            for di in range(1, n_dt):
+                dx, dy, dw_d, dh_d, area_d = [int(v) for v in dt_stats[di]]
+                if area_d >= 120:
+                    comp_d = dt_lbl[dy:dy+dh_d, dx:dx+dw_d] == di
+                    if float(np.mean(sub_seg[dy:dy+dh_d, dx:dx+dw_d][comp_d] > 0.25)) < 0.20:
+                        keep_dt[di] = False
+            dark_text = keep_dt[dt_lbl]
+
+        # C) Halo blanco protector cenido alrededor de trazos de texto
+        halo_anchor = dark_text | strong_seg | color_ink
+        if np.any(halo_anchor):
+            dil_anchor = cv2.dilate(halo_anchor.astype(np.uint8), k_7x7)
+            white_halo = (dil_anchor > 0) & (gray > 215) & (sub_seg > 0.10)
+        else:
+            white_halo = np.zeros_like(dark_text)
+
+        # D) Nucleo blanco de texto hueco/contorneado y su contorno negro adyacente (sin inundar fondos blancos)
+        white_core = (gray > 200) & (sub_seg > 0.22)
         if np.any(white_core):
-            k_expand = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
-            dil_white = cv2.dilate(white_core.astype(np.uint8), k_expand)
-            black_border = (dil_white > 0) & (gray < 90)
+            dil_white = cv2.dilate(white_core.astype(np.uint8), k_5x5)
+            black_border = (dil_white > 0) & (gray < 100) & (sub_seg > 0.05)
+            if np.any(black_border):
+                dil_border = cv2.dilate(black_border.astype(np.uint8), k_7x7)
+                white_outlined = white_core & (dil_border > 0)
+            else:
+                white_outlined = np.zeros_like(white_core)
         else:
             black_border = np.zeros_like(white_core)
-            
-        # Si el texto es de núcleo blanco predominante (técnicas sobre tramas como 『クロス・クリメイション』 y ディア・ウエポン),
-        # los caracteres son estrictamente el núcleo blanco + su borde negro, protegiendo 100% las SFX negras adyacentes.
-        if np.count_nonzero(white_core) > 400:
-            char_raw = white_core | black_border
-        else:
-            # C) Detectar letras negras estándar y furigana sobre tramas grises (con o sin halo)
-            _, otsu_inv = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-            dark_text = (otsu_inv > 0) & (sub_seg > 0.08) & (gray < 125)
-            
-            # D) Halo blanco protector perimetral pegado al texto oscuro sobre tramas
-            if np.any(dark_text):
-                k_halo = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
-                dil_dark = cv2.dilate(dark_text.astype(np.uint8), k_halo)
-                white_halo = (dil_dark > 0) & (gray > 210) & (sub_seg > 0.05)
-            else:
-                white_halo = np.zeros_like(white_core)
-                
-            char_raw = white_core | black_border | dark_text | white_halo
+            white_outlined = np.zeros_like(white_core)
+
+        char_raw = strong_seg | color_ink | dark_text | white_halo | white_outlined | black_border
+        if has_real_seg and estilo is None and 125 <= float(np.median(gray)) <= 195:
+            if int(np.count_nonzero((gray > 220) & (sub_seg > 0.12))) >= 80:
+                char_raw = char_raw | ((gray > 210) & (sub_seg > 0.08))
+        if estilo == "contorneado":
+            white_bin = (gray > 195).astype(np.uint8)
+            n_w, w_lbl, w_stats, _ = cv2.connectedComponentsWithStats(white_bin)
+            enclosed_white = np.zeros_like(gray, dtype=bool)
+            for wi in range(1, n_w):
+                wx, wy, ww, wh, warea = [int(v) for v in w_stats[wi]]
+                if warea < 14 or warea > 0.25 * sh * sw:
+                    continue
+                if wx == 0 or wy == 0 or (wx + ww) >= sw or (wy + wh) >= sh:
+                    continue
+                rx1, ry1 = max(0, wx - 2), max(0, wy - 2)
+                rx2, ry2 = min(sw, wx + ww + 2), min(sh, wy + wh + 2)
+                comp_roi = (w_lbl[ry1:ry2, rx1:rx2] == wi)
+                ring = (cv2.dilate(comp_roi.astype(np.uint8), k_5x5) > 0) & (~comp_roi)
+                if np.count_nonzero(ring) < 8:
+                    continue
+                if float(np.mean(gray[ry1:ry2, rx1:rx2][ring] < 130)) >= 0.50:
+                    if float(sub_seg[ry1:ry2, rx1:rx2][comp_roi].max()) > 0.08 or warea >= 45:
+                        enclosed_white[ry1:ry2, rx1:rx2] |= comp_roi
+            outline_dark = (cv2.dilate(enclosed_white.astype(np.uint8), k_7x7) > 0) & (gray < 145)
+            char_raw = char_raw | enclosed_white | outline_dark
+        es_tinta_color = (estilo == "color_portada") or (
+            int(np.count_nonzero(color_ink)) >= max(150, int(0.25 * max(1, np.count_nonzero(char_raw))))
+        )
         
     char_uint8 = char_raw.astype(np.uint8) * 255
     
@@ -115,7 +188,8 @@ def segmentar_caracteres_region(sub_img, sub_seg, origen, margin_px=DEFAULT_MARG
     # FASE 4: MARGEN CONFIGURABLE Y PROTECCIÓN FRENTE A DIBUJO
     # ==========================================================
     if margin_px > 0:
-        k_size = 2 * margin_px + 1
+        eff_margin = margin_px + 3 if es_tinta_color else margin_px
+        k_size = 2 * eff_margin + 1
         k_margen = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k_size, k_size))
         char_dilated = cv2.dilate(char_closed, k_margen, iterations=1)
     else:
@@ -212,11 +286,45 @@ def procesar_mascara_pagina(img_path, page_info, comic_session=None, margin_px=D
                 # letras/signos que UNet omita, sin volver a inferir.
                 gray=cv2.cvtColor(sub_img,cv2.COLOR_BGR2GRAY)
                 sub_mask=(gray<220).astype(np.uint8)*255
+                if seg_map is not None and float(seg_map.min())<0.5:
+                    if z.get('poligono_contenedor'):
+                        p_local=np.array(z['poligono_contenedor'],dtype=np.int32)-[sx1,sy1]
+                        p_in=np.zeros_like(sub_mask)
+                        cv2.fillPoly(p_in,[p_local],255)
+                        p_in=cv2.erode(p_in,k_erode_3x3)
+                        sub_mask&=p_in
+                    ix1,iy1=max(0,rx1-sx1-1),max(0,ry1-sy1-1)
+                    ix2,iy2=min(sx2-sx1,rx2-sx1+1),min(sy2-sy1,ry2-sy1+1)
+                    n_cc,cc_lbl,cc_stats,_=cv2.connectedComponentsWithStats((sub_mask>0).astype(np.uint8))
+                    seg_hit=sub_seg>0.08
+                    keep_cc=np.zeros(n_cc,dtype=bool)
+                    inner_ids=set(np.unique(cc_lbl[iy1:iy2,ix1:ix2])) if (ix2>ix1 and iy2>iy1) else set(range(1,n_cc))
+                    for ci in range(1,n_cc):
+                        if ci not in inner_ids:
+                            continue
+                        area_c=int(cc_stats[ci,cv2.CC_STAT_AREA])
+                        if area_c<=120:
+                            keep_cc[ci]=True
+                        else:
+                            overlap=float(np.count_nonzero(seg_hit&(cc_lbl==ci)))/max(1,area_c)
+                            if overlap>=0.12:
+                                keep_cc[ci]=True
+                    sub_mask=np.where(keep_cc[cc_lbl],255,0).astype(np.uint8)
                 if k_dilate_globo is not None:
                     sub_mask=cv2.dilate(sub_mask,k_dilate_globo)
                 sub_mask=parchar_huecos_mascara(sub_mask)
             else:
-                sub_mask = segmentar_caracteres_region(sub_img, sub_seg, origen, margin_px=margin_px)
+                sub_mask = segmentar_caracteres_region(sub_img, sub_seg, origen, margin_px=margin_px, estilo=z.get("estilo"))
+                if np.any(sub_mask):
+                    ix1, iy1 = max(0, rx1 - sx1), max(0, ry1 - sy1)
+                    ix2, iy2 = min(sx2 - sx1, rx2 - sx1), min(sy2 - sy1, ry2 - sy1)
+                    if ix2 > ix1 and iy2 > iy1:
+                        n_sm, sm_lbl, _, _ = cv2.connectedComponentsWithStats((sub_mask > 0).astype(np.uint8))
+                        if n_sm > 2:
+                            keep_sm = np.zeros(n_sm, dtype=bool)
+                            inner_lbls = np.unique(sm_lbl[iy1:iy2, ix1:ix2])
+                            keep_sm[inner_lbls[inner_lbls > 0]] = True
+                            sub_mask = np.where(keep_sm[sm_lbl], 255, 0).astype(np.uint8)
             
             # Combinar en la máscara local de la zona
             zone_roi[sy1-zy1:sy2-zy1, sx1-zx1:sx2-zx1] |= sub_mask
@@ -229,7 +337,14 @@ def procesar_mascara_pagina(img_path, page_info, comic_session=None, margin_px=D
             container=np.zeros((cy2-cy1,cx2-cx1),dtype=np.uint8)
             cv2.fillPoly(container,[poly-[cx1,cy1]],255)
             container=cv2.erode(container,k_erode_3x3)
-            zone_roi &= container[zy1-cy1:zy2-cy1, zx1-cx1:zx2-cx1]
+            clipped=zone_roi & container[zy1-cy1:zy2-cy1, zx1-cx1:zx2-cx1]
+            if z.get('from_yolo',True) or np.count_nonzero(clipped)>=0.85*max(1,np.count_nonzero(zone_roi)):
+                seg_zone=seg_map[zy1:zy2,zx1:zx2]>0.22
+                lost_seg=(zone_roi>0)&(clipped==0)&seg_zone
+                if int(np.count_nonzero(lost_seg))>=250:
+                    zone_roi=clipped|(zone_roi&seg_zone.astype(np.uint8)*255)
+                else:
+                    zone_roi=clipped
         mascara_pixel[zy1:zy2, zx1:zx2] |= zone_roi
             
     # Métricas comparativas (Fase 6)

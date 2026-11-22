@@ -40,7 +40,8 @@
     }
   },
   "zonas_revisadas": {
-    "24.jpg": {
+    "ba9ea18ee68ba55fa94b0ca18f9eefcb8ac4b066fc0c25c0097efa119c35e4a7": {
+      "archivo": "24.jpg",
       "raw_sha256": "ba9ea18ee68ba55fa94b0ca18f9eefcb8ac4b066fc0c25c0097efa119c35e4a7",
       "bloques": {
         "24_06": {
